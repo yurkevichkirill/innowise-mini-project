@@ -1,0 +1,14 @@
+{
+    "name": "kirill/mini-project",
+    "type": "project",
+    "require": {
+        "psr/log": "^3.0",
+        "psr/container": "^2.0",
+        "twig/twig": "^3.22"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kirill\\MiniProject\\": "app/"
+        }
+    }
+}
