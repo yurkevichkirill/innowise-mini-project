@@ -4,26 +4,55 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Attributes\FromEnv;
+use App\Services\UserRepository;
+use App\Services\UserRepositoryInterface;
+use App\Services\UserService;
+use App\Services\UserServiceInterface;
+use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 class Container implements ContainerInterface
 {
     private array $objects = [];
+//    private array $context = [];
 
     public function __construct() {
-        $this->objects[Domain\ItemRepositoryInterface::class] = DataAccess\ItemRepository::class;
-        $this->objects[Domain\ItemServiceInterface::class] = Domain\ItemService::class;
-        $this->objects[Domain\UserContextInterface::class] = UserInterface\UserContextInterfaceAdapter::class;
+        $this->objects[Services\AdultServiceInterface::class] = Services\AdultService::class;
+        $this->objects[Services\UnemploymentServiceInterface::class] = Services\UnemploymentService::class;
+        $this->objects[UserServiceInterface::class] = UserService::class;
+        $this->objects[UserRepositoryInterface::class] = UserRepository::class;
+
+//        $this->context = [
+//            RequireClass1::class => [
+//                Services\TravelAbroadService::class
+//            ],
+//            RequireClass2::class => [
+//                Services\TravelInnerService::class
+//            ]
+//        ];
     }
     public function has(string $id): bool
     {
         return isset($this->objects[$id]) || class_exists($id);
     }
+
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws \ReflectionException
+     * @throws NotFoundExceptionInterface
+     */
     public function get(string $id): mixed
     {
         return $this->prepareObject($id);
     }
 
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws \ReflectionException
+     * @throws NotFoundExceptionInterface
+     */
     public function prepareObject(string $dependency): object
     {
         $dependencyReflector = new \ReflectionClass($dependency);
@@ -35,6 +64,8 @@ class Container implements ContainerInterface
             $class = $dependency;
             $classReflector = $dependencyReflector;
         }
+
+//        if($classReflector)
 
         $constructorReflector = $classReflector->getConstructor();
         if (empty($constructorReflector)) {
@@ -48,9 +79,15 @@ class Container implements ContainerInterface
 
         $args = [];
         foreach ($constructorArguments as $argument) {
-            $argumentType = $argument->getType()->getName();
-
-            $args[$argument->getName()] = $this->get($argumentType);
+            $fromEnvs = $argument->getAttributes(FromEnv::class);
+            if(!empty($fromEnvs)) {
+                $attribute = $fromEnvs[0];
+                $envName = $attribute->getArguments()[0];
+                $args[$argument->getName()] = getenv($envName);
+            } else {
+                $argumentType = $argument->getType()->getName();
+                $args[$argument->getName()] = $this->get($argumentType);
+            }
         }
 
         return new $class(...$args);
