@@ -10,20 +10,26 @@ use App\Attributes\Post;
 use App\Attributes\Put;
 use App\Services\UserServiceInterface;
 
-class UserController
+readonly class UserController
 {
     public function __construct(private UserServiceInterface $userService) {}
 
     #[Get("/")]
     public function index(): void
     {
+        print_r("Hello");
+    }
+
+    #[Get("/users")]
+    public function showAllUsers(): void
+    {
         print_r($this->userService->getUsers());
     }
 
     #[Get("/users/{id}")]
-    public function show($id): void
+    public function showUser($id): void
     {
-        echo "GET /users/$id";
+        print_r($this->userService->getUser($id));
     }
 
     #[Post("/")]

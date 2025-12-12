@@ -8,7 +8,7 @@ use App\DB;
 use App\Models\User;
 use App\Services\UserRepositoryInterface;
 
-class UserRepository implements UserRepositoryInterface
+readonly class UserRepository implements UserRepositoryInterface
 {
     public function __construct(private DB $context) {}
 
@@ -20,5 +20,13 @@ class UserRepository implements UserRepositoryInterface
             $users[] = new User($row['id'], $row['name'], $row['age'], $row['money'], $row['has_visa']);
         }
         return $users;
+    }
+
+    public function getUser($id): User
+    {
+        $stmt = $this->context->getConnection()->prepare("SELECT * FROM users WHERE id = ?");
+        $stmt->execute([$id]);
+        $row = $stmt->fetchAll(\PDO::FETCH_ASSOC)[0];
+        return new User($row['id'], $row['name'], $row['age'], $row['money'], $row['has_visa']);
     }
 }

@@ -8,36 +8,29 @@ use App\Controllers\User\UserController;
 use App\Services\UserRepository;
 use App\Services\UserService;
 use PDO;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 class App
 {
-//    static private DB $db;
+    static private DB $db;
+
+    /**
+     * @throws \ReflectionException
+     */
     public function __construct(
         protected Container $container,
         protected Router $router,
-        array $request,
-        protected Config $config
-    )
-    {
-//        $driver = getenv('POSTGRES_DRIVER');
-//        $host = getenv('POSTGRES_HOST');
-//        $port = getenv('POSTGRES_PORT');
-//        $dbname = getenv('DB_NAME');
-//        $username = getenv('POSTGRES_USER');
-//        $password = getenv('POSTGRES_PASSWORD');
-//
-//        $pdo = new PDO("$driver:host=$host;port=$port;dbname=$dbname", $username, $password);
-//
-//        $controller = new UserController(
-//            new UserService(
-//                new UserRepository(
-//                    new DB($pdo)
-//                )
-//            )
-//        );
+        protected array $request
+    ) {
+        $this->router->initializeControllers();
     }
 
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     public function run ():void {
-
+        $this->router->handler($this->request['uri'], $this->request['method']);
     }
 }

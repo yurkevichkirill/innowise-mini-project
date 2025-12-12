@@ -65,8 +65,6 @@ class Container implements ContainerInterface
             $classReflector = $dependencyReflector;
         }
 
-//        if($classReflector)
-
         $constructorReflector = $classReflector->getConstructor();
         if (empty($constructorReflector)) {
             return new $class;
