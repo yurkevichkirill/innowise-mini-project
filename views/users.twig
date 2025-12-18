@@ -1,0 +1,43 @@
+{% extends "../index.html.twig" %}
+
+{% block head %}
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    table tr th, table tr td {
+        border: 1px #eee solid;
+        padding: 5px;
+    }
+</style>
+{% endblock %}
+{% block title %}Users{% endblock %}
+{% block content%}
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Money</th>
+        <th>Has visa</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.money }}</td>
+            <td>{{ user.hasVisa ? '1' : '0' }}</td>
+        </tr>
+    {% else %}
+        <tr><td colspan="5">No Users Found</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

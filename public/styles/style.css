@@ -1,0 +1,14 @@
+body {
+    background-color: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table tr th, table tr td {
+    border: 1px #eee solid;
+    padding: 5px;
+}
