@@ -29,7 +29,6 @@ class Router
         foreach($controllerClasses as $controller) {
             $this->registerFromController($controller);
         }
-//        $this->registerFromController($this->controller);
     }
 
     /**
@@ -89,10 +88,10 @@ class Router
 
         [$dynamicKey, $param] = $this->createDynamicData($uri);
 
-        $dynamicUris = preg_grep($dynamicKey, array_keys($this->routes["GET"]));
+        $dynamicUris = preg_grep($dynamicKey, array_keys($this->routes[$method] ?? []));
         if(count($dynamicUris) === 1) {
             $dynamicUri = array_values($dynamicUris)[0];
-            $call = $this->routes["GET"][$dynamicUri];
+            $call = $this->routes[$method][$dynamicUri];
             $this->callHandler($call, [$param]);
             return;
         }

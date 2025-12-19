@@ -1,0 +1,28 @@
+{% extends "index.twig" %}
+
+{% block title %}Users{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content%}
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Money</th>
+            <th>Has visa</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.money }}</td>
+                <td>{{ user.hasVisa ? '1' : '0' }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

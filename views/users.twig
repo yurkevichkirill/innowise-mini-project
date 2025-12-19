@@ -1,20 +1,9 @@
-{% extends "../index.html.twig" %}
+{% extends "index.twig" %}
 
-{% block head %}
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: center;
-    }
-
-    table tr th, table tr td {
-        border: 1px #eee solid;
-        padding: 5px;
-    }
-</style>
-{% endblock %}
 {% block title %}Users{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
 {% block content%}
 <table>
     <thead>

@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App;
 
 use App\Attributes\FromEnv;
+use App\Services\ConnectionServiceInterface;
+use App\Services\TestUserRepository;
 use App\Services\UserRepository;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserService;
@@ -16,26 +18,16 @@ use Psr\Container\NotFoundExceptionInterface;
 class Container implements ContainerInterface
 {
     private array $objects = [];
-//    private array $context = [];
+    private array $singletons = [];
 
     public function __construct() {
-        $this->objects[Services\AdultServiceInterface::class] = Services\AdultService::class;
-        $this->objects[Services\UnemploymentServiceInterface::class] = Services\UnemploymentService::class;
         $this->objects[UserServiceInterface::class] = UserService::class;
         $this->objects[UserRepositoryInterface::class] = UserRepository::class;
-
-//        $this->context = [
-//            RequireClass1::class => [
-//                Services\TravelAbroadService::class
-//            ],
-//            RequireClass2::class => [
-//                Services\TravelInnerService::class
-//            ]
-//        ];
+        $this->objects[ConnectionServiceInterface::class] = TestDB::class;
     }
     public function has(string $id): bool
     {
-        return isset($this->objects[$id]) || class_exists($id);
+        return isset($this->objects[$id]) || isset($this->singletons[$id]) || class_exists($id);
     }
 
     /**
@@ -45,6 +37,10 @@ class Container implements ContainerInterface
      */
     public function get(string $id): mixed
     {
+        if(isset($this->singletons[$id])) {
+            return $this->singletons[$id];
+        }
+
         return $this->prepareObject($id);
     }
 
@@ -89,5 +85,15 @@ class Container implements ContainerInterface
         }
 
         return new $class(...$args);
+    }
+
+    public function singleton(string $id, object $instance): void
+    {
+        $this->singletons[$id] = $instance;
+    }
+
+    public function bind(string $id, string $class): void
+    {
+        $this->objects[$id] = $class;
     }
 }

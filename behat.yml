@@ -1,0 +1,12 @@
+default:
+  suites:
+    default:
+      paths:
+        - features/
+      contexts:
+        - FeatureContext
+    e2e:
+      paths:
+        - features/e2e.feature
+      contexts:
+        - FeatureContextE2E

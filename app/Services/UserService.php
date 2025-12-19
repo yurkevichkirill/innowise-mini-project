@@ -22,4 +22,19 @@ readonly class UserService implements UserServiceInterface
     {
         return $this->repository->getUser($id);
     }
+
+    public function createUser(string $name, int $age, float $money, bool $has_visa): void
+    {
+        $this->repository->addUser($name, $age, $money, $has_visa);
+    }
+
+    public function updateUser(int $id, string $name, int $age, float $money, bool $has_visa): void
+    {
+        $this->repository->updateUser($id, $name, $age, $money, $has_visa);
+    }
+
+    public function deleteUser(int $id): void
+    {
+        $this->repository->deleteUser($id);
+    }
 }

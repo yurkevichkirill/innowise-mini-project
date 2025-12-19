@@ -6,9 +6,10 @@ namespace App;
 
 use AllowDynamicProperties;
 use App\Attributes\FromEnv;
+use App\Services\ConnectionServiceInterface;
 
 #[AllowDynamicProperties]
-class DB
+class DB implements ConnectionServiceInterface
 {
     public function __construct(
         #[FromEnv('DB_DSN')]

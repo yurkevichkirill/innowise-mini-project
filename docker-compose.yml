@@ -30,6 +30,7 @@ services:
       - XDEBUG_CONFIG=${XDEBUG_CONFIG}
       - XDEBUG_CLIENT_HOST=${XDEBUG_CLIENT_HOST}
       - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
+      - TEST_DB_DSN=${TEST_DB_DSN}
       - DB_DSN=${DB_DSN}
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}

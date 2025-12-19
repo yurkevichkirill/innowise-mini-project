@@ -17,19 +17,9 @@ class User
         private bool $has_visa
     ) {}
 
-    public function getAge(): int
+    public function getId(): int
     {
-        return $this->age;
-    }
-
-    public function isHasVisa(): bool
-    {
-        return $this->has_visa;
-    }
-
-    public function getMoney(): float
-    {
-        return $this->money;
+        return $this->id;
     }
 
     public function getName(): string
@@ -37,5 +27,19 @@ class User
         return $this->name;
     }
 
+    public function getAge(): int
+    {
+        return $this->age;
+    }
+
+    public function getMoney(): float
+    {
+        return $this->money;
+    }
+
+    public function isHasVisa(): bool
+    {
+        return $this->has_visa;
+    }
 
 }

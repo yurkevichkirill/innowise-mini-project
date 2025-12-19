@@ -10,13 +10,12 @@ use App\Services\UserService;
 use PDO;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
+use ReflectionException;
 
 class App
 {
-    static private DB $db;
-
     /**
-     * @throws \ReflectionException
+     * @throws ReflectionException
      */
     public function __construct(
         protected Container $container,
