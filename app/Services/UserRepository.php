@@ -85,4 +85,9 @@ readonly class UserRepository implements UserRepositoryInterface
 
         return $stmt->fetch() !== false;
     }
+
+    public function getLastId(): string
+    {
+        return $this->context->getConnection()->lastInsertId();
+    }
 }

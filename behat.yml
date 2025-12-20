@@ -2,9 +2,10 @@ default:
   suites:
     default:
       paths:
-        - features/
+        - features/user_repository.feature
       contexts:
         - FeatureContext
+
     e2e:
       paths:
         - features/e2e.feature

@@ -18,19 +18,22 @@ readonly class UserService implements UserServiceInterface
         return $this->repository->getUsers();
     }
 
-    public function getUser($id): User
+    public function getUser($id): ?User
     {
         return $this->repository->getUser($id);
     }
 
-    public function createUser(string $name, int $age, float $money, bool $has_visa): void
+    public function createUser(string $name, int $age, float $money, bool $has_visa): ?User
     {
         $this->repository->addUser($name, $age, $money, $has_visa);
+        $id = (int)$this->repository->getLastId();
+        return new User($id, $name, $age, $money, $has_visa);
     }
 
-    public function updateUser(int $id, string $name, int $age, float $money, bool $has_visa): void
+    public function updateUser(int $id, string $name, int $age, float $money, bool $has_visa): ?User
     {
         $this->repository->updateUser($id, $name, $age, $money, $has_visa);
+        return new User($id, $name, $age, $money, $has_visa);
     }
 
     public function deleteUser(int $id): void

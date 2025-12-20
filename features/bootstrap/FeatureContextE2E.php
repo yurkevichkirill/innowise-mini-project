@@ -78,6 +78,7 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         $client = new Client([
             'base_uri' => 'http://nginx',
             'timeout' => 2.0,
+            'http_errors' => false,
         ]);
 
         $this->lastResponse = $client
@@ -114,16 +115,17 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         $client = new Client([
             'base_uri' => 'http://nginx',
             'timeout' => 2.0,
+            'http_errors' => false
         ]);
 
-        $client->request($method, $uri, [
+        $this->lastResponse = $client->request($method, $uri, [
             'json' => [
                 'name' => $name,
                 'age' => $age,
                 'money' => $money,
                 'has_visa' => $has_visa
             ]
-        ]);
+        ])->getBody()->getContents();
     }
 
     #[Then('db should have :arg1 user')]
@@ -156,5 +158,23 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         \PHPUnit\Framework\assertEquals($age, $resultAge);
         \PHPUnit\Framework\assertEquals($money, $resultMoney);
         \PHPUnit\Framework\assertEquals($has_visa, $resultVisa);
+    }
+
+    #[Then('response should contain name :arg1 age :arg3 money :arg4 :arg2 visa')]
+    public function responseShouldContainNameAgeMoneyVisa($name, $age, $money, $visaStr): void
+    {
+        $has_visa = $visaStr === 'with';
+        $testData = [
+            'user' => [
+                'id' => 1,
+                'name' => (string)$name,
+                'age' => (int)$age,
+                'money' => (float)$money,
+                'has_visa' => $has_visa
+            ]
+        ];
+        $jsonTestData = json_encode($testData);
+
+        \PHPUnit\Framework\assertEquals($jsonTestData, $this->lastResponse);
     }
 }

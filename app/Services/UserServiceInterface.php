@@ -9,8 +9,8 @@ use App\Models\User;
 interface UserServiceInterface
 {
     public function getUsers(): array;
-    public function getUser(int $id): User;
-    public function createUser(string $name, int $age, float $money, bool $has_visa): void;
-    public function updateUser(int $id, string $name, int $age, float $money, bool $has_visa): void;
+    public function getUser(int $id): ?User;
+    public function createUser(string $name, int $age, float $money, bool $has_visa): ?User;
+    public function updateUser(int $id, string $name, int $age, float $money, bool $has_visa): ?User;
     public function deleteUser(int $id): void;
 }

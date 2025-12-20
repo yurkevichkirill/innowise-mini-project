@@ -64,7 +64,12 @@ readonly class UserController
         $age = (int)$data['age'];
         $money = (float)$data['money'];
         $has_visa = $data['has_visa'];
-        $this->userService->createUser($name, $age, $money, $has_visa);
+        try {
+            $user = $this->userService->createUser($name, $age, $money, $has_visa);
+            $this->json(['user' => $user->toArray()], 201);
+        } catch(\Exception $e) {
+            $this->json(['error' => $e->getMessage()], 404);
+        }
     }
 
     #[Patch("/users/{id}")]
@@ -77,13 +82,30 @@ readonly class UserController
         $age = (int)$data['age'];
         $money = (float)$data['money'];
         $has_visa = $data['has_visa'];
-        $this->userService->updateUser($id, $name, $age, $money, $has_visa);
+        try{
+            $user = $this->userService->updateUser($id, $name, $age, $money, $has_visa);
+            $this->json(['user' => $user->toArray()], 200);
+        } catch (\Exception $e) {
+            $this->json(['error' => $e->getMessage()], 404);
+        }
     }
 
     #[Delete("/users/{id}")]
     public function remove($id): void
     {
         $id = (int)$id;
-        $this->userService->deleteUser($id);
+        try {
+            $this->userService->deleteUser($id);
+            $this->json([], 204);
+        } catch (\Exception $e) {
+            $this->json(['error' => $e->getMessage()], 404);
+        }
+    }
+
+    private function json(array $data, int $code): void
+    {
+        http_response_code($code);
+        header('Content-Type: application/json');
+        echo json_encode($data);
     }
 }

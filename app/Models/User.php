@@ -42,4 +42,15 @@ class User
         return $this->has_visa;
     }
 
+    public function toArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'age' => $this->age,
+            'money' => $this->money,
+            'has_visa' => $this->has_visa
+        ];
+    }
+
 }

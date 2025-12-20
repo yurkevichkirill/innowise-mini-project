@@ -16,13 +16,17 @@
         </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.name }}</td>
-                <td>{{ user.age }}</td>
-                <td>{{ user.money }}</td>
-                <td>{{ user.hasVisa ? '1' : '0' }}</td>
-            </tr>
+            {% if user is null %}
+                <tr><td colspan="5">No User Found</td></tr>
+            {% else %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.age }}</td>
+                    <td>{{ user.money }}</td>
+                    <td>{{ user.hasVisa ? '1' : '0' }}</td>
+                </tr>
+            {% endif %}
         </tbody>
     </table>
 {% endblock %}

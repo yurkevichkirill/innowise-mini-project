@@ -26,6 +26,8 @@ class FeatureContext implements Context
     {
         $this->db = new TestDB(getenv('TEST_DB_DSN'));
         $pdo = $this->db->getConnection();
+
+        $pdo->exec('DROP TABLE IF EXISTS users');
         $pdo->exec('CREATE TABLE users (
             id INTEGER PRIMARY KEY,
             name VARCHAR(100) NOT NULL,

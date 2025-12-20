@@ -5,14 +5,16 @@ declare(strict_types=1);
 namespace Unit;
 
 use App\Models\User;
-use App\Services\TestUserRepository;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserService;
+use App\Services\UserServiceInterface;
 use PHPUnit\Framework\TestCase;
 use function PHPUnit\Framework\assertEquals;
 
 class UserServiceTest extends TestCase
 {
+    private ?UserRepositoryInterface $repo = null;
+    private ?UserServiceInterface $service = null;
     protected function setUp(): void
     {
         $this->repo = $this->createMock(UserRepositoryInterface::class);
@@ -63,11 +65,27 @@ class UserServiceTest extends TestCase
     public function testEditUserById(): void
     {
         $testValues = [12, 'Grisha', 22, 445, true];
+        $expectedUser = new User(...$testValues);
 
         $this->repo->expects($this->once())
             ->method('updateUser')
             ->with(...$testValues);
 
-        $this->service->updateUser(...$testValues);
+        $resultUser = $this->service->updateUser(...$testValues);
+
+        $this->assertEquals($expectedUser, $resultUser);
+    }
+
+    public function testCreateUser(): void
+    {
+        $testValues = ['Vasya', 45, 4444, false];
+        $expectedUser = new User(0, ...$testValues);
+        $this->repo->expects($this->once())
+            ->method('addUser')
+            ->with(...$testValues);
+
+        $resultUser = $this->service->createUser(...$testValues);
+
+        $this->assertEquals($expectedUser, $resultUser);
     }
 }

@@ -14,4 +14,5 @@ interface UserRepositoryInterface
     public function updateUser(int $id, string $name, int $age, float $money, bool $has_visa): void;
     public function deleteUser($id): void;
     public function existUser($id): bool;
+    public function getLastId(): string;
 }
