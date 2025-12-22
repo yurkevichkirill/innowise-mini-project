@@ -6,19 +6,17 @@ use App\App;
 use App\Container;
 use App\Controllers\User\UserController;
 use App\DB;
+use App\Logger;
 use App\Router;
 use App\Services\ConnectionServiceInterface;
 use App\Services\UserRepository;
 use App\Services\UserService;
 use App\TestDB;
+use Psr\Log\LoggerInterface;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
 $container = new Container();
-//if(getenv('TEST_MODE') === 'yes') {
-//    $container->bind(ConnectionServiceInterface::class, TestDB::class);
-//    putenv('TEST_MODE=no');
-//}
 $router = new Router($container);
 
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../views');
@@ -27,6 +25,9 @@ $twig = new \Twig\Environment($loader, [
 ]);
 
 $container->singleton(\Twig\Environment::class, $twig);
+
+$logger = new Logger();
+$container->singleton(LoggerInterface::class, $logger);
 
 try {
     new App(

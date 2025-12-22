@@ -1,0 +1,8 @@
+[2025-12-22 18:32:47] [info] Got all users
+[2025-12-22 18:32:47] [info] Got user 1
+[2025-12-22 18:32:47] [info] Got user 1
+[2025-12-22 18:32:48] [info] User Valik created
+[2025-12-22 18:32:48] [info] User 1 updated
+[2025-12-22 18:32:48] [error] Failed to update user 1 with error Object not found
+[2025-12-22 18:32:48] [info] User 1 deleted
+[2025-12-22 18:32:48] [error] Failed to delete user 1 with error Object not found

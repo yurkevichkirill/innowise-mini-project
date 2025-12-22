@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Container;
+use App\Logger;
 use App\Router;
 use App\Services\ConnectionServiceInterface;
 use App\TestDB;
@@ -11,6 +12,7 @@ use Behat\Step\Given;
 use Behat\Step\When;
 use Behat\Step\Then;
 use GuzzleHttp\Client;
+use Psr\Log\LoggerInterface;
 use Twig\Environment;
 
 class FeatureContextE2E implements \Behat\Behat\Context\Context
@@ -34,6 +36,9 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
             'cache' => false
         ]);
         $this->container->singleton(\Twig\Environment::class, $twig);
+
+        $logger = new Logger();
+        $this->container->singleton(LoggerInterface::class, $logger);
 
         $this->router = new Router($this->container);
         $this->router->initializeControllers();

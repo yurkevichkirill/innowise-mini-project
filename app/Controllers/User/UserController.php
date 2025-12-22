@@ -10,6 +10,7 @@ use App\Attributes\Patch;
 use App\Attributes\Post;
 use App\Services\UserServiceInterface;
 use JetBrains\PhpStorm\NoReturn;
+use Psr\Log\LoggerInterface;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -19,7 +20,8 @@ readonly class UserController
 {
     public function __construct(
         private UserServiceInterface $userService,
-        private Environment $twig
+        private Environment $twig,
+        private LoggerInterface $logger
     ) {}
 
     /**
@@ -31,6 +33,7 @@ readonly class UserController
     public function index(): void
     {
         echo $this->twig->render('index.twig');
+        $this->logger->info("Got start page");
     }
 
     /**
@@ -42,6 +45,7 @@ readonly class UserController
     public function showAllUsers(): void
     {
         echo $this->twig->render('users.twig', ['users' => $this->userService->getUsers()]);
+        $this->logger->info("Got all users");
     }
 
     /**
@@ -53,6 +57,7 @@ readonly class UserController
     public function showUser($id): void
     {
         echo $this->twig->render('user.twig', ['user' => $this->userService->getUser($id)]);
+        $this->logger->info("Got user {id}", ['id' => $id]);
     }
 
     #[Post("/users")]
@@ -67,8 +72,10 @@ readonly class UserController
         try {
             $user = $this->userService->createUser($name, $age, $money, $has_visa);
             $this->json(['user' => $user->toArray()], 201);
+            $this->logger->info("User {name} created", ['name' => $name]);
         } catch(\Exception $e) {
             $this->json(['error' => $e->getMessage()], 404);
+            $this->logger->error("Failed to create user {name} with error {e}", ['name' => $name, 'e', $e->getMessage()]);
         }
     }
 
@@ -85,8 +92,10 @@ readonly class UserController
         try{
             $user = $this->userService->updateUser($id, $name, $age, $money, $has_visa);
             $this->json(['user' => $user->toArray()], 200);
+            $this->logger->info("User {id} updated", ['id' => $id]);
         } catch (\Exception $e) {
             $this->json(['error' => $e->getMessage()], 404);
+            $this->logger->error("Failed to update user {id} with error {e}", ['id' => $id, 'e' => $e->getMessage()]);
         }
     }
 
@@ -97,8 +106,10 @@ readonly class UserController
         try {
             $this->userService->deleteUser($id);
             $this->json([], 204);
+            $this->logger->info('User {id} deleted', ['id' => $id]);
         } catch (\Exception $e) {
             $this->json(['error' => $e->getMessage()], 404);
+            $this->logger->error('Failed to delete user {id} with error {e}', ['id' => $id, 'e' => $e->getMessage()]);
         }
     }
 

@@ -8,6 +8,7 @@ use App\Controllers\User\UserController;
 use App\Models\User;
 use App\Services\UserServiceInterface;
 use PHPUnit\Framework\TestCase;
+use Psr\Log\LoggerInterface;
 use Twig\Environment;
 
 class UserControllerTest extends TestCase
@@ -18,6 +19,7 @@ class UserControllerTest extends TestCase
     {
         $this->service = $this->createMock(UserServiceInterface::class);
         $this->twig = $this->createMock(Environment::class);
+        $this->logger = $this->createMock(LoggerInterface::class);
     }
     public function testShowAllUsersRendersTemplate(): void
     {
@@ -34,7 +36,7 @@ class UserControllerTest extends TestCase
             ->with('users.twig', ['users' => $this->service->getUsers()])
             ->willReturn('HTML');
 
-        $controller = new UserController($this->service, $this->twig);
+        $controller = new UserController($this->service, $this->twig, $this->logger);
 
         ob_start();
         $controller->showAllUsers();
@@ -51,7 +53,7 @@ class UserControllerTest extends TestCase
             ->willReturn('HTML');
 
         $service = $this->createMock(UserServiceInterface::class);
-        $controller = new UserController($service, $this->twig);
+        $controller = new UserController($service, $this->twig, $this->logger);
 
         ob_start();
         $controller->index();
@@ -74,7 +76,7 @@ class UserControllerTest extends TestCase
             ->with('user.twig', ['user' => $this->service->getUser($testId)])
             ->willReturn('HTML');
 
-        $controller = new UserController($this->service, $this->twig);
+        $controller = new UserController($this->service, $this->twig, $this->logger);
 
         ob_start();
         $controller->showUser($testId);
