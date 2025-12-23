@@ -1,8 +1,110 @@
-[2025-12-22 18:32:47] [info] Got all users
-[2025-12-22 18:32:47] [info] Got user 1
-[2025-12-22 18:32:47] [info] Got user 1
-[2025-12-22 18:32:48] [info] User Valik created
-[2025-12-22 18:32:48] [info] User 1 updated
-[2025-12-22 18:32:48] [error] Failed to update user 1 with error Object not found
-[2025-12-22 18:32:48] [info] User 1 deleted
-[2025-12-22 18:32:48] [error] Failed to delete user 1 with error Object not found
+[2025-12-23 20:48:35] [info] Controller: GET /users - processing request
+[2025-12-23 20:48:35] [info] Service: Fetching all users
+[2025-12-23 20:48:35] [debug] Fetching all users from db
+[2025-12-23 20:48:35] [debug] Fetched 2 users from db
+[2025-12-23 20:48:35] [info] Service: Fetched 2 users
+[2025-12-23 20:48:35] [info] Controller: GET /users - 200
+[2025-12-23 20:48:35] [info] Controller: GET /users/1 - processing request
+[2025-12-23 20:48:35] [info] Service: Fetching user 1
+[2025-12-23 20:48:35] [debug] Fetching user 1 from db
+[2025-12-23 20:48:35] [debug] User {id} fetched from db
+[2025-12-23 20:48:35] [info] Service: Fetched user 1
+[2025-12-23 20:48:35] [info] Controller: GET /users/1 - 200
+[2025-12-23 20:48:35] [info] Controller: GET /users/1 - processing request
+[2025-12-23 20:48:35] [info] Service: Fetching user 1
+[2025-12-23 20:48:35] [debug] Fetching user 1 from db
+[2025-12-23 20:48:35] [warning] User 1 not found in db
+[2025-12-23 20:48:35] [info] Service: Fetched user 1
+[2025-12-23 20:48:35] [info] Controller: GET /users/1 - 200
+[2025-12-23 20:48:35] [info] Controller: POST /users - processing request
+[2025-12-23 20:48:35] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-23 20:48:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-23 20:48:35] [debug] User 1 added to db
+[2025-12-23 20:48:35] [info] Service: Created user 1
+[2025-12-23 20:48:35] [info] Controller: POST /users - 201
+[2025-12-23 20:48:35] [info] Controller: PATCH /users/1 - processing request
+[2025-12-23 20:48:35] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-23 20:48:35] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-23 20:48:35] [debug] User 1 updated in db
+[2025-12-23 20:48:35] [info] Service: Updated user 1
+[2025-12-23 20:48:35] [info] Controller: PATCH /users/{id} - 200
+[2025-12-23 20:48:35] [info] Controller: PATCH /users/1 - processing request
+[2025-12-23 20:48:35] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-23 20:48:35] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-23 20:48:35] [warning] User 1 not found in db
+[2025-12-23 20:48:35] [info] Controller: PATCH /users/{id} - 404
+[2025-12-23 20:48:35] [info] Controller: DELETE /users/1 - processing request
+[2025-12-23 20:48:35] [info] Service: Deleting user 1
+[2025-12-23 20:48:35] [debug] Deleting user 1 from db
+[2025-12-23 20:48:35] [debug] Deleted user 1 from db
+[2025-12-23 20:48:35] [info] Service Deleted user 1
+[2025-12-23 20:48:35] [info] Controller: DELETE /users/{id} - 204
+[2025-12-23 20:48:36] [info] Controller: DELETE /users/1 - processing request
+[2025-12-23 20:48:36] [info] Service: Deleting user 1
+[2025-12-23 20:48:36] [debug] Deleting user 1 from db
+[2025-12-23 20:48:36] [warning] User 1 not found in db
+[2025-12-23 20:48:36] [info] Controller: DELETE /users/{id} - 404
+[2025-12-23 20:54:51] [debug] Fetching all users from db
+[2025-12-23 20:54:51] [debug] Fetched 0 users from db
+[2025-12-23 20:54:51] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-23 20:54:51] [debug] User 1 added to db
+[2025-12-23 20:54:51] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-23 20:54:51] [debug] User 2 added to db
+[2025-12-23 20:54:51] [debug] Fetching all users from db
+[2025-12-23 20:54:51] [debug] Fetched 2 users from db
+[2025-12-23 20:54:51] [debug] Fetching user 1 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching user 1 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching user 1 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching all users from db
+[2025-12-23 20:54:51] [debug] Fetched 0 users from db
+[2025-12-23 20:54:51] [debug] Fetching user 1 from db
+[2025-12-23 20:54:51] [warning] User 1 not found in db
+[2025-12-23 20:54:51] [debug] Fetching all users from db
+[2025-12-23 20:54:51] [debug] Fetched 0 users from db
+[2025-12-23 20:54:51] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-23 20:54:51] [debug] User 1 added to db
+[2025-12-23 20:54:51] [debug] Fetching user 1 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching user 1 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching user 1 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching all users from db
+[2025-12-23 20:54:51] [debug] Fetched 0 users from db
+[2025-12-23 20:54:51] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-23 20:54:51] [debug] User 1 added to db
+[2025-12-23 20:54:51] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-23 20:54:51] [debug] User 2 added to db
+[2025-12-23 20:54:51] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-23 20:54:51] [debug] User 2 updated in db
+[2025-12-23 20:54:51] [debug] Fetching user 2 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching user 2 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching user 2 from db
+[2025-12-23 20:54:51] [debug] User {id} fetched from db
+[2025-12-23 20:54:51] [debug] Fetching all users from db
+[2025-12-23 20:54:51] [debug] Fetched 0 users from db
+[2025-12-23 20:54:52] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-23 20:54:52] [warning] User 2 not found in db
+[2025-12-23 20:54:52] [debug] Fetching all users from db
+[2025-12-23 20:54:52] [debug] Fetched 0 users from db
+[2025-12-23 20:54:52] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-23 20:54:52] [debug] User 1 added to db
+[2025-12-23 20:54:52] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-23 20:54:52] [debug] User 2 added to db
+[2025-12-23 20:54:52] [debug] Deleting user 2 from db
+[2025-12-23 20:54:52] [debug] Deleted user 2 from db
+[2025-12-23 20:54:52] [debug] Fetching user 2 from db
+[2025-12-23 20:54:52] [warning] User 2 not found in db
+[2025-12-23 20:54:52] [debug] Fetching all users from db
+[2025-12-23 20:54:52] [debug] Fetched 0 users from db
+[2025-12-23 20:54:52] [debug] Deleting user 2 from db
+[2025-12-23 20:54:52] [warning] User 2 not found in db
+[2025-12-23 20:54:52] [debug] Fetching all users from db
+[2025-12-23 20:54:52] [debug] Fetched 0 users from db
+[2025-12-23 20:54:52] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-23 20:54:52] [debug] User 1 added to db

@@ -32,8 +32,9 @@ readonly class UserController
     #[Get("/")]
     public function index(): void
     {
+        $this->logger->info("Controller: GET / - processing request");
         echo $this->twig->render('index.twig');
-        $this->logger->info("Got start page");
+        $this->logger->info("Controller: GET / - 200");
     }
 
     /**
@@ -44,8 +45,9 @@ readonly class UserController
     #[Get("/users")]
     public function showAllUsers(): void
     {
+        $this->logger->info("Controller: GET /users - processing request");
         echo $this->twig->render('users.twig', ['users' => $this->userService->getUsers()]);
-        $this->logger->info("Got all users");
+        $this->logger->info("Controller: GET /users - 200");
     }
 
     /**
@@ -56,13 +58,15 @@ readonly class UserController
     #[Get("/users/{id}")]
     public function showUser($id): void
     {
+        $this->logger->info("Controller: GET /users/{id} - processing request", ['id' => $id]);
         echo $this->twig->render('user.twig', ['user' => $this->userService->getUser($id)]);
-        $this->logger->info("Got user {id}", ['id' => $id]);
+        $this->logger->info("Controller: GET /users/{id} - 200", ['id' => $id]);
     }
 
     #[Post("/users")]
     public function store(): void
     {
+        $this->logger->info("Controller: POST /users - processing request");
         $input = file_get_contents('php://input');
         $data = json_decode($input, true);
         $name = $data['name'];
@@ -71,17 +75,20 @@ readonly class UserController
         $has_visa = $data['has_visa'];
         try {
             $user = $this->userService->createUser($name, $age, $money, $has_visa);
-            $this->json(['user' => $user->toArray()], 201);
-            $this->logger->info("User {name} created", ['name' => $name]);
+            $code = 201;
+            $this->json(['user' => $user->toArray()], $code);
         } catch(\Exception $e) {
-            $this->json(['error' => $e->getMessage()], 404);
-            $this->logger->error("Failed to create user {name} with error {e}", ['name' => $name, 'e', $e->getMessage()]);
+            $code = 404;
+            $this->json(['error' => $e->getMessage()], $code);
+        } finally {
+            $this->logger->info("Controller: POST /users - {code}", ['code' => $code]);
         }
     }
 
     #[Patch("/users/{id}")]
     public function update($id): void
     {
+        $this->logger->info("Controller: PATCH /users/{id} - processing request", ['id' => $id]);
         $id = (int)$id;
         $input = file_get_contents('php://input');
         $data = json_decode($input, true);
@@ -91,25 +98,30 @@ readonly class UserController
         $has_visa = $data['has_visa'];
         try{
             $user = $this->userService->updateUser($id, $name, $age, $money, $has_visa);
-            $this->json(['user' => $user->toArray()], 200);
-            $this->logger->info("User {id} updated", ['id' => $id]);
+            $code = 200;
+            $this->json(['user' => $user->toArray()], $code);
         } catch (\Exception $e) {
-            $this->json(['error' => $e->getMessage()], 404);
-            $this->logger->error("Failed to update user {id} with error {e}", ['id' => $id, 'e' => $e->getMessage()]);
+            $code = 404;
+            $this->json(['error' => $e->getMessage()], $code);
+        } finally {
+            $this->logger->info("Controller: PATCH /users/{id} - {code}", ['code' => $code]);
         }
     }
 
     #[Delete("/users/{id}")]
     public function remove($id): void
     {
+        $this->logger->info("Controller: DELETE /users/{id} - processing request", ['id' => $id]);
         $id = (int)$id;
         try {
             $this->userService->deleteUser($id);
-            $this->json([], 204);
-            $this->logger->info('User {id} deleted', ['id' => $id]);
+            $code = 204;
+            $this->json([], $code);
         } catch (\Exception $e) {
-            $this->json(['error' => $e->getMessage()], 404);
-            $this->logger->error('Failed to delete user {id} with error {e}', ['id' => $id, 'e' => $e->getMessage()]);
+            $code = 404;
+            $this->json(['error' => $e->getMessage()], $code);
+        } finally {
+            $this->logger->info("Controller: DELETE /users/{id} - {code}", ['code' => $code]);
         }
     }
 

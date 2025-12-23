@@ -6,6 +6,7 @@ use App\TestDB;
 use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
+use Psr\Log\LoggerInterface;
 
 /**
  * Defines application features from the specific context.
@@ -14,6 +15,7 @@ use Behat\Gherkin\Node\TableNode;
 class FeatureContext implements Context
 {
     private ?TestDB $db = null;
+    private ?LoggerInterface $logger = null;
     private ?UserRepository $repo = null;
     private ?User $lastUser = null;
     private ?Throwable $lastException = null;
@@ -37,7 +39,9 @@ class FeatureContext implements Context
             )'
         );
 
-        $this->repo = new UserRepository($this->db);
+        $this->logger = new \App\Logger();
+
+        $this->repo = new UserRepository($this->db, $this->logger);
     }
     /**
      * @Given /^db is empty$/
