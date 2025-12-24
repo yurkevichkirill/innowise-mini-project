@@ -1,12 +1,15 @@
 <?php
 
+use App\Logger;
 use App\Models\User;
 use App\Services\UserRepository;
 use App\TestDB;
 use Behat\Behat\Context\Context;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
-use Psr\Log\LoggerInterface;
+use function PHPUnit\Framework\assertEmpty;
+use function PHPUnit\Framework\assertEquals;
+use function PHPUnit\Framework\assertNotNull;
+use function PHPUnit\Framework\assertNull;
+use function PHPUnit\Framework\assertTrue;
 
 /**
  * Defines application features from the specific context.
@@ -15,7 +18,6 @@ use Psr\Log\LoggerInterface;
 class FeatureContext implements Context
 {
     private ?TestDB $db = null;
-    private ?LoggerInterface $logger = null;
     private ?UserRepository $repo = null;
     private ?User $lastUser = null;
     private ?Throwable $lastException = null;
@@ -39,9 +41,9 @@ class FeatureContext implements Context
             )'
         );
 
-        $this->logger = new \App\Logger();
+        $logger = new Logger();
 
-        $this->repo = new UserRepository($this->db, $this->logger);
+        $this->repo = new UserRepository($this->db, $logger);
     }
     /**
      * @Given /^db is empty$/
@@ -51,7 +53,7 @@ class FeatureContext implements Context
         if(is_null($this->db)){
             $this->setUp();
         }
-        \PHPUnit\Framework\assertEmpty($this->repo->getUsers());
+        assertEmpty($this->repo->getUsers());
     }
 
     /**
@@ -80,14 +82,14 @@ class FeatureContext implements Context
     {
         $has_visa = $visaStr === 'with';
 
-        \PHPUnit\Framework\assertEquals($name, $this->repo->getUser($id)->getName());
-        \PHPUnit\Framework\assertEquals($age, $this->repo->getUser($id)->getAge());
-        \PHPUnit\Framework\assertEquals($money, $this->repo->getUser($id)->getMoney());
-        \PHPUnit\Framework\assertTrue($has_visa);
+        assertEquals($name, $this->repo->getUser($id)->getName());
+        assertEquals($age, $this->repo->getUser($id)->getAge());
+        assertEquals($money, $this->repo->getUser($id)->getMoney());
+        assertTrue($has_visa);
     }
 
     /**
-     * @Given /^edit name to "([^"]*)" age to (\d+) money to (\d+) \'([^\']*)\' visa of user (\d+)$/
+     * @Given /^edit name to "([^"]*)" age to (\d+) money to (\d+) "([^"]*)" visa of user (\d+)$/
      */
     public function editNameToAgeToMoneyToVisaOfUser(string $name, int $age, float $money, string $visaStr, int $id): void
     {
@@ -125,7 +127,7 @@ class FeatureContext implements Context
      */
     public function getUsersFromDb(int $count): void
     {
-        \PHPUnit\Framework\assertEquals($count, count($this->repo->getUsers()));
+        assertEquals($count, count($this->repo->getUsers()));
     }
 
     /**
@@ -133,7 +135,7 @@ class FeatureContext implements Context
      */
     public function userShouldNotExist($id): void
     {
-        \PHPUnit\Framework\assertNull($this->repo->getUser($id));
+        assertNull($this->repo->getUser($id));
     }
 
     /**
@@ -141,7 +143,7 @@ class FeatureContext implements Context
      */
     public function userShouldExist($id): void
     {
-        \PHPUnit\Framework\assertTrue($this->repo->existUser($id));
+        assertTrue($this->repo->existUser($id));
     }
 
     /**
@@ -158,7 +160,7 @@ class FeatureContext implements Context
      */
     public function getException(): void
     {
-        \PHPUnit\Framework\assertNotNull($this->lastException);
+        assertNotNull($this->lastException);
     }
 
     /**
@@ -166,6 +168,6 @@ class FeatureContext implements Context
      */
     public function shouldGetLastUserNull(): void
     {
-        \PHPUnit\Framework\assertNull($this->lastUser);
+        assertNull($this->lastUser);
     }
 }

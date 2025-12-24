@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace App;
 
-use App\Controllers\User\UserController;
-use App\Services\UserRepository;
-use App\Services\UserService;
-use PDO;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use ReflectionException;

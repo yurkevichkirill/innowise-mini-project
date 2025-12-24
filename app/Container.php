@@ -6,7 +6,6 @@ namespace App;
 
 use App\Attributes\FromEnv;
 use App\Services\ConnectionServiceInterface;
-use App\Services\TestUserRepository;
 use App\Services\UserRepository;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserService;
@@ -14,6 +13,8 @@ use App\Services\UserServiceInterface;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
+use ReflectionClass;
+use ReflectionException;
 
 class Container implements ContainerInterface
 {
@@ -23,7 +24,7 @@ class Container implements ContainerInterface
     public function __construct() {
         $this->objects[UserServiceInterface::class] = UserService::class;
         $this->objects[UserRepositoryInterface::class] = UserRepository::class;
-        $this->objects[ConnectionServiceInterface::class] = TestDB::class;
+        $this->objects[ConnectionServiceInterface::class] = DB::class;
     }
     public function has(string $id): bool
     {
@@ -32,7 +33,7 @@ class Container implements ContainerInterface
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws \ReflectionException
+     * @throws ReflectionException
      * @throws NotFoundExceptionInterface
      */
     public function get(string $id): mixed
@@ -46,16 +47,16 @@ class Container implements ContainerInterface
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws \ReflectionException
+     * @throws ReflectionException
      * @throws NotFoundExceptionInterface
      */
     public function prepareObject(string $dependency): object
     {
-        $dependencyReflector = new \ReflectionClass($dependency);
+        $dependencyReflector = new ReflectionClass($dependency);
 
         if ($dependencyReflector->isInterface()) {
             $class = $this->objects[$dependency];
-            $classReflector = new \ReflectionClass($class);
+            $classReflector = new ReflectionClass($class);
         } else {
             $class = $dependency;
             $classReflector = $dependencyReflector;

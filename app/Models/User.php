@@ -4,17 +4,14 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use App\Container;
-use App\Router;
-
-class User
+readonly class User
 {
     public function __construct(
-        private int $id,
+        private int    $id,
         private string $name,
-        private int $age,
-        private float $money,
-        private bool $has_visa
+        private int    $age,
+        private float  $money,
+        private bool   $has_visa
     ) {}
 
     public function getId(): int

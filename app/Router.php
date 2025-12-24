@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace App;
 
 use App\Attributes\Route;
-use App\Controllers\User\UserController;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
+use ReflectionAttribute;
+use ReflectionClass;
 use ReflectionException;
 
 class Router
@@ -15,7 +16,7 @@ class Router
     public array $routes = [];
 
     public function __construct(
-        private Container $container
+        private readonly Container $container
     ) {}
 
     /**
@@ -36,9 +37,9 @@ class Router
      */
     public function registerFromController($controller): void
     {
-        $reflectionController = new \ReflectionClass($controller);
+        $reflectionController = new ReflectionClass($controller);
         foreach($reflectionController->getMethods() as $method) {
-            $attributes = $method->getAttributes(Route::class, \ReflectionAttribute::IS_INSTANCEOF);
+            $attributes = $method->getAttributes(Route::class, ReflectionAttribute::IS_INSTANCEOF);
             foreach($attributes as $attribute) {
                 $route = $attribute->newInstance();
 
@@ -73,7 +74,7 @@ class Router
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws NotFoundExceptionInterface
+     * @throws NotFoundExceptionInterface|ReflectionException
      */
     public function handler($uri, $method): void
     {
@@ -125,7 +126,7 @@ class Router
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws NotFoundExceptionInterface
+     * @throws NotFoundExceptionInterface|ReflectionException
      */
     private function callHandler($handler, $params): void
     {

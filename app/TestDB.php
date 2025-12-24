@@ -7,6 +7,7 @@ namespace App;
 use AllowDynamicProperties;
 use App\Attributes\FromEnv;
 use App\Services\ConnectionServiceInterface;
+use PDO;
 
 #[AllowDynamicProperties]
 class TestDB implements ConnectionServiceInterface
@@ -16,10 +17,10 @@ class TestDB implements ConnectionServiceInterface
         string $dsn
     )
     {
-        $this->pdo = new \PDO($dsn);
+        $this->pdo = new PDO($dsn);
     }
 
-    public function getConnection(): \PDO
+    public function getConnection(): PDO
     {
         return $this->pdo;
     }

@@ -20,12 +20,12 @@ Feature:
   Scenario: Edit concrete user in db
     Given db is empty
     When initialize default values
-    And edit name to "Sergey" age to 33 money to 6600 'with' visa of user 2
+    And edit name to "Sergey" age to 33 money to 6600 "with" visa of user 2
     Then user with id 2 should be "Sergey" with age 33 money 6600 "with" visa
 
   Scenario: edit no-existing user in db
     Given db is empty
-    When edit name to "Sergey" age to 33 money to 6600 'with' visa of user 2
+    When edit name to "Sergey" age to 33 money to 6600 "with" visa of user 2
     Then get exception
 
   Scenario: Delete concrete user in db

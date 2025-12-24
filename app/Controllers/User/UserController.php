@@ -9,7 +9,7 @@ use App\Attributes\Get;
 use App\Attributes\Patch;
 use App\Attributes\Post;
 use App\Services\UserServiceInterface;
-use JetBrains\PhpStorm\NoReturn;
+use Exception;
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
 use Twig\Error\LoaderError;
@@ -77,7 +77,7 @@ readonly class UserController
             $user = $this->userService->createUser($name, $age, $money, $has_visa);
             $code = 201;
             $this->json(['user' => $user->toArray()], $code);
-        } catch(\Exception $e) {
+        } catch(Exception $e) {
             $code = 404;
             $this->json(['error' => $e->getMessage()], $code);
         } finally {
@@ -100,7 +100,7 @@ readonly class UserController
             $user = $this->userService->updateUser($id, $name, $age, $money, $has_visa);
             $code = 200;
             $this->json(['user' => $user->toArray()], $code);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $code = 404;
             $this->json(['error' => $e->getMessage()], $code);
         } finally {
@@ -117,7 +117,7 @@ readonly class UserController
             $this->userService->deleteUser($id);
             $code = 204;
             $this->json([], $code);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $code = 404;
             $this->json(['error' => $e->getMessage()], $code);
         } finally {

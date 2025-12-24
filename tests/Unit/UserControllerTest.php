@@ -7,20 +7,32 @@ namespace Unit;
 use App\Controllers\User\UserController;
 use App\Models\User;
 use App\Services\UserServiceInterface;
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
+#[AllowMockObjectsWithoutExpectations]
 class UserControllerTest extends TestCase
 {
     private ?UserServiceInterface $service = null;
     private ?Environment $twig = null;
+    private ?LoggerInterface $logger = null;
     protected function setUp(): void
     {
         $this->service = $this->createMock(UserServiceInterface::class);
         $this->twig = $this->createMock(Environment::class);
         $this->logger = $this->createMock(LoggerInterface::class);
     }
+
+    /**
+     * @throws SyntaxError
+     * @throws RuntimeError
+     * @throws LoaderError
+     */
     public function testShowAllUsersRendersTemplate(): void
     {
         $values = [
@@ -45,6 +57,11 @@ class UserControllerTest extends TestCase
         $this->assertSame('HTML', $result);
     }
 
+    /**
+     * @throws SyntaxError
+     * @throws RuntimeError
+     * @throws LoaderError
+     */
     public function testIndexRendersTemplate(): void
     {
         $this->twig->expects($this->once())
@@ -62,6 +79,11 @@ class UserControllerTest extends TestCase
         $this->assertSame('HTML', $result);
     }
 
+    /**
+     * @throws RuntimeError
+     * @throws SyntaxError
+     * @throws LoaderError
+     */
     public function testShowConcreteUserRendersTemplate(): void
     {
         $testId = 1;

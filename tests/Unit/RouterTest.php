@@ -6,16 +6,19 @@ namespace Unit;
 
 use App\Container;
 use App\Controllers\User\UserController;
-use App\Models\User;
 use App\Router;
-use App\Services\UserService;
-use App\Services\UserServiceInterface;
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\TestCase;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use ReflectionException;
-use Twig\Environment;
 
+#[AllowMockObjectsWithoutExpectations]
 class RouterTest extends TestCase
 {
+    /**
+     * @throws ReflectionException
+     */
     public function testRegisterRoutes(): void
     {
         $container = new Container();
@@ -31,6 +34,11 @@ class RouterTest extends TestCase
         $this->assertArrayHasKey('/users', $router->routes['POST']);
     }
 
+    /**
+     * @throws NotFoundExceptionInterface
+     * @throws ContainerExceptionInterface
+     * @throws ReflectionException
+     */
     public function testHandleStaticRoutes(): void
     {
         $controller = $this->createMock(UserController::class);
@@ -58,6 +66,11 @@ class RouterTest extends TestCase
         $router->handler('/users', 'POST');
     }
 
+    /**
+     * @throws NotFoundExceptionInterface
+     * @throws ContainerExceptionInterface
+     * @throws ReflectionException
+     */
     public function testHandleDynamicRoutes(): void
     {
         $testId = 1;
@@ -89,6 +102,11 @@ class RouterTest extends TestCase
         $router->handler("/users/$testId", 'DELETE');
     }
 
+    /**
+     * @throws ReflectionException
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     public function testHandleUnknownRoute(): void
     {
         $container = $this->createStub(Container::class);

@@ -8,20 +8,21 @@ use App\Models\User;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserService;
 use App\Services\UserServiceInterface;
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
-use function PHPUnit\Framework\assertEquals;
 
+#[AllowMockObjectsWithoutExpectations]
 class UserServiceTest extends TestCase
 {
     private ?UserRepositoryInterface $repo = null;
     private ?UserServiceInterface $service = null;
-    private ?LoggerInterface $logger = null;
+
     protected function setUp(): void
     {
         $this->repo = $this->createMock(UserRepositoryInterface::class);
-        $this->logger = $this->createMock(LoggerInterface::class);
-        $this->service = new UserService($this->repo, $this->logger);
+        $logger = $this->createMock(LoggerInterface::class);
+        $this->service = new UserService($this->repo, $logger);
     }
 
     public function testGetUsersReturnsRepositoryData(): void

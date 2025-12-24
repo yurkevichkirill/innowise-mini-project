@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\DB;
 use App\Models\User;
-use App\Services\UserRepositoryInterface;
-use App\TestDB;
 use Exception;
+use PDO;
 use Psr\Log\LoggerInterface;
 
 readonly class UserRepository implements UserRepositoryInterface
@@ -40,7 +38,7 @@ readonly class UserRepository implements UserRepositoryInterface
             $this->logger->warning("User {id} not found in db", ['id' => $id]);
             return null;
         }
-        $row = $stmt->fetchAll(\PDO::FETCH_ASSOC)[0];
+        $row = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
         $this->logger->debug("User {id} fetched from db", ['id', $id]);
 
         return new User($row['id'], $row['name'], $row['age'], $row['money'], (bool)$row['has_visa']);

@@ -7,11 +7,11 @@ namespace App;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 
-class Logger implements LoggerInterface
+readonly class Logger implements LoggerInterface
 {
     public function __construct(
         private string $logFile = '/var/www/tmp/logs/app.log',
-        private int $minLevel = 100
+        private int    $minLevel = 100
     ){
         $dirName = dirname($this->logFile);
 
