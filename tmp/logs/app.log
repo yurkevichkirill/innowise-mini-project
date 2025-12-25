@@ -108,3 +108,2561 @@
 [2025-12-23 20:54:52] [debug] Fetched 0 users from db
 [2025-12-23 20:54:52] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
 [2025-12-23 20:54:52] [debug] User 1 added to db
+[2025-12-23 21:04:06] [info] Controller: GET / - processing request
+[2025-12-23 21:04:06] [info] Controller: GET / - 200
+[2025-12-23 21:04:19] [info] Controller: GET /users - processing request
+[2025-12-23 21:04:19] [info] Service: Fetching all users
+[2025-12-23 21:04:19] [debug] Fetching all users from db
+[2025-12-23 21:04:19] [debug] Fetched 1 users from db
+[2025-12-23 21:04:19] [info] Service: Fetched 1 users
+[2025-12-23 21:04:19] [info] Controller: GET /users - 200
+[2025-12-23 21:04:21] [info] Controller: GET /users - processing request
+[2025-12-23 21:04:21] [info] Service: Fetching all users
+[2025-12-23 21:04:21] [debug] Fetching all users from db
+[2025-12-23 21:04:21] [debug] Fetched 1 users from db
+[2025-12-23 21:04:21] [info] Service: Fetched 1 users
+[2025-12-23 21:04:21] [info] Controller: GET /users - 200
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 0 users from db
+[2025-12-23 21:09:15] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-23 21:09:15] [debug] User 1 added to db
+[2025-12-23 21:09:15] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-23 21:09:15] [debug] User 2 added to db
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 2 users from db
+[2025-12-23 21:09:15] [debug] Fetching user 1 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching user 1 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching user 1 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 0 users from db
+[2025-12-23 21:09:15] [debug] Fetching user 1 from db
+[2025-12-23 21:09:15] [warning] User 1 not found in db
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 0 users from db
+[2025-12-23 21:09:15] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-23 21:09:15] [debug] User 1 added to db
+[2025-12-23 21:09:15] [debug] Fetching user 1 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching user 1 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching user 1 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 0 users from db
+[2025-12-23 21:09:15] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-23 21:09:15] [debug] User 1 added to db
+[2025-12-23 21:09:15] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-23 21:09:15] [debug] User 2 added to db
+[2025-12-23 21:09:15] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-23 21:09:15] [debug] User 2 updated in db
+[2025-12-23 21:09:15] [debug] Fetching user 2 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching user 2 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching user 2 from db
+[2025-12-23 21:09:15] [debug] User {id} fetched from db
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 0 users from db
+[2025-12-23 21:09:15] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-23 21:09:15] [warning] User 2 not found in db
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 0 users from db
+[2025-12-23 21:09:15] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-23 21:09:15] [debug] User 1 added to db
+[2025-12-23 21:09:15] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-23 21:09:15] [debug] User 2 added to db
+[2025-12-23 21:09:15] [debug] Deleting user 2 from db
+[2025-12-23 21:09:15] [debug] Deleted user 2 from db
+[2025-12-23 21:09:15] [debug] Fetching user 2 from db
+[2025-12-23 21:09:15] [warning] User 2 not found in db
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 0 users from db
+[2025-12-23 21:09:15] [debug] Deleting user 2 from db
+[2025-12-23 21:09:15] [warning] User 2 not found in db
+[2025-12-23 21:09:15] [debug] Fetching all users from db
+[2025-12-23 21:09:15] [debug] Fetched 0 users from db
+[2025-12-23 21:09:15] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-23 21:09:15] [debug] User 1 added to db
+[2025-12-23 21:12:42] [info] Controller: GET /users/1 - processing request
+[2025-12-23 21:12:42] [info] Service: Fetching user 1
+[2025-12-23 21:12:42] [debug] Fetching user 1 from db
+[2025-12-23 21:12:42] [debug] User {id} fetched from db
+[2025-12-23 21:12:42] [info] Service: Fetched user 1
+[2025-12-23 21:12:42] [info] Controller: GET /users/1 - 200
+[2025-12-23 21:12:45] [info] Controller: GET /users/2 - processing request
+[2025-12-23 21:12:45] [info] Service: Fetching user 2
+[2025-12-23 21:12:45] [debug] Fetching user 2 from db
+[2025-12-23 21:12:45] [warning] User 2 not found in db
+[2025-12-23 21:12:45] [info] Service: Fetched user 2
+[2025-12-23 21:12:45] [info] Controller: GET /users/2 - 200
+[2025-12-23 21:12:51] [info] Controller: GET /users/1 - processing request
+[2025-12-23 21:12:51] [info] Service: Fetching user 1
+[2025-12-23 21:12:51] [debug] Fetching user 1 from db
+[2025-12-23 21:12:51] [debug] User {id} fetched from db
+[2025-12-23 21:12:51] [info] Service: Fetched user 1
+[2025-12-23 21:12:51] [info] Controller: GET /users/1 - 200
+[2025-12-23 21:12:58] [info] Controller: GET /users/1 - processing request
+[2025-12-23 21:12:58] [info] Service: Fetching user 1
+[2025-12-23 21:12:58] [debug] Fetching user 1 from db
+[2025-12-23 21:12:58] [debug] User {id} fetched from db
+[2025-12-23 21:12:58] [info] Service: Fetched user 1
+[2025-12-23 21:12:58] [info] Controller: GET /users/1 - 200
+[2025-12-23 21:16:44] [info] Controller: GET /users - processing request
+[2025-12-23 21:16:44] [info] Service: Fetching all users
+[2025-12-23 21:16:44] [debug] Fetching all users from db
+[2025-12-23 21:16:44] [debug] Fetched 12 users from db
+[2025-12-23 21:16:44] [info] Service: Fetched 12 users
+[2025-12-23 21:16:44] [info] Controller: GET /users - 200
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 0 users from db
+[2025-12-24 09:31:44] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:31:44] [debug] User 1 added to db
+[2025-12-24 09:31:44] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:31:44] [debug] User 2 added to db
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 2 users from db
+[2025-12-24 09:31:44] [debug] Fetching user 1 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching user 1 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching user 1 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 0 users from db
+[2025-12-24 09:31:44] [debug] Fetching user 1 from db
+[2025-12-24 09:31:44] [warning] User 1 not found in db
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 0 users from db
+[2025-12-24 09:31:44] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-24 09:31:44] [debug] User 1 added to db
+[2025-12-24 09:31:44] [debug] Fetching user 1 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching user 1 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching user 1 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 0 users from db
+[2025-12-24 09:31:44] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:31:44] [debug] User 1 added to db
+[2025-12-24 09:31:44] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:31:44] [debug] User 2 added to db
+[2025-12-24 09:31:44] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-24 09:31:44] [debug] User 2 updated in db
+[2025-12-24 09:31:44] [debug] Fetching user 2 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching user 2 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching user 2 from db
+[2025-12-24 09:31:44] [debug] User {id} fetched from db
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 0 users from db
+[2025-12-24 09:31:44] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-24 09:31:44] [warning] User 2 not found in db
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 0 users from db
+[2025-12-24 09:31:44] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:31:44] [debug] User 1 added to db
+[2025-12-24 09:31:44] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:31:44] [debug] User 2 added to db
+[2025-12-24 09:31:44] [debug] Deleting user 2 from db
+[2025-12-24 09:31:44] [debug] Deleted user 2 from db
+[2025-12-24 09:31:44] [debug] Fetching user 2 from db
+[2025-12-24 09:31:44] [warning] User 2 not found in db
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 0 users from db
+[2025-12-24 09:31:44] [debug] Deleting user 2 from db
+[2025-12-24 09:31:44] [warning] User 2 not found in db
+[2025-12-24 09:31:44] [debug] Fetching all users from db
+[2025-12-24 09:31:44] [debug] Fetched 0 users from db
+[2025-12-24 09:31:44] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-24 09:31:44] [debug] User 1 added to db
+[2025-12-24 09:32:43] [info] Controller: GET / - processing request
+[2025-12-24 09:32:43] [info] Controller: GET / - 200
+[2025-12-24 09:32:46] [info] Controller: GET /users - processing request
+[2025-12-24 09:32:46] [info] Service: Fetching all users
+[2025-12-24 09:32:46] [debug] Fetching all users from db
+[2025-12-24 09:32:46] [debug] Fetched 12 users from db
+[2025-12-24 09:32:46] [info] Service: Fetched 12 users
+[2025-12-24 09:32:46] [info] Controller: GET /users - 200
+[2025-12-24 09:34:37] [info] Controller: GET /users - processing request
+[2025-12-24 09:34:37] [info] Service: Fetching all users
+[2025-12-24 09:34:37] [debug] Fetching all users from db
+[2025-12-24 09:34:37] [debug] Fetched 1 users from db
+[2025-12-24 09:34:37] [info] Service: Fetched 1 users
+[2025-12-24 09:34:37] [info] Controller: GET /users - 200
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 0 users from db
+[2025-12-24 09:39:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:39:35] [debug] User 1 added to db
+[2025-12-24 09:39:35] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:39:35] [debug] User 2 added to db
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 2 users from db
+[2025-12-24 09:39:35] [debug] Fetching user 1 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching user 1 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching user 1 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 0 users from db
+[2025-12-24 09:39:35] [debug] Fetching user 1 from db
+[2025-12-24 09:39:35] [warning] User 1 not found in db
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 0 users from db
+[2025-12-24 09:39:35] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-24 09:39:35] [debug] User 1 added to db
+[2025-12-24 09:39:35] [debug] Fetching user 1 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching user 1 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching user 1 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 0 users from db
+[2025-12-24 09:39:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:39:35] [debug] User 1 added to db
+[2025-12-24 09:39:35] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:39:35] [debug] User 2 added to db
+[2025-12-24 09:39:35] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-24 09:39:35] [debug] User 2 updated in db
+[2025-12-24 09:39:35] [debug] Fetching user 2 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching user 2 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching user 2 from db
+[2025-12-24 09:39:35] [debug] User {id} fetched from db
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 0 users from db
+[2025-12-24 09:39:35] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-24 09:39:35] [warning] User 2 not found in db
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 0 users from db
+[2025-12-24 09:39:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:39:35] [debug] User 1 added to db
+[2025-12-24 09:39:35] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:39:35] [debug] User 2 added to db
+[2025-12-24 09:39:35] [debug] Deleting user 2 from db
+[2025-12-24 09:39:35] [debug] Deleted user 2 from db
+[2025-12-24 09:39:35] [debug] Fetching user 2 from db
+[2025-12-24 09:39:35] [warning] User 2 not found in db
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 0 users from db
+[2025-12-24 09:39:35] [debug] Deleting user 2 from db
+[2025-12-24 09:39:35] [warning] User 2 not found in db
+[2025-12-24 09:39:35] [debug] Fetching all users from db
+[2025-12-24 09:39:35] [debug] Fetched 0 users from db
+[2025-12-24 09:39:35] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-24 09:39:35] [debug] User 1 added to db
+[2025-12-24 09:45:20] [info] Controller: GET /users - processing request
+[2025-12-24 09:45:20] [info] Service: Fetching all users
+[2025-12-24 09:45:20] [debug] Fetching all users from db
+[2025-12-24 09:45:20] [debug] Fetched 1 users from db
+[2025-12-24 09:45:20] [info] Service: Fetched 1 users
+[2025-12-24 09:45:20] [info] Controller: GET /users - 200
+[2025-12-24 09:52:21] [info] Controller: GET /users - processing request
+[2025-12-24 09:52:21] [info] Service: Fetching all users
+[2025-12-24 09:52:21] [debug] Fetching all users from db
+[2025-12-24 09:52:21] [debug] Fetched 2 users from db
+[2025-12-24 09:52:21] [info] Service: Fetched 2 users
+[2025-12-24 09:52:21] [info] Controller: GET /users - 200
+[2025-12-24 09:52:21] [info] Controller: GET /users/1 - processing request
+[2025-12-24 09:52:21] [info] Service: Fetching user 1
+[2025-12-24 09:52:21] [debug] Fetching user 1 from db
+[2025-12-24 09:52:21] [debug] User {id} fetched from db
+[2025-12-24 09:52:21] [info] Service: Fetched user 1
+[2025-12-24 09:52:21] [info] Controller: GET /users/1 - 200
+[2025-12-24 09:52:21] [info] Controller: GET /users/1 - processing request
+[2025-12-24 09:52:21] [info] Service: Fetching user 1
+[2025-12-24 09:52:21] [debug] Fetching user 1 from db
+[2025-12-24 09:52:21] [warning] User 1 not found in db
+[2025-12-24 09:52:21] [info] Service: Fetched user 1
+[2025-12-24 09:52:21] [info] Controller: GET /users/1 - 200
+[2025-12-24 09:52:21] [info] Controller: POST /users - processing request
+[2025-12-24 09:52:21] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 09:52:21] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:52:21] [debug] User 1 added to db
+[2025-12-24 09:52:21] [info] Service: Created user 1
+[2025-12-24 09:52:21] [info] Controller: POST /users - 201
+[2025-12-24 09:52:21] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 09:52:21] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 09:52:21] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 09:52:21] [debug] User 1 updated in db
+[2025-12-24 09:52:21] [info] Service: Updated user 1
+[2025-12-24 09:52:21] [info] Controller: PATCH /users/{id} - 200
+[2025-12-24 09:52:21] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 09:52:21] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 09:52:21] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 09:52:21] [warning] User 1 not found in db
+[2025-12-24 09:52:21] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 09:52:21] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 09:52:21] [info] Service: Deleting user 1
+[2025-12-24 09:52:21] [debug] Deleting user 1 from db
+[2025-12-24 09:52:21] [debug] Deleted user 1 from db
+[2025-12-24 09:52:21] [info] Service Deleted user 1
+[2025-12-24 09:52:21] [info] Controller: DELETE /users/{id} - 204
+[2025-12-24 09:52:22] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 09:52:22] [info] Service: Deleting user 1
+[2025-12-24 09:52:22] [debug] Deleting user 1 from db
+[2025-12-24 09:52:22] [warning] User 1 not found in db
+[2025-12-24 09:52:22] [info] Controller: DELETE /users/{id} - 404
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 0 users from db
+[2025-12-24 09:52:27] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:52:27] [debug] User 1 added to db
+[2025-12-24 09:52:27] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:52:27] [debug] User 2 added to db
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 2 users from db
+[2025-12-24 09:52:27] [debug] Fetching user 1 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching user 1 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching user 1 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 0 users from db
+[2025-12-24 09:52:27] [debug] Fetching user 1 from db
+[2025-12-24 09:52:27] [warning] User 1 not found in db
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 0 users from db
+[2025-12-24 09:52:27] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-24 09:52:27] [debug] User 1 added to db
+[2025-12-24 09:52:27] [debug] Fetching user 1 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching user 1 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching user 1 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 0 users from db
+[2025-12-24 09:52:27] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:52:27] [debug] User 1 added to db
+[2025-12-24 09:52:27] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:52:27] [debug] User 2 added to db
+[2025-12-24 09:52:27] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-24 09:52:27] [debug] User 2 updated in db
+[2025-12-24 09:52:27] [debug] Fetching user 2 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching user 2 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching user 2 from db
+[2025-12-24 09:52:27] [debug] User {id} fetched from db
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 0 users from db
+[2025-12-24 09:52:27] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-24 09:52:27] [warning] User 2 not found in db
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 0 users from db
+[2025-12-24 09:52:27] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 09:52:27] [debug] User 1 added to db
+[2025-12-24 09:52:27] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 09:52:27] [debug] User 2 added to db
+[2025-12-24 09:52:27] [debug] Deleting user 2 from db
+[2025-12-24 09:52:27] [debug] Deleted user 2 from db
+[2025-12-24 09:52:27] [debug] Fetching user 2 from db
+[2025-12-24 09:52:27] [warning] User 2 not found in db
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 0 users from db
+[2025-12-24 09:52:27] [debug] Deleting user 2 from db
+[2025-12-24 09:52:27] [warning] User 2 not found in db
+[2025-12-24 09:52:27] [debug] Fetching all users from db
+[2025-12-24 09:52:27] [debug] Fetched 0 users from db
+[2025-12-24 09:52:27] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-24 09:52:27] [debug] User 1 added to db
+[2025-12-24 09:58:00] [info] Controller: GET /users - processing request
+[2025-12-24 09:58:00] [info] Service: Fetching all users
+[2025-12-24 09:58:00] [debug] Fetching all users from db
+[2025-12-24 09:58:00] [debug] Fetched 12 users from db
+[2025-12-24 09:58:00] [info] Service: Fetched 12 users
+[2025-12-24 09:58:00] [info] Controller: GET /users - 200
+[2025-12-24 09:59:01] [info] Controller: GET /users - processing request
+[2025-12-24 09:59:01] [info] Service: Fetching all users
+[2025-12-24 09:59:01] [debug] Fetching all users from db
+[2025-12-24 09:59:01] [debug] Fetched 12 users from db
+[2025-12-24 09:59:01] [info] Service: Fetched 12 users
+[2025-12-24 09:59:01] [info] Controller: GET /users - 200
+[2025-12-24 09:59:02] [info] Controller: GET /users - processing request
+[2025-12-24 09:59:02] [info] Service: Fetching all users
+[2025-12-24 09:59:02] [debug] Fetching all users from db
+[2025-12-24 09:59:02] [debug] Fetched 12 users from db
+[2025-12-24 09:59:02] [info] Service: Fetched 12 users
+[2025-12-24 09:59:02] [info] Controller: GET /users - 200
+[2025-12-24 09:59:10] [info] Controller: GET /users - processing request
+[2025-12-24 09:59:10] [info] Service: Fetching all users
+[2025-12-24 09:59:10] [debug] Fetching all users from db
+[2025-12-24 09:59:10] [debug] Fetched 0 users from db
+[2025-12-24 09:59:10] [info] Service: Fetched 0 users
+[2025-12-24 09:59:10] [info] Controller: GET /users - 200
+[2025-12-24 09:59:21] [info] Controller: GET /users - processing request
+[2025-12-24 09:59:21] [info] Service: Fetching all users
+[2025-12-24 09:59:21] [debug] Fetching all users from db
+[2025-12-24 09:59:21] [debug] Fetched 3 users from db
+[2025-12-24 09:59:21] [info] Service: Fetched 3 users
+[2025-12-24 09:59:21] [info] Controller: GET /users - 200
+[2025-12-24 10:00:27] [info] Controller: GET /users - processing request
+[2025-12-24 10:00:27] [info] Service: Fetching all users
+[2025-12-24 10:00:27] [debug] Fetching all users from db
+[2025-12-24 10:00:27] [debug] Fetched 3 users from db
+[2025-12-24 10:00:27] [info] Service: Fetched 3 users
+[2025-12-24 10:00:27] [info] Controller: GET /users - 200
+[2025-12-24 10:00:27] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:00:27] [info] Service: Fetching user 1
+[2025-12-24 10:00:27] [debug] Fetching user 1 from db
+[2025-12-24 10:00:27] [warning] User 1 not found in db
+[2025-12-24 10:00:27] [info] Service: Fetched user 1
+[2025-12-24 10:00:27] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:00:27] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:00:27] [info] Service: Fetching user 1
+[2025-12-24 10:00:27] [debug] Fetching user 1 from db
+[2025-12-24 10:00:27] [warning] User 1 not found in db
+[2025-12-24 10:00:27] [info] Service: Fetched user 1
+[2025-12-24 10:00:27] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:00:28] [info] Controller: POST /users - processing request
+[2025-12-24 10:00:28] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 10:00:28] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 10:00:28] [debug] User 16 added to db
+[2025-12-24 10:00:28] [info] Service: Created user 16
+[2025-12-24 10:00:28] [info] Controller: POST /users - 201
+[2025-12-24 10:00:28] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:00:28] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:00:28] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:00:28] [warning] User 1 not found in db
+[2025-12-24 10:00:28] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:00:28] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:00:28] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:00:28] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:00:28] [warning] User 1 not found in db
+[2025-12-24 10:00:28] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:00:28] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:00:28] [info] Service: Deleting user 1
+[2025-12-24 10:00:28] [debug] Deleting user 1 from db
+[2025-12-24 10:00:28] [warning] User 1 not found in db
+[2025-12-24 10:00:28] [info] Controller: DELETE /users/{id} - 404
+[2025-12-24 10:00:48] [info] Controller: GET /users - processing request
+[2025-12-24 10:00:48] [info] Service: Fetching all users
+[2025-12-24 10:00:48] [debug] Fetching all users from db
+[2025-12-24 10:00:48] [debug] Fetched 4 users from db
+[2025-12-24 10:00:48] [info] Service: Fetched 4 users
+[2025-12-24 10:00:48] [info] Controller: GET /users - 200
+[2025-12-24 10:01:20] [info] Controller: GET /users - processing request
+[2025-12-24 10:01:20] [info] Service: Fetching all users
+[2025-12-24 10:01:20] [debug] Fetching all users from db
+[2025-12-24 10:01:28] [debug] Fetched 2 users from db
+[2025-12-24 10:01:28] [info] Service: Fetched 2 users
+[2025-12-24 10:01:28] [info] Controller: GET /users - 200
+[2025-12-24 10:01:31] [info] Controller: GET /users - processing request
+[2025-12-24 10:01:31] [info] Service: Fetching all users
+[2025-12-24 10:01:31] [debug] Fetching all users from db
+[2025-12-24 10:01:31] [debug] Fetched 2 users from db
+[2025-12-24 10:01:31] [info] Service: Fetched 2 users
+[2025-12-24 10:01:31] [info] Controller: GET /users - 200
+[2025-12-24 10:01:35] [info] Controller: GET /users - processing request
+[2025-12-24 10:01:35] [info] Service: Fetching all users
+[2025-12-24 10:01:35] [debug] Fetching all users from db
+[2025-12-24 10:01:35] [debug] Fetched 2 users from db
+[2025-12-24 10:01:35] [info] Service: Fetched 2 users
+[2025-12-24 10:01:35] [info] Controller: GET /users - 200
+[2025-12-24 10:01:35] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:01:35] [info] Service: Fetching user 1
+[2025-12-24 10:01:35] [debug] Fetching user 1 from db
+[2025-12-24 10:01:35] [debug] User {id} fetched from db
+[2025-12-24 10:01:35] [info] Service: Fetched user 1
+[2025-12-24 10:01:35] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:01:35] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:01:35] [info] Service: Fetching user 1
+[2025-12-24 10:01:35] [debug] Fetching user 1 from db
+[2025-12-24 10:01:35] [warning] User 1 not found in db
+[2025-12-24 10:01:35] [info] Service: Fetched user 1
+[2025-12-24 10:01:35] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:01:35] [info] Controller: POST /users - processing request
+[2025-12-24 10:01:35] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 10:01:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 10:01:35] [debug] User 1 added to db
+[2025-12-24 10:01:35] [info] Service: Created user 1
+[2025-12-24 10:01:35] [info] Controller: POST /users - 201
+[2025-12-24 10:01:35] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:01:35] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:01:35] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:01:35] [debug] User 1 updated in db
+[2025-12-24 10:01:35] [info] Service: Updated user 1
+[2025-12-24 10:01:35] [info] Controller: PATCH /users/{id} - 200
+[2025-12-24 10:01:35] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:01:35] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:01:35] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:01:35] [warning] User 1 not found in db
+[2025-12-24 10:01:35] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:01:35] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:01:35] [info] Service: Deleting user 1
+[2025-12-24 10:01:35] [debug] Deleting user 1 from db
+[2025-12-24 10:01:35] [debug] Deleted user 1 from db
+[2025-12-24 10:01:35] [info] Service Deleted user 1
+[2025-12-24 10:01:35] [info] Controller: DELETE /users/{id} - 204
+[2025-12-24 10:01:35] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:01:35] [info] Service: Deleting user 1
+[2025-12-24 10:01:35] [debug] Deleting user 1 from db
+[2025-12-24 10:01:35] [warning] User 1 not found in db
+[2025-12-24 10:01:35] [info] Controller: DELETE /users/{id} - 404
+[2025-12-24 10:01:37] [info] Controller: GET /users - processing request
+[2025-12-24 10:01:37] [info] Service: Fetching all users
+[2025-12-24 10:01:37] [debug] Fetching all users from db
+[2025-12-24 10:01:37] [debug] Fetched 0 users from db
+[2025-12-24 10:01:37] [info] Service: Fetched 0 users
+[2025-12-24 10:01:37] [info] Controller: GET /users - 200
+[2025-12-24 10:01:39] [info] Controller: GET /users - processing request
+[2025-12-24 10:01:39] [info] Service: Fetching all users
+[2025-12-24 10:01:39] [debug] Fetching all users from db
+[2025-12-24 10:01:39] [debug] Fetched 0 users from db
+[2025-12-24 10:01:39] [info] Service: Fetched 0 users
+[2025-12-24 10:01:39] [info] Controller: GET /users - 200
+[2025-12-24 10:01:43] [info] Controller: GET /users - processing request
+[2025-12-24 10:01:43] [info] Service: Fetching all users
+[2025-12-24 10:01:43] [debug] Fetching all users from db
+[2025-12-24 10:01:43] [debug] Fetched 2 users from db
+[2025-12-24 10:01:43] [info] Service: Fetched 2 users
+[2025-12-24 10:01:43] [info] Controller: GET /users - 200
+[2025-12-24 10:01:44] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:01:44] [info] Service: Fetching user 1
+[2025-12-24 10:01:44] [debug] Fetching user 1 from db
+[2025-12-24 10:01:44] [debug] User {id} fetched from db
+[2025-12-24 10:01:44] [info] Service: Fetched user 1
+[2025-12-24 10:01:44] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:01:44] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:01:44] [info] Service: Fetching user 1
+[2025-12-24 10:01:44] [debug] Fetching user 1 from db
+[2025-12-24 10:01:44] [warning] User 1 not found in db
+[2025-12-24 10:01:44] [info] Service: Fetched user 1
+[2025-12-24 10:01:44] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:01:44] [info] Controller: POST /users - processing request
+[2025-12-24 10:01:44] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 10:01:44] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 10:01:44] [debug] User 1 added to db
+[2025-12-24 10:01:44] [info] Service: Created user 1
+[2025-12-24 10:01:44] [info] Controller: POST /users - 201
+[2025-12-24 10:01:44] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:01:44] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:01:44] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:01:44] [debug] User 1 updated in db
+[2025-12-24 10:01:44] [info] Service: Updated user 1
+[2025-12-24 10:01:44] [info] Controller: PATCH /users/{id} - 200
+[2025-12-24 10:01:44] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:01:44] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:01:44] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:01:44] [warning] User 1 not found in db
+[2025-12-24 10:01:44] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:01:44] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:01:44] [info] Service: Deleting user 1
+[2025-12-24 10:01:44] [debug] Deleting user 1 from db
+[2025-12-24 10:01:44] [debug] Deleted user 1 from db
+[2025-12-24 10:01:44] [info] Service Deleted user 1
+[2025-12-24 10:01:44] [info] Controller: DELETE /users/{id} - 204
+[2025-12-24 10:01:44] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:01:44] [info] Service: Deleting user 1
+[2025-12-24 10:01:44] [debug] Deleting user 1 from db
+[2025-12-24 10:01:44] [warning] User 1 not found in db
+[2025-12-24 10:01:44] [info] Controller: DELETE /users/{id} - 404
+[2025-12-24 10:01:46] [info] Controller: GET /users - processing request
+[2025-12-24 10:01:46] [info] Service: Fetching all users
+[2025-12-24 10:01:46] [debug] Fetching all users from db
+[2025-12-24 10:01:46] [debug] Fetched 0 users from db
+[2025-12-24 10:01:46] [info] Service: Fetched 0 users
+[2025-12-24 10:01:46] [info] Controller: GET /users - 200
+[2025-12-24 10:01:47] [info] Controller: GET /users - processing request
+[2025-12-24 10:01:47] [info] Service: Fetching all users
+[2025-12-24 10:01:47] [debug] Fetching all users from db
+[2025-12-24 10:01:47] [debug] Fetched 0 users from db
+[2025-12-24 10:01:47] [info] Service: Fetched 0 users
+[2025-12-24 10:01:47] [info] Controller: GET /users - 200
+[2025-12-24 10:08:56] [info] Controller: GET /users - processing request
+[2025-12-24 10:08:56] [info] Service: Fetching all users
+[2025-12-24 10:08:56] [debug] Fetching all users from db
+[2025-12-24 10:08:56] [debug] Fetched 4 users from db
+[2025-12-24 10:08:56] [info] Service: Fetched 4 users
+[2025-12-24 10:08:56] [info] Controller: GET /users - 200
+[2025-12-24 10:09:04] [info] Controller: GET /users - processing request
+[2025-12-24 10:09:04] [info] Service: Fetching all users
+[2025-12-24 10:09:04] [debug] Fetching all users from db
+[2025-12-24 10:09:04] [debug] Fetched 4 users from db
+[2025-12-24 10:09:04] [info] Service: Fetched 4 users
+[2025-12-24 10:09:04] [info] Controller: GET /users - 200
+[2025-12-24 10:09:04] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:09:04] [info] Service: Fetching user 1
+[2025-12-24 10:09:04] [debug] Fetching user 1 from db
+[2025-12-24 10:09:04] [warning] User 1 not found in db
+[2025-12-24 10:09:04] [info] Service: Fetched user 1
+[2025-12-24 10:09:04] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:09:04] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:09:04] [info] Service: Fetching user 1
+[2025-12-24 10:09:04] [debug] Fetching user 1 from db
+[2025-12-24 10:09:04] [warning] User 1 not found in db
+[2025-12-24 10:09:04] [info] Service: Fetched user 1
+[2025-12-24 10:09:04] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:09:04] [info] Controller: POST /users - processing request
+[2025-12-24 10:09:04] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 10:09:04] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 10:09:04] [debug] User 17 added to db
+[2025-12-24 10:09:04] [info] Service: Created user 17
+[2025-12-24 10:09:04] [info] Controller: POST /users - 201
+[2025-12-24 10:09:04] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:09:04] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:09:04] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:09:04] [warning] User 1 not found in db
+[2025-12-24 10:09:04] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:09:05] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:09:05] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:09:05] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:09:05] [warning] User 1 not found in db
+[2025-12-24 10:09:05] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:09:05] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:09:05] [info] Service: Deleting user 1
+[2025-12-24 10:09:05] [debug] Deleting user 1 from db
+[2025-12-24 10:09:05] [warning] User 1 not found in db
+[2025-12-24 10:09:05] [info] Controller: DELETE /users/{id} - 404
+[2025-12-24 10:09:14] [info] Controller: GET /users - processing request
+[2025-12-24 10:09:14] [info] Service: Fetching all users
+[2025-12-24 10:09:14] [debug] Fetching all users from db
+[2025-12-24 10:09:14] [debug] Fetched 5 users from db
+[2025-12-24 10:09:14] [info] Service: Fetched 5 users
+[2025-12-24 10:09:14] [info] Controller: GET /users - 200
+[2025-12-24 10:09:15] [info] Controller: GET /users - processing request
+[2025-12-24 10:09:15] [info] Service: Fetching all users
+[2025-12-24 10:09:15] [debug] Fetching all users from db
+[2025-12-24 10:09:15] [debug] Fetched 5 users from db
+[2025-12-24 10:09:15] [info] Service: Fetched 5 users
+[2025-12-24 10:09:15] [info] Controller: GET /users - 200
+[2025-12-24 10:36:05] [info] Controller: GET /users - processing request
+[2025-12-24 10:36:05] [info] Service: Fetching all users
+[2025-12-24 10:36:05] [debug] Fetching all users from db
+[2025-12-24 10:36:05] [debug] Fetched 5 users from db
+[2025-12-24 10:36:05] [info] Service: Fetched 5 users
+[2025-12-24 10:36:05] [info] Controller: GET /users - 200
+[2025-12-24 10:36:05] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:36:05] [info] Service: Fetching user 1
+[2025-12-24 10:36:05] [debug] Fetching user 1 from db
+[2025-12-24 10:36:05] [warning] User 1 not found in db
+[2025-12-24 10:36:05] [info] Service: Fetched user 1
+[2025-12-24 10:36:05] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:36:05] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:36:05] [info] Service: Fetching user 1
+[2025-12-24 10:36:05] [debug] Fetching user 1 from db
+[2025-12-24 10:36:05] [warning] User 1 not found in db
+[2025-12-24 10:36:05] [info] Service: Fetched user 1
+[2025-12-24 10:36:05] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:36:05] [info] Controller: POST /users - processing request
+[2025-12-24 10:36:05] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 10:36:05] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 10:36:05] [debug] User 18 added to db
+[2025-12-24 10:36:05] [info] Service: Created user 18
+[2025-12-24 10:36:05] [info] Controller: POST /users - 201
+[2025-12-24 10:36:05] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:36:05] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:36:05] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:36:05] [warning] User 1 not found in db
+[2025-12-24 10:36:05] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:36:06] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:36:06] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:36:06] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:36:06] [warning] User 1 not found in db
+[2025-12-24 10:36:06] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:36:06] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:36:06] [info] Service: Deleting user 1
+[2025-12-24 10:36:06] [debug] Deleting user 1 from db
+[2025-12-24 10:36:06] [warning] User 1 not found in db
+[2025-12-24 10:36:06] [info] Controller: DELETE /users/{id} - 404
+[2025-12-24 10:40:12] [info] Controller: GET /users - processing request
+[2025-12-24 10:40:12] [info] Service: Fetching all users
+[2025-12-24 10:40:12] [debug] Fetching all users from db
+[2025-12-24 10:40:12] [debug] Fetched 6 users from db
+[2025-12-24 10:40:12] [info] Service: Fetched 6 users
+[2025-12-24 10:40:12] [info] Controller: GET /users - 200
+[2025-12-24 10:40:19] [info] Controller: GET /users - processing request
+[2025-12-24 10:40:19] [info] Service: Fetching all users
+[2025-12-24 10:40:19] [debug] Fetching all users from db
+[2025-12-24 10:40:19] [debug] Fetched 2 users from db
+[2025-12-24 10:40:19] [info] Service: Fetched 2 users
+[2025-12-24 10:40:19] [info] Controller: GET /users - 200
+[2025-12-24 10:40:19] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:40:19] [info] Service: Fetching user 1
+[2025-12-24 10:40:19] [debug] Fetching user 1 from db
+[2025-12-24 10:40:19] [debug] User {id} fetched from db
+[2025-12-24 10:40:19] [info] Service: Fetched user 1
+[2025-12-24 10:40:19] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:40:19] [info] Controller: GET /users/1 - processing request
+[2025-12-24 10:40:19] [info] Service: Fetching user 1
+[2025-12-24 10:40:19] [debug] Fetching user 1 from db
+[2025-12-24 10:40:19] [warning] User 1 not found in db
+[2025-12-24 10:40:19] [info] Service: Fetched user 1
+[2025-12-24 10:40:19] [info] Controller: GET /users/1 - 200
+[2025-12-24 10:40:19] [info] Controller: POST /users - processing request
+[2025-12-24 10:40:19] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 10:40:19] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 10:40:19] [debug] User 1 added to db
+[2025-12-24 10:40:19] [info] Service: Created user 1
+[2025-12-24 10:40:19] [info] Controller: POST /users - 201
+[2025-12-24 10:40:19] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:40:19] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:40:19] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:40:19] [debug] User 1 updated in db
+[2025-12-24 10:40:19] [info] Service: Updated user 1
+[2025-12-24 10:40:19] [info] Controller: PATCH /users/{id} - 200
+[2025-12-24 10:40:20] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 10:40:20] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 10:40:20] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 10:40:20] [warning] User 1 not found in db
+[2025-12-24 10:40:20] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 10:40:20] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:40:20] [info] Service: Deleting user 1
+[2025-12-24 10:40:20] [debug] Deleting user 1 from db
+[2025-12-24 10:40:20] [debug] Deleted user 1 from db
+[2025-12-24 10:40:20] [info] Service Deleted user 1
+[2025-12-24 10:40:20] [info] Controller: DELETE /users/{id} - 204
+[2025-12-24 10:40:20] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 10:40:20] [info] Service: Deleting user 1
+[2025-12-24 10:40:20] [debug] Deleting user 1 from db
+[2025-12-24 10:40:20] [warning] User 1 not found in db
+[2025-12-24 10:40:20] [info] Controller: DELETE /users/{id} - 404
+[2025-12-24 10:40:23] [info] Controller: GET /users - processing request
+[2025-12-24 10:40:23] [info] Service: Fetching all users
+[2025-12-24 10:40:23] [debug] Fetching all users from db
+[2025-12-24 10:40:23] [debug] Fetched 6 users from db
+[2025-12-24 10:40:23] [info] Service: Fetched 6 users
+[2025-12-24 10:40:23] [info] Controller: GET /users - 200
+[2025-12-24 11:00:20] [info] Controller: GET /users - processing request
+[2025-12-24 11:00:20] [info] Service: Fetching all users
+[2025-12-24 11:00:20] [debug] Fetching all users from db
+[2025-12-24 11:00:20] [debug] Fetched 6 users from db
+[2025-12-24 11:00:20] [info] Service: Fetched 6 users
+[2025-12-24 11:00:20] [info] Controller: GET /users - 200
+[2025-12-24 11:00:27] [info] Controller: GET /users - processing request
+[2025-12-24 11:00:27] [info] Service: Fetching all users
+[2025-12-24 11:00:27] [debug] Fetching all users from db
+[2025-12-24 11:00:27] [debug] Fetched 2 users from db
+[2025-12-24 11:00:27] [info] Service: Fetched 2 users
+[2025-12-24 11:00:27] [info] Controller: GET /users - 200
+[2025-12-24 11:00:27] [info] Controller: GET /users/1 - processing request
+[2025-12-24 11:00:27] [info] Service: Fetching user 1
+[2025-12-24 11:00:27] [debug] Fetching user 1 from db
+[2025-12-24 11:00:27] [debug] User {id} fetched from db
+[2025-12-24 11:00:27] [info] Service: Fetched user 1
+[2025-12-24 11:00:27] [info] Controller: GET /users/1 - 200
+[2025-12-24 11:00:27] [info] Controller: GET /users/1 - processing request
+[2025-12-24 11:00:27] [info] Service: Fetching user 1
+[2025-12-24 11:00:27] [debug] Fetching user 1 from db
+[2025-12-24 11:00:27] [warning] User 1 not found in db
+[2025-12-24 11:00:27] [info] Service: Fetched user 1
+[2025-12-24 11:00:27] [info] Controller: GET /users/1 - 200
+[2025-12-24 11:00:27] [info] Controller: POST /users - processing request
+[2025-12-24 11:00:27] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 11:00:27] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 11:00:27] [debug] User 1 added to db
+[2025-12-24 11:00:27] [info] Service: Created user 1
+[2025-12-24 11:00:27] [info] Controller: POST /users - 201
+[2025-12-24 11:00:28] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 11:00:28] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 11:00:28] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 11:00:28] [debug] User 1 updated in db
+[2025-12-24 11:00:28] [info] Service: Updated user 1
+[2025-12-24 11:00:28] [info] Controller: PATCH /users/{id} - 200
+[2025-12-24 11:00:28] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 11:00:28] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 11:00:28] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 11:00:28] [warning] User 1 not found in db
+[2025-12-24 11:00:28] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 11:00:28] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 11:00:28] [info] Service: Deleting user 1
+[2025-12-24 11:00:28] [debug] Deleting user 1 from db
+[2025-12-24 11:00:28] [debug] Deleted user 1 from db
+[2025-12-24 11:00:28] [info] Service Deleted user 1
+[2025-12-24 11:00:28] [info] Controller: DELETE /users/{id} - 204
+[2025-12-24 11:00:28] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 11:00:28] [info] Service: Deleting user 1
+[2025-12-24 11:00:28] [debug] Deleting user 1 from db
+[2025-12-24 11:00:28] [warning] User 1 not found in db
+[2025-12-24 11:00:28] [info] Controller: DELETE /users/{id} - 404
+[2025-12-24 11:00:35] [debug] Fetching all users from db
+[2025-12-24 11:00:35] [debug] Fetched 0 users from db
+[2025-12-24 11:00:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 11:00:35] [debug] User 1 added to db
+[2025-12-24 11:00:35] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 11:00:35] [debug] User 2 added to db
+[2025-12-24 11:00:35] [debug] Fetching all users from db
+[2025-12-24 11:00:35] [debug] Fetched 2 users from db
+[2025-12-24 11:00:35] [debug] Fetching user 1 from db
+[2025-12-24 11:00:35] [debug] User {id} fetched from db
+[2025-12-24 11:00:35] [debug] Fetching user 1 from db
+[2025-12-24 11:00:35] [debug] User {id} fetched from db
+[2025-12-24 11:00:35] [debug] Fetching user 1 from db
+[2025-12-24 11:00:35] [debug] User {id} fetched from db
+[2025-12-24 11:00:35] [debug] Fetching all users from db
+[2025-12-24 11:00:35] [debug] Fetched 0 users from db
+[2025-12-24 11:00:35] [debug] Fetching user 1 from db
+[2025-12-24 11:00:35] [warning] User 1 not found in db
+[2025-12-24 11:00:35] [debug] Fetching all users from db
+[2025-12-24 11:00:35] [debug] Fetched 0 users from db
+[2025-12-24 11:00:35] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-24 11:00:35] [debug] User 1 added to db
+[2025-12-24 11:00:35] [debug] Fetching user 1 from db
+[2025-12-24 11:00:35] [debug] User {id} fetched from db
+[2025-12-24 11:00:35] [debug] Fetching user 1 from db
+[2025-12-24 11:00:35] [debug] User {id} fetched from db
+[2025-12-24 11:00:35] [debug] Fetching user 1 from db
+[2025-12-24 11:00:35] [debug] User {id} fetched from db
+[2025-12-24 11:00:35] [debug] Fetching all users from db
+[2025-12-24 11:00:35] [debug] Fetched 0 users from db
+[2025-12-24 11:00:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 11:00:35] [debug] User 1 added to db
+[2025-12-24 11:00:35] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 11:00:35] [debug] User 2 added to db
+[2025-12-24 11:00:36] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-24 11:00:36] [debug] User 2 updated in db
+[2025-12-24 11:00:36] [debug] Fetching user 2 from db
+[2025-12-24 11:00:36] [debug] User {id} fetched from db
+[2025-12-24 11:00:36] [debug] Fetching user 2 from db
+[2025-12-24 11:00:36] [debug] User {id} fetched from db
+[2025-12-24 11:00:36] [debug] Fetching user 2 from db
+[2025-12-24 11:00:36] [debug] User {id} fetched from db
+[2025-12-24 11:00:36] [debug] Fetching all users from db
+[2025-12-24 11:00:36] [debug] Fetched 0 users from db
+[2025-12-24 11:00:36] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-24 11:00:36] [warning] User 2 not found in db
+[2025-12-24 11:00:36] [debug] Fetching all users from db
+[2025-12-24 11:00:36] [debug] Fetched 0 users from db
+[2025-12-24 11:00:36] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 11:00:36] [debug] User 1 added to db
+[2025-12-24 11:00:36] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-24 11:00:36] [debug] User 2 added to db
+[2025-12-24 11:00:36] [debug] Deleting user 2 from db
+[2025-12-24 11:00:36] [debug] Deleted user 2 from db
+[2025-12-24 11:00:36] [debug] Fetching user 2 from db
+[2025-12-24 11:00:36] [warning] User 2 not found in db
+[2025-12-24 11:00:36] [debug] Fetching all users from db
+[2025-12-24 11:00:36] [debug] Fetched 0 users from db
+[2025-12-24 11:00:36] [debug] Deleting user 2 from db
+[2025-12-24 11:00:36] [warning] User 2 not found in db
+[2025-12-24 11:00:36] [debug] Fetching all users from db
+[2025-12-24 11:00:36] [debug] Fetched 0 users from db
+[2025-12-24 11:00:36] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-24 11:00:36] [debug] User 1 added to db
+[2025-12-24 11:01:54] [info] Controller: GET /users - processing request
+[2025-12-24 11:01:54] [info] Service: Fetching all users
+[2025-12-24 11:01:54] [debug] Fetching all users from db
+[2025-12-24 11:01:54] [debug] Fetched 3 users from db
+[2025-12-24 11:01:54] [info] Service: Fetched 3 users
+[2025-12-24 11:01:54] [info] Controller: GET /users - 200
+[2025-12-24 11:01:57] [info] Controller: GET /users/1 - processing request
+[2025-12-24 11:01:57] [info] Service: Fetching user 1
+[2025-12-24 11:01:57] [debug] Fetching user 1 from db
+[2025-12-24 11:01:57] [warning] User 1 not found in db
+[2025-12-24 11:01:57] [info] Service: Fetched user 1
+[2025-12-24 11:01:57] [info] Controller: GET /users/1 - 200
+[2025-12-24 11:02:02] [info] Controller: GET /users - processing request
+[2025-12-24 11:02:02] [info] Service: Fetching all users
+[2025-12-24 11:02:02] [debug] Fetching all users from db
+[2025-12-24 11:02:02] [debug] Fetched 3 users from db
+[2025-12-24 11:02:02] [info] Service: Fetched 3 users
+[2025-12-24 11:02:02] [info] Controller: GET /users - 200
+[2025-12-24 11:02:05] [info] Controller: GET /users - processing request
+[2025-12-24 11:02:05] [info] Service: Fetching all users
+[2025-12-24 11:02:05] [debug] Fetching all users from db
+[2025-12-24 11:02:05] [debug] Fetched 3 users from db
+[2025-12-24 11:02:05] [info] Service: Fetched 3 users
+[2025-12-24 11:02:05] [info] Controller: GET /users - 200
+[2025-12-24 11:02:20] [info] Controller: GET /users/1 - processing request
+[2025-12-24 11:02:20] [info] Service: Fetching user 1
+[2025-12-24 11:02:20] [debug] Fetching user 1 from db
+[2025-12-24 11:02:20] [warning] User 1 not found in db
+[2025-12-24 11:02:20] [info] Service: Fetched user 1
+[2025-12-24 11:02:20] [info] Controller: GET /users/1 - 200
+[2025-12-24 11:02:21] [info] Controller: GET /users/19 - processing request
+[2025-12-24 11:02:21] [info] Service: Fetching user 19
+[2025-12-24 11:02:21] [debug] Fetching user 19 from db
+[2025-12-24 11:02:21] [debug] User {id} fetched from db
+[2025-12-24 11:02:21] [info] Service: Fetched user 19
+[2025-12-24 11:02:21] [info] Controller: GET /users/19 - 200
+[2025-12-24 11:02:49] [info] Controller: GET /users/19 - processing request
+[2025-12-24 11:02:49] [info] Service: Fetching user 19
+[2025-12-24 11:02:49] [debug] Fetching user 19 from db
+[2025-12-24 11:02:49] [debug] User {id} fetched from db
+[2025-12-24 11:02:49] [info] Service: Fetched user 19
+[2025-12-24 11:02:49] [info] Controller: GET /users/19 - 200
+[2025-12-24 11:02:57] [info] Controller: GET /users/1 - processing request
+[2025-12-24 11:02:57] [info] Service: Fetching user 1
+[2025-12-24 11:02:57] [debug] Fetching user 1 from db
+[2025-12-24 11:02:57] [warning] User 1 not found in db
+[2025-12-24 11:02:57] [info] Service: Fetched user 1
+[2025-12-24 11:02:57] [info] Controller: GET /users/1 - 200
+[2025-12-24 11:02:58] [info] Controller: GET /users - processing request
+[2025-12-24 11:02:58] [info] Service: Fetching all users
+[2025-12-24 11:02:58] [debug] Fetching all users from db
+[2025-12-24 11:02:58] [debug] Fetched 3 users from db
+[2025-12-24 11:02:58] [info] Service: Fetched 3 users
+[2025-12-24 11:02:58] [info] Controller: GET /users - 200
+[2025-12-24 11:03:25] [info] Controller: GET /users - processing request
+[2025-12-24 11:03:25] [info] Service: Fetching all users
+[2025-12-24 11:03:25] [debug] Fetching all users from db
+[2025-12-24 11:03:25] [debug] Fetched 3 users from db
+[2025-12-24 11:03:25] [info] Service: Fetched 3 users
+[2025-12-24 11:03:25] [info] Controller: GET /users - 200
+[2025-12-24 11:05:30] [info] Controller: GET /users - processing request
+[2025-12-24 11:05:30] [info] Service: Fetching all users
+[2025-12-24 11:05:30] [debug] Fetching all users from db
+[2025-12-24 11:05:30] [debug] Fetched 3 users from db
+[2025-12-24 11:05:30] [info] Service: Fetched 3 users
+[2025-12-24 11:05:30] [info] Controller: GET /users - 200
+[2025-12-24 11:05:33] [info] Controller: GET /users/2 - processing request
+[2025-12-24 11:05:33] [info] Service: Fetching user 2
+[2025-12-24 11:05:33] [debug] Fetching user 2 from db
+[2025-12-24 11:05:33] [warning] User 2 not found in db
+[2025-12-24 11:05:33] [info] Service: Fetched user 2
+[2025-12-24 11:05:33] [info] Controller: GET /users/2 - 200
+[2025-12-24 11:05:34] [info] Controller: GET /users/21 - processing request
+[2025-12-24 11:05:34] [info] Service: Fetching user 21
+[2025-12-24 11:05:34] [debug] Fetching user 21 from db
+[2025-12-24 11:05:34] [debug] User {id} fetched from db
+[2025-12-24 11:05:34] [info] Service: Fetched user 21
+[2025-12-24 11:05:34] [info] Controller: GET /users/21 - 200
+[2025-12-24 11:06:26] [info] Controller: GET /users/21 - processing request
+[2025-12-24 11:06:26] [info] Service: Fetching user 21
+[2025-12-24 11:06:26] [debug] Fetching user 21 from db
+[2025-12-24 11:06:26] [debug] User {id} fetched from db
+[2025-12-24 11:06:26] [info] Service: Fetched user 21
+[2025-12-24 11:06:26] [info] Controller: GET /users/21 - 200
+[2025-12-24 11:06:27] [info] Controller: GET /users/21 - processing request
+[2025-12-24 11:06:27] [info] Service: Fetching user 21
+[2025-12-24 11:06:27] [debug] Fetching user 21 from db
+[2025-12-24 11:06:27] [debug] User {id} fetched from db
+[2025-12-24 11:06:27] [info] Service: Fetched user 21
+[2025-12-24 11:06:27] [info] Controller: GET /users/21 - 200
+[2025-12-24 11:06:29] [info] Controller: GET /users - processing request
+[2025-12-24 11:06:29] [info] Service: Fetching all users
+[2025-12-24 11:06:29] [debug] Fetching all users from db
+[2025-12-24 11:06:29] [debug] Fetched 3 users from db
+[2025-12-24 11:06:29] [info] Service: Fetched 3 users
+[2025-12-24 11:06:29] [info] Controller: GET /users - 200
+[2025-12-24 11:06:47] [info] Controller: GET /users - processing request
+[2025-12-24 11:06:47] [info] Service: Fetching all users
+[2025-12-24 11:06:47] [debug] Fetching all users from db
+[2025-12-24 11:06:47] [debug] Fetched 3 users from db
+[2025-12-24 11:06:47] [info] Service: Fetched 3 users
+[2025-12-24 11:06:47] [info] Controller: GET /users - 200
+[2025-12-24 11:06:48] [info] Controller: GET /users - processing request
+[2025-12-24 11:06:48] [info] Service: Fetching all users
+[2025-12-24 11:06:48] [debug] Fetching all users from db
+[2025-12-24 11:06:48] [debug] Fetched 3 users from db
+[2025-12-24 11:06:48] [info] Service: Fetched 3 users
+[2025-12-24 11:06:48] [info] Controller: GET /users - 200
+[2025-12-24 11:08:35] [info] Service: Fetching all users
+[2025-12-24 11:08:35] [debug] Fetching all users from db
+[2025-12-24 11:08:35] [debug] Fetched 3 users from db
+[2025-12-24 11:08:35] [info] Service: Fetched 3 users
+[2025-12-24 11:09:31] [info] Service: Fetching all users
+[2025-12-24 11:09:31] [debug] Fetching all users from db
+[2025-12-24 11:09:31] [debug] Fetched 3 users from db
+[2025-12-24 11:09:31] [info] Service: Fetched 3 users
+[2025-12-24 11:09:32] [info] Service: Fetching all users
+[2025-12-24 11:09:32] [debug] Fetching all users from db
+[2025-12-24 11:09:32] [debug] Fetched 3 users from db
+[2025-12-24 11:09:32] [info] Service: Fetched 3 users
+[2025-12-24 11:09:50] [info] Controller: GET /users - processing request
+[2025-12-24 11:09:50] [info] Service: Fetching all users
+[2025-12-24 11:09:50] [debug] Fetching all users from db
+[2025-12-24 11:09:50] [debug] Fetched 3 users from db
+[2025-12-24 11:09:50] [info] Service: Fetched 3 users
+[2025-12-24 11:09:50] [info] Controller: GET /users - 200
+[2025-12-24 11:10:52] [info] Controller: GET /users - processing request
+[2025-12-24 11:10:52] [info] Service: Fetching all users
+[2025-12-24 11:10:52] [debug] Fetching all users from db
+[2025-12-24 11:10:52] [debug] Fetched 3 users from db
+[2025-12-24 11:10:52] [info] Service: Fetched 3 users
+[2025-12-24 11:10:52] [info] Controller: GET /users - 200
+[2025-12-24 18:25:34] [info] Controller: GET / - processing request
+[2025-12-24 18:25:34] [info] Controller: GET / - 200
+[2025-12-24 18:25:45] [info] Controller: GET /users - processing request
+[2025-12-24 18:25:45] [info] Service: Fetching all users
+[2025-12-24 18:25:45] [debug] Fetching all users from db
+[2025-12-24 18:25:45] [debug] Fetched 3 users from db
+[2025-12-24 18:25:45] [info] Service: Fetched 3 users
+[2025-12-24 18:25:45] [info] Controller: GET /users - 200
+[2025-12-24 18:26:20] [info] Controller: GET /users/1 - processing request
+[2025-12-24 18:26:20] [info] Service: Fetching user 1
+[2025-12-24 18:26:20] [debug] Fetching user 1 from db
+[2025-12-24 18:26:20] [warning] User 1 not found in db
+[2025-12-24 18:26:20] [info] Service: Fetched user 1
+[2025-12-24 18:26:21] [info] Controller: GET /users/1 - 200
+[2025-12-24 18:26:21] [info] Controller: GET /users/19 - processing request
+[2025-12-24 18:26:21] [info] Service: Fetching user 19
+[2025-12-24 18:26:21] [debug] Fetching user 19 from db
+[2025-12-24 18:26:21] [debug] User {id} fetched from db
+[2025-12-24 18:26:21] [info] Service: Fetched user 19
+[2025-12-24 18:26:21] [info] Controller: GET /users/19 - 200
+[2025-12-24 18:26:25] [info] Controller: GET /users/1 - processing request
+[2025-12-24 18:26:25] [info] Service: Fetching user 1
+[2025-12-24 18:26:25] [debug] Fetching user 1 from db
+[2025-12-24 18:26:25] [warning] User 1 not found in db
+[2025-12-24 18:26:25] [info] Service: Fetched user 1
+[2025-12-24 18:26:25] [info] Controller: GET /users/1 - 200
+[2025-12-24 18:29:47] [info] Controller: GET /users - processing request
+[2025-12-24 18:29:47] [info] Service: Fetching all users
+[2025-12-24 18:29:47] [debug] Fetching all users from db
+[2025-12-24 18:29:47] [debug] Fetched 2 users from db
+[2025-12-24 18:29:47] [info] Service: Fetched 2 users
+[2025-12-24 18:29:47] [info] Controller: GET /users - 200
+[2025-12-24 18:29:48] [info] Controller: GET /users/1 - processing request
+[2025-12-24 18:29:48] [info] Service: Fetching user 1
+[2025-12-24 18:29:48] [debug] Fetching user 1 from db
+[2025-12-24 18:29:48] [debug] User {id} fetched from db
+[2025-12-24 18:29:48] [info] Service: Fetched user 1
+[2025-12-24 18:29:48] [info] Controller: GET /users/1 - 200
+[2025-12-24 18:29:48] [info] Controller: GET /users/1 - processing request
+[2025-12-24 18:29:48] [info] Service: Fetching user 1
+[2025-12-24 18:29:48] [debug] Fetching user 1 from db
+[2025-12-24 18:29:48] [warning] User 1 not found in db
+[2025-12-24 18:29:48] [info] Service: Fetched user 1
+[2025-12-24 18:29:48] [info] Controller: GET /users/1 - 200
+[2025-12-24 18:29:48] [info] Controller: POST /users - processing request
+[2025-12-24 18:29:48] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-24 18:29:48] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-24 18:29:48] [debug] User 1 added to db
+[2025-12-24 18:29:48] [info] Service: Created user 1
+[2025-12-24 18:29:48] [info] Controller: POST /users - 201
+[2025-12-24 18:29:48] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 18:29:48] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 18:29:48] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 18:29:48] [debug] User 1 updated in db
+[2025-12-24 18:29:48] [info] Service: Updated user 1
+[2025-12-24 18:29:48] [info] Controller: PATCH /users/{id} - 200
+[2025-12-24 18:29:49] [info] Controller: PATCH /users/1 - processing request
+[2025-12-24 18:29:49] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-24 18:29:49] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-24 18:29:49] [warning] User 1 not found in db
+[2025-12-24 18:29:49] [info] Controller: PATCH /users/{id} - 404
+[2025-12-24 18:29:49] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 18:29:49] [info] Service: Deleting user 1
+[2025-12-24 18:29:49] [debug] Deleting user 1 from db
+[2025-12-24 18:29:49] [debug] Deleted user 1 from db
+[2025-12-24 18:29:49] [info] Service Deleted user 1
+[2025-12-24 18:29:49] [info] Controller: DELETE /users/{id} - 204
+[2025-12-24 18:29:49] [info] Controller: DELETE /users/1 - processing request
+[2025-12-24 18:29:49] [info] Service: Deleting user 1
+[2025-12-24 18:29:49] [debug] Deleting user 1 from db
+[2025-12-24 18:29:49] [warning] User 1 not found in db
+[2025-12-24 18:29:49] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 09:29:54] [info] Controller: GET /users - processing request
+[2025-12-25 09:29:54] [info] Service: Fetching all users
+[2025-12-25 09:29:54] [debug] Fetching all users from db
+[2025-12-25 09:29:54] [debug] Fetched 3 users from db
+[2025-12-25 09:29:54] [info] Service: Fetched 3 users
+[2025-12-25 09:29:54] [info] Controller: GET /users - 200
+[2025-12-25 09:29:54] [info] Controller: GET /users/1 - processing request
+[2025-12-25 09:29:55] [info] Controller: GET /users/1 - processing request
+[2025-12-25 09:29:55] [info] Controller: POST /users - processing request
+[2025-12-25 09:29:55] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 09:29:55] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 09:29:55] [debug] User 22 added to db
+[2025-12-25 09:29:55] [info] Service: Created user 22
+[2025-12-25 09:29:55] [info] Controller: POST /users - 201
+[2025-12-25 09:29:55] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 09:29:55] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 09:29:55] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 09:29:55] [warning] User 1 not found in db
+[2025-12-25 09:29:55] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 09:29:55] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 09:29:55] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 09:29:55] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 09:29:55] [warning] User 1 not found in db
+[2025-12-25 09:29:55] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 09:29:55] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 09:29:55] [info] Service: Deleting user 1
+[2025-12-25 09:29:55] [debug] Deleting user 1 from db
+[2025-12-25 09:29:55] [warning] User 1 not found in db
+[2025-12-25 09:29:55] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 09:30:53] [info] Controller: GET /users - processing request
+[2025-12-25 09:30:53] [info] Service: Fetching all users
+[2025-12-25 09:30:53] [debug] Fetching all users from db
+[2025-12-25 09:30:53] [debug] Fetched 4 users from db
+[2025-12-25 09:30:53] [info] Service: Fetched 4 users
+[2025-12-25 09:30:53] [info] Controller: GET /users - 200
+[2025-12-25 09:30:53] [info] Controller: GET /users/1 - processing request
+[2025-12-25 09:30:53] [info] Controller: GET /users/1 - processing request
+[2025-12-25 09:30:53] [info] Controller: POST /users - processing request
+[2025-12-25 09:30:53] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 09:30:53] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 09:30:53] [debug] User 23 added to db
+[2025-12-25 09:30:53] [info] Service: Created user 23
+[2025-12-25 09:30:53] [info] Controller: POST /users - 201
+[2025-12-25 09:30:54] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 09:30:54] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 09:30:54] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 09:30:54] [warning] User 1 not found in db
+[2025-12-25 09:30:54] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 09:30:54] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 09:30:54] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 09:30:54] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 09:30:54] [warning] User 1 not found in db
+[2025-12-25 09:30:54] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 09:30:54] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 09:30:54] [info] Service: Deleting user 1
+[2025-12-25 09:30:54] [debug] Deleting user 1 from db
+[2025-12-25 09:30:54] [warning] User 1 not found in db
+[2025-12-25 09:30:54] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 0 users from db
+[2025-12-25 09:31:40] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 09:31:40] [debug] User 1 added to db
+[2025-12-25 09:31:40] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-25 09:31:40] [debug] User 2 added to db
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 2 users from db
+[2025-12-25 09:31:40] [debug] Fetching user 1 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching user 1 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching user 1 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 0 users from db
+[2025-12-25 09:31:40] [debug] Fetching user 1 from db
+[2025-12-25 09:31:40] [warning] User 1 not found in db
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 0 users from db
+[2025-12-25 09:31:40] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-25 09:31:40] [debug] User 1 added to db
+[2025-12-25 09:31:40] [debug] Fetching user 1 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching user 1 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching user 1 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 0 users from db
+[2025-12-25 09:31:40] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 09:31:40] [debug] User 1 added to db
+[2025-12-25 09:31:40] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-25 09:31:40] [debug] User 2 added to db
+[2025-12-25 09:31:40] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-25 09:31:40] [debug] User 2 updated in db
+[2025-12-25 09:31:40] [debug] Fetching user 2 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching user 2 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching user 2 from db
+[2025-12-25 09:31:40] [debug] User {id} fetched from db
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 0 users from db
+[2025-12-25 09:31:40] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-25 09:31:40] [warning] User 2 not found in db
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 0 users from db
+[2025-12-25 09:31:40] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 09:31:40] [debug] User 1 added to db
+[2025-12-25 09:31:40] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-25 09:31:40] [debug] User 2 added to db
+[2025-12-25 09:31:40] [debug] Deleting user 2 from db
+[2025-12-25 09:31:40] [debug] Deleted user 2 from db
+[2025-12-25 09:31:40] [debug] Fetching user 2 from db
+[2025-12-25 09:31:40] [warning] User 2 not found in db
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 0 users from db
+[2025-12-25 09:31:40] [debug] Deleting user 2 from db
+[2025-12-25 09:31:40] [warning] User 2 not found in db
+[2025-12-25 09:31:40] [debug] Fetching all users from db
+[2025-12-25 09:31:40] [debug] Fetched 0 users from db
+[2025-12-25 09:31:40] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-25 09:31:40] [debug] User 1 added to db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 0 users from db
+[2025-12-25 09:32:10] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 09:32:10] [debug] User 1 added to db
+[2025-12-25 09:32:10] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-25 09:32:10] [debug] User 2 added to db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 2 users from db
+[2025-12-25 09:32:10] [debug] Fetching user 1 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching user 1 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching user 1 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 0 users from db
+[2025-12-25 09:32:10] [debug] Fetching user 1 from db
+[2025-12-25 09:32:10] [warning] User 1 not found in db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 0 users from db
+[2025-12-25 09:32:10] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-25 09:32:10] [debug] User 1 added to db
+[2025-12-25 09:32:10] [debug] Fetching user 1 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching user 1 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching user 1 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 0 users from db
+[2025-12-25 09:32:10] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 09:32:10] [debug] User 1 added to db
+[2025-12-25 09:32:10] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-25 09:32:10] [debug] User 2 added to db
+[2025-12-25 09:32:10] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-25 09:32:10] [debug] User 2 updated in db
+[2025-12-25 09:32:10] [debug] Fetching user 2 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching user 2 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching user 2 from db
+[2025-12-25 09:32:10] [debug] User {id} fetched from db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 0 users from db
+[2025-12-25 09:32:10] [debug] Update user 2 in db to name Sergey age 33 money 6600 visa 1
+[2025-12-25 09:32:10] [warning] User 2 not found in db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 0 users from db
+[2025-12-25 09:32:10] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 09:32:10] [debug] User 1 added to db
+[2025-12-25 09:32:10] [debug] Adding user Seriy age 54 money 3400 visa  to db
+[2025-12-25 09:32:10] [debug] User 2 added to db
+[2025-12-25 09:32:10] [debug] Deleting user 2 from db
+[2025-12-25 09:32:10] [debug] Deleted user 2 from db
+[2025-12-25 09:32:10] [debug] Fetching user 2 from db
+[2025-12-25 09:32:10] [warning] User 2 not found in db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 0 users from db
+[2025-12-25 09:32:10] [debug] Deleting user 2 from db
+[2025-12-25 09:32:10] [warning] User 2 not found in db
+[2025-12-25 09:32:10] [debug] Fetching all users from db
+[2025-12-25 09:32:10] [debug] Fetched 0 users from db
+[2025-12-25 09:32:10] [debug] Adding user Nikolay age 55 money 23000 visa 1 to db
+[2025-12-25 09:32:10] [debug] User 1 added to db
+[2025-12-25 11:03:22] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:03:22] [info] Controller: POST /users - processing request
+[2025-12-25 11:03:22] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:03:22] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:03:22] [debug] User 24 added to db
+[2025-12-25 11:03:22] [info] Service: Created user 24
+[2025-12-25 11:03:22] [info] Controller: POST /users - 201
+[2025-12-25 11:03:22] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:03:22] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:03:22] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:03:22] [warning] User 1 not found in db
+[2025-12-25 11:03:22] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:03:22] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:03:22] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:03:22] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:03:22] [warning] User 1 not found in db
+[2025-12-25 11:03:22] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:03:22] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:03:22] [info] Service: Deleting user 1
+[2025-12-25 11:03:22] [debug] Deleting user 1 from db
+[2025-12-25 11:03:22] [warning] User 1 not found in db
+[2025-12-25 11:03:22] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:03:22] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:03:22] [info] Service: Deleting user 1
+[2025-12-25 11:03:22] [debug] Deleting user 1 from db
+[2025-12-25 11:03:22] [warning] User 1 not found in db
+[2025-12-25 11:03:22] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:13:02] [info] Controller: GET / - processing request
+[2025-12-25 11:13:02] [info] Controller: GET / - 200
+[2025-12-25 11:13:05] [info] Controller: GET /users - processing request
+[2025-12-25 11:13:05] [info] Service: Fetching all users
+[2025-12-25 11:13:05] [debug] Fetching all users from db
+[2025-12-25 11:13:05] [debug] Fetched 6 users from db
+[2025-12-25 11:13:05] [info] Service: Fetched 6 users
+[2025-12-25 11:13:05] [info] Controller: GET /users - 200
+[2025-12-25 11:14:02] [info] Controller: GET /users - processing request
+[2025-12-25 11:14:02] [info] Service: Fetching all users
+[2025-12-25 11:14:02] [debug] Fetching all users from db
+[2025-12-25 11:14:02] [debug] Fetched 6 users from db
+[2025-12-25 11:14:02] [info] Service: Fetched 6 users
+[2025-12-25 11:14:02] [info] Controller: GET /users - 200
+[2025-12-25 11:14:02] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:14:02] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:14:02] [info] Controller: POST /users - processing request
+[2025-12-25 11:14:02] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:14:02] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:14:02] [debug] User 25 added to db
+[2025-12-25 11:14:02] [info] Service: Created user 25
+[2025-12-25 11:14:02] [info] Controller: POST /users - 201
+[2025-12-25 11:14:02] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:14:02] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:14:02] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:14:02] [warning] User 1 not found in db
+[2025-12-25 11:14:02] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:14:02] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:14:02] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:14:02] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:14:02] [warning] User 1 not found in db
+[2025-12-25 11:14:02] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:14:02] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:14:02] [info] Service: Deleting user 1
+[2025-12-25 11:14:02] [debug] Deleting user 1 from db
+[2025-12-25 11:14:02] [warning] User 1 not found in db
+[2025-12-25 11:14:02] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:14:08] [info] Controller: GET /users - processing request
+[2025-12-25 11:14:08] [info] Service: Fetching all users
+[2025-12-25 11:14:08] [debug] Fetching all users from db
+[2025-12-25 11:14:08] [debug] Fetched 7 users from db
+[2025-12-25 11:14:08] [info] Service: Fetched 7 users
+[2025-12-25 11:14:08] [info] Controller: GET /users - 200
+[2025-12-25 11:16:50] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:16:55] [info] Controller: POST /users - processing request
+[2025-12-25 11:16:55] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:16:55] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:16:55] [debug] User 26 added to db
+[2025-12-25 11:16:55] [info] Service: Created user 26
+[2025-12-25 11:16:55] [info] Controller: POST /users - 201
+[2025-12-25 11:16:56] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:16:56] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:16:56] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:16:56] [warning] User 1 not found in db
+[2025-12-25 11:16:56] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:16:57] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:16:57] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:16:57] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:16:57] [warning] User 1 not found in db
+[2025-12-25 11:16:57] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:16:58] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:16:58] [info] Service: Deleting user 1
+[2025-12-25 11:16:58] [debug] Deleting user 1 from db
+[2025-12-25 11:16:58] [warning] User 1 not found in db
+[2025-12-25 11:16:58] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:18:14] [info] Controller: GET /users - processing request
+[2025-12-25 11:18:14] [info] Service: Fetching all users
+[2025-12-25 11:18:14] [debug] Fetching all users from db
+[2025-12-25 11:18:14] [debug] Fetched 8 users from db
+[2025-12-25 11:18:14] [info] Service: Fetched 8 users
+[2025-12-25 11:18:14] [info] Controller: GET /users - 200
+[2025-12-25 11:18:14] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:18:14] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:18:14] [info] Controller: POST /users - processing request
+[2025-12-25 11:18:14] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:18:14] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:18:14] [debug] User 27 added to db
+[2025-12-25 11:18:14] [info] Service: Created user 27
+[2025-12-25 11:18:14] [info] Controller: POST /users - 201
+[2025-12-25 11:18:14] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:18:14] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:14] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:14] [warning] User 1 not found in db
+[2025-12-25 11:18:14] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:18:14] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:18:14] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:14] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:14] [warning] User 1 not found in db
+[2025-12-25 11:18:14] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:18:14] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:18:14] [info] Service: Deleting user 1
+[2025-12-25 11:18:14] [debug] Deleting user 1 from db
+[2025-12-25 11:18:14] [warning] User 1 not found in db
+[2025-12-25 11:18:14] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:18:18] [info] Controller: GET /users - processing request
+[2025-12-25 11:18:18] [info] Service: Fetching all users
+[2025-12-25 11:18:18] [debug] Fetching all users from db
+[2025-12-25 11:18:18] [debug] Fetched 9 users from db
+[2025-12-25 11:18:18] [info] Service: Fetched 9 users
+[2025-12-25 11:18:18] [info] Controller: GET /users - 200
+[2025-12-25 11:18:18] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:18:18] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:18:18] [info] Controller: POST /users - processing request
+[2025-12-25 11:18:18] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:18:18] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:18:18] [debug] User 28 added to db
+[2025-12-25 11:18:18] [info] Service: Created user 28
+[2025-12-25 11:18:18] [info] Controller: POST /users - 201
+[2025-12-25 11:18:18] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:18:18] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:18] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:18] [warning] User 1 not found in db
+[2025-12-25 11:18:18] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:18:18] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:18:18] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:18] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:18] [warning] User 1 not found in db
+[2025-12-25 11:18:18] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:18:19] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:18:19] [info] Service: Deleting user 1
+[2025-12-25 11:18:19] [debug] Deleting user 1 from db
+[2025-12-25 11:18:19] [warning] User 1 not found in db
+[2025-12-25 11:18:19] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:18:34] [info] Controller: GET /users - processing request
+[2025-12-25 11:18:34] [info] Service: Fetching all users
+[2025-12-25 11:18:34] [debug] Fetching all users from db
+[2025-12-25 11:18:34] [debug] Fetched 10 users from db
+[2025-12-25 11:18:34] [info] Service: Fetched 10 users
+[2025-12-25 11:18:34] [info] Controller: GET /users - 200
+[2025-12-25 11:18:34] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:18:34] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:18:35] [info] Controller: POST /users - processing request
+[2025-12-25 11:18:35] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:18:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:18:35] [debug] User 29 added to db
+[2025-12-25 11:18:35] [info] Service: Created user 29
+[2025-12-25 11:18:35] [info] Controller: POST /users - 201
+[2025-12-25 11:18:35] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:18:35] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:35] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:35] [warning] User 1 not found in db
+[2025-12-25 11:18:35] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:18:35] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:18:35] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:35] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:18:35] [warning] User 1 not found in db
+[2025-12-25 11:18:35] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:18:35] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:18:35] [info] Service: Deleting user 1
+[2025-12-25 11:18:35] [debug] Deleting user 1 from db
+[2025-12-25 11:18:35] [warning] User 1 not found in db
+[2025-12-25 11:18:35] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:19:34] [info] Controller: GET /users - processing request
+[2025-12-25 11:19:34] [info] Service: Fetching all users
+[2025-12-25 11:19:34] [debug] Fetching all users from db
+[2025-12-25 11:19:34] [debug] Fetched 11 users from db
+[2025-12-25 11:19:34] [info] Service: Fetched 11 users
+[2025-12-25 11:19:34] [info] Controller: GET /users - 200
+[2025-12-25 11:20:05] [info] Controller: GET /users - processing request
+[2025-12-25 11:20:05] [info] Service: Fetching all users
+[2025-12-25 11:20:05] [debug] Fetching all users from db
+[2025-12-25 11:20:05] [debug] Fetched 11 users from db
+[2025-12-25 11:20:05] [info] Service: Fetched 11 users
+[2025-12-25 11:20:05] [info] Controller: GET /users - 200
+[2025-12-25 11:20:05] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:20:05] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:20:05] [info] Controller: POST /users - processing request
+[2025-12-25 11:20:05] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:20:05] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:20:05] [debug] User 30 added to db
+[2025-12-25 11:20:05] [info] Service: Created user 30
+[2025-12-25 11:20:05] [info] Controller: POST /users - 201
+[2025-12-25 11:20:05] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:20:05] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:20:05] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:20:05] [warning] User 1 not found in db
+[2025-12-25 11:20:05] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:20:05] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:20:05] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:20:05] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:20:05] [warning] User 1 not found in db
+[2025-12-25 11:20:05] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:20:05] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:20:05] [info] Service: Deleting user 1
+[2025-12-25 11:20:05] [debug] Deleting user 1 from db
+[2025-12-25 11:20:05] [warning] User 1 not found in db
+[2025-12-25 11:20:05] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:22:39] [info] Controller: GET /users - processing request
+[2025-12-25 11:22:39] [info] Service: Fetching all users
+[2025-12-25 11:22:39] [debug] Fetching all users from db
+[2025-12-25 11:22:39] [debug] Fetched 12 users from db
+[2025-12-25 11:22:39] [info] Service: Fetched 12 users
+[2025-12-25 11:22:39] [info] Controller: GET /users - 200
+[2025-12-25 11:25:22] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:25:23] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:25:24] [info] Controller: POST /users - processing request
+[2025-12-25 11:25:24] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:25:24] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:25:24] [debug] User 31 added to db
+[2025-12-25 11:25:24] [info] Service: Created user 31
+[2025-12-25 11:25:24] [info] Controller: POST /users - 201
+[2025-12-25 11:25:25] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:25:25] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:25:25] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:25:25] [warning] User 1 not found in db
+[2025-12-25 11:25:25] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:25:26] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:25:26] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:25:26] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:25:26] [warning] User 1 not found in db
+[2025-12-25 11:25:26] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:25:27] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:25:27] [info] Service: Deleting user 1
+[2025-12-25 11:25:27] [debug] Deleting user 1 from db
+[2025-12-25 11:25:27] [warning] User 1 not found in db
+[2025-12-25 11:25:27] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:32:08] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:32:08] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:32:08] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:32:08] [warning] User 1 not found in db
+[2025-12-25 11:32:08] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:32:08] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:32:08] [info] Service: Deleting user 1
+[2025-12-25 11:32:08] [debug] Deleting user 1 from db
+[2025-12-25 11:32:08] [warning] User 1 not found in db
+[2025-12-25 11:32:08] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:32:08] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:32:08] [info] Service: Deleting user 1
+[2025-12-25 11:32:08] [debug] Deleting user 1 from db
+[2025-12-25 11:32:08] [warning] User 1 not found in db
+[2025-12-25 11:32:08] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:32:42] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:32:43] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:32:44] [info] Controller: POST /users - processing request
+[2025-12-25 11:32:44] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:32:44] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:32:44] [debug] User 32 added to db
+[2025-12-25 11:32:44] [info] Service: Created user 32
+[2025-12-25 11:32:44] [info] Controller: POST /users - 201
+[2025-12-25 11:32:45] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:32:45] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:32:45] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:32:45] [warning] User 1 not found in db
+[2025-12-25 11:32:45] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:32:46] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:32:46] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:32:46] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:32:46] [warning] User 1 not found in db
+[2025-12-25 11:32:46] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:32:46] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:32:46] [info] Service: Deleting user 1
+[2025-12-25 11:32:46] [debug] Deleting user 1 from db
+[2025-12-25 11:32:46] [warning] User 1 not found in db
+[2025-12-25 11:32:46] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:36:32] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:36:36] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:36:41] [info] Controller: POST /users - processing request
+[2025-12-25 11:36:41] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:36:41] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:36:41] [debug] User 33 added to db
+[2025-12-25 11:36:41] [info] Service: Created user 33
+[2025-12-25 11:36:41] [info] Controller: POST /users - 201
+[2025-12-25 11:36:52] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:36:52] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:36:52] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:36:52] [warning] User 1 not found in db
+[2025-12-25 11:36:52] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:36:59] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:36:59] [info] Service: Deleting user 1
+[2025-12-25 11:36:59] [debug] Deleting user 1 from db
+[2025-12-25 11:36:59] [warning] User 1 not found in db
+[2025-12-25 11:36:59] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:37:09] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:37:09] [info] Service: Deleting user 1
+[2025-12-25 11:37:09] [debug] Deleting user 1 from db
+[2025-12-25 11:37:09] [warning] User 1 not found in db
+[2025-12-25 11:37:09] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:39:06] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:39:07] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:39:08] [info] Controller: POST /users - processing request
+[2025-12-25 11:39:08] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:39:08] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:39:08] [debug] User 34 added to db
+[2025-12-25 11:39:08] [info] Service: Created user 34
+[2025-12-25 11:39:08] [info] Controller: POST /users - 201
+[2025-12-25 11:39:08] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:39:08] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:39:08] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:39:08] [warning] User 1 not found in db
+[2025-12-25 11:39:08] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:39:09] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:39:09] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:39:09] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:39:09] [warning] User 1 not found in db
+[2025-12-25 11:39:09] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:46:31] [info] Controller: GET /users - processing request
+[2025-12-25 11:46:31] [info] Service: Fetching all users
+[2025-12-25 11:46:31] [debug] Fetching all users from db
+[2025-12-25 11:46:31] [debug] Fetched 16 users from db
+[2025-12-25 11:46:31] [info] Service: Fetched 16 users
+[2025-12-25 11:46:31] [info] Controller: GET /users - 200
+[2025-12-25 11:51:35] [info] Controller: GET /users - processing request
+[2025-12-25 11:51:35] [info] Service: Fetching all users
+[2025-12-25 11:51:35] [debug] Fetching all users from db
+[2025-12-25 11:51:35] [debug] Fetched 16 users from db
+[2025-12-25 11:51:35] [info] Service: Fetched 16 users
+[2025-12-25 11:51:35] [info] Controller: GET /users - 200
+[2025-12-25 11:51:37] [info] Controller: GET /users/1 - processing request
+[2025-12-25 11:51:44] [info] Controller: POST /users - processing request
+[2025-12-25 11:51:44] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 11:51:44] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 11:51:44] [debug] User 35 added to db
+[2025-12-25 11:51:44] [info] Service: Created user 35
+[2025-12-25 11:51:44] [info] Controller: POST /users - 201
+[2025-12-25 11:51:45] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:51:45] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:51:45] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:51:45] [warning] User 1 not found in db
+[2025-12-25 11:51:45] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:51:47] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 11:51:47] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 11:51:47] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 11:51:47] [warning] User 1 not found in db
+[2025-12-25 11:51:47] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 11:51:47] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 11:51:47] [info] Service: Deleting user 1
+[2025-12-25 11:51:47] [debug] Deleting user 1 from db
+[2025-12-25 11:51:47] [warning] User 1 not found in db
+[2025-12-25 11:51:47] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 11:52:05] [info] Controller: GET /users - processing request
+[2025-12-25 11:52:05] [info] Service: Fetching all users
+[2025-12-25 11:52:05] [debug] Fetching all users from db
+[2025-12-25 11:52:05] [debug] Fetched 17 users from db
+[2025-12-25 11:52:05] [info] Service: Fetched 17 users
+[2025-12-25 11:52:05] [info] Controller: GET /users - 200
+[2025-12-25 12:48:24] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:48:25] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:48:26] [info] Controller: POST /users - processing request
+[2025-12-25 12:48:26] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 12:48:26] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 12:48:26] [debug] User 36 added to db
+[2025-12-25 12:48:26] [info] Service: Created user 36
+[2025-12-25 12:48:26] [info] Controller: POST /users - 201
+[2025-12-25 12:48:26] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:48:26] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:48:26] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:48:26] [warning] User 1 not found in db
+[2025-12-25 12:48:26] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:48:27] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:48:27] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:48:27] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:48:27] [warning] User 1 not found in db
+[2025-12-25 12:48:27] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:48:28] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:48:28] [info] Service: Deleting user 1
+[2025-12-25 12:48:28] [debug] Deleting user 1 from db
+[2025-12-25 12:48:28] [warning] User 1 not found in db
+[2025-12-25 12:48:28] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 12:48:48] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:48:48] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:48:49] [info] Controller: POST /users - processing request
+[2025-12-25 12:48:49] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 12:48:49] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 12:48:49] [debug] User 37 added to db
+[2025-12-25 12:48:49] [info] Service: Created user 37
+[2025-12-25 12:48:49] [info] Controller: POST /users - 201
+[2025-12-25 12:48:50] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:48:50] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:48:50] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:48:50] [warning] User 1 not found in db
+[2025-12-25 12:48:50] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:48:50] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:48:50] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:48:50] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:48:50] [warning] User 1 not found in db
+[2025-12-25 12:48:50] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:48:51] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:48:51] [info] Service: Deleting user 1
+[2025-12-25 12:48:51] [debug] Deleting user 1 from db
+[2025-12-25 12:48:51] [warning] User 1 not found in db
+[2025-12-25 12:48:51] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 12:49:23] [info] Controller: GET /users - processing request
+[2025-12-25 12:49:23] [info] Service: Fetching all users
+[2025-12-25 12:49:23] [debug] Fetching all users from db
+[2025-12-25 12:49:23] [debug] Fetched 19 users from db
+[2025-12-25 12:49:23] [info] Service: Fetched 19 users
+[2025-12-25 12:49:23] [info] Controller: GET /users - 200
+[2025-12-25 12:49:23] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:49:23] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:49:23] [info] Controller: POST /users - processing request
+[2025-12-25 12:49:23] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 12:49:23] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 12:49:23] [debug] User 38 added to db
+[2025-12-25 12:49:23] [info] Service: Created user 38
+[2025-12-25 12:49:23] [info] Controller: POST /users - 201
+[2025-12-25 12:49:24] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:49:24] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:49:24] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:49:24] [warning] User 1 not found in db
+[2025-12-25 12:49:24] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:49:24] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:49:24] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:49:24] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:49:24] [warning] User 1 not found in db
+[2025-12-25 12:49:24] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:49:24] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:49:24] [info] Service: Deleting user 1
+[2025-12-25 12:49:24] [debug] Deleting user 1 from db
+[2025-12-25 12:49:24] [warning] User 1 not found in db
+[2025-12-25 12:49:24] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 12:49:49] [info] Controller: GET /users - processing request
+[2025-12-25 12:49:49] [info] Service: Fetching all users
+[2025-12-25 12:49:49] [debug] Fetching all users from db
+[2025-12-25 12:49:49] [debug] Fetched 20 users from db
+[2025-12-25 12:49:49] [info] Service: Fetched 20 users
+[2025-12-25 12:49:49] [info] Controller: GET /users - 200
+[2025-12-25 12:50:45] [info] Controller: GET /users - processing request
+[2025-12-25 12:50:45] [info] Service: Fetching all users
+[2025-12-25 12:50:45] [debug] Fetching all users from db
+[2025-12-25 12:50:45] [debug] Fetched 2 users from db
+[2025-12-25 12:50:45] [info] Service: Fetched 2 users
+[2025-12-25 12:50:45] [info] Controller: GET /users - 200
+[2025-12-25 12:50:46] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:50:49] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:50:55] [info] Controller: GET /users - processing request
+[2025-12-25 12:50:55] [info] Service: Fetching all users
+[2025-12-25 12:50:55] [debug] Fetching all users from db
+[2025-12-25 12:50:55] [debug] Fetched 2 users from db
+[2025-12-25 12:50:55] [info] Service: Fetched 2 users
+[2025-12-25 12:50:55] [info] Controller: GET /users - 200
+[2025-12-25 12:50:55] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:50:55] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:50:55] [info] Controller: POST /users - processing request
+[2025-12-25 12:50:55] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 12:50:55] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 12:50:55] [debug] User 1 added to db
+[2025-12-25 12:50:55] [info] Service: Created user 1
+[2025-12-25 12:50:55] [info] Controller: POST /users - 201
+[2025-12-25 12:50:55] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:50:55] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:50:55] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:50:55] [debug] User 1 updated in db
+[2025-12-25 12:50:55] [info] Service: Updated user 1
+[2025-12-25 12:50:55] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 12:50:55] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:50:55] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:50:55] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:50:55] [warning] User 1 not found in db
+[2025-12-25 12:50:55] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:50:55] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:50:55] [info] Service: Deleting user 1
+[2025-12-25 12:50:55] [debug] Deleting user 1 from db
+[2025-12-25 12:50:55] [debug] Deleted user 1 from db
+[2025-12-25 12:50:55] [info] Service Deleted user 1
+[2025-12-25 12:50:55] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 12:50:55] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:50:55] [info] Service: Deleting user 1
+[2025-12-25 12:50:55] [debug] Deleting user 1 from db
+[2025-12-25 12:50:55] [warning] User 1 not found in db
+[2025-12-25 12:50:55] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 12:51:21] [info] Controller: GET /users - processing request
+[2025-12-25 12:51:21] [info] Service: Fetching all users
+[2025-12-25 12:51:21] [debug] Fetching all users from db
+[2025-12-25 12:51:21] [debug] Fetched 2 users from db
+[2025-12-25 12:51:21] [info] Service: Fetched 2 users
+[2025-12-25 12:51:21] [info] Controller: GET /users - 200
+[2025-12-25 12:51:21] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:51:21] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:51:21] [info] Controller: POST /users - processing request
+[2025-12-25 12:51:21] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 12:51:21] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 12:51:21] [debug] User 1 added to db
+[2025-12-25 12:51:21] [info] Service: Created user 1
+[2025-12-25 12:51:21] [info] Controller: POST /users - 201
+[2025-12-25 12:51:21] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:51:21] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:51:21] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:51:21] [debug] User 1 updated in db
+[2025-12-25 12:51:21] [info] Service: Updated user 1
+[2025-12-25 12:51:21] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 12:51:22] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:51:22] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:51:22] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:51:22] [warning] User 1 not found in db
+[2025-12-25 12:51:22] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:51:22] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:51:22] [info] Service: Deleting user 1
+[2025-12-25 12:51:22] [debug] Deleting user 1 from db
+[2025-12-25 12:51:22] [debug] Deleted user 1 from db
+[2025-12-25 12:51:22] [info] Service Deleted user 1
+[2025-12-25 12:51:22] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 12:51:22] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:51:22] [info] Service: Deleting user 1
+[2025-12-25 12:51:22] [debug] Deleting user 1 from db
+[2025-12-25 12:51:22] [warning] User 1 not found in db
+[2025-12-25 12:51:22] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 12:58:10] [info] Controller: GET /users - processing request
+[2025-12-25 12:58:10] [info] Service: Fetching all users
+[2025-12-25 12:58:10] [debug] Fetching all users from db
+[2025-12-25 12:58:10] [debug] Fetched 2 users from db
+[2025-12-25 12:58:10] [info] Service: Fetched 2 users
+[2025-12-25 12:58:10] [info] Controller: GET /users - 200
+[2025-12-25 12:58:34] [info] Controller: GET /users - processing request
+[2025-12-25 12:58:34] [info] Service: Fetching all users
+[2025-12-25 12:58:34] [debug] Fetching all users from db
+[2025-12-25 12:58:34] [debug] Fetched 2 users from db
+[2025-12-25 12:58:34] [info] Service: Fetched 2 users
+[2025-12-25 12:58:34] [info] Controller: GET /users - 200
+[2025-12-25 12:59:28] [info] Controller: GET /users - processing request
+[2025-12-25 12:59:28] [info] Service: Fetching all users
+[2025-12-25 12:59:28] [debug] Fetching all users from db
+[2025-12-25 12:59:28] [debug] Fetched 2 users from db
+[2025-12-25 12:59:28] [info] Service: Fetched 2 users
+[2025-12-25 12:59:28] [info] Controller: GET /users - 200
+[2025-12-25 12:59:28] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:59:28] [info] Controller: GET /users/1 - processing request
+[2025-12-25 12:59:29] [info] Controller: POST /users - processing request
+[2025-12-25 12:59:29] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 12:59:29] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 12:59:29] [debug] User 1 added to db
+[2025-12-25 12:59:29] [info] Service: Created user 1
+[2025-12-25 12:59:29] [info] Controller: POST /users - 201
+[2025-12-25 12:59:29] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:59:29] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:59:29] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:59:29] [debug] User 1 updated in db
+[2025-12-25 12:59:29] [info] Service: Updated user 1
+[2025-12-25 12:59:29] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 12:59:29] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 12:59:29] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 12:59:29] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 12:59:29] [warning] User 1 not found in db
+[2025-12-25 12:59:29] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 12:59:29] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:59:29] [info] Service: Deleting user 1
+[2025-12-25 12:59:29] [debug] Deleting user 1 from db
+[2025-12-25 12:59:29] [debug] Deleted user 1 from db
+[2025-12-25 12:59:29] [info] Service Deleted user 1
+[2025-12-25 12:59:29] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 12:59:29] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 12:59:29] [info] Service: Deleting user 1
+[2025-12-25 12:59:29] [debug] Deleting user 1 from db
+[2025-12-25 12:59:29] [warning] User 1 not found in db
+[2025-12-25 12:59:29] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:02:47] [info] Controller: GET /users - processing request
+[2025-12-25 13:02:47] [info] Service: Fetching all users
+[2025-12-25 13:02:47] [debug] Fetching all users from db
+[2025-12-25 13:02:47] [debug] Fetched 2 users from db
+[2025-12-25 13:02:47] [info] Service: Fetched 2 users
+[2025-12-25 13:02:47] [info] Controller: GET /users - 200
+[2025-12-25 13:02:47] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:02:47] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:02:47] [info] Controller: POST /users - processing request
+[2025-12-25 13:02:47] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:02:47] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:02:47] [debug] User 1 added to db
+[2025-12-25 13:02:47] [info] Service: Created user 1
+[2025-12-25 13:02:47] [info] Controller: POST /users - 201
+[2025-12-25 13:02:47] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:02:47] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:02:47] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:02:47] [debug] User 1 updated in db
+[2025-12-25 13:02:47] [info] Service: Updated user 1
+[2025-12-25 13:02:47] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:02:47] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:02:47] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:02:47] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:02:47] [warning] User 1 not found in db
+[2025-12-25 13:02:47] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:02:48] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:02:48] [info] Service: Deleting user 1
+[2025-12-25 13:02:48] [debug] Deleting user 1 from db
+[2025-12-25 13:02:48] [debug] Deleted user 1 from db
+[2025-12-25 13:02:48] [info] Service Deleted user 1
+[2025-12-25 13:02:48] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:02:48] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:02:48] [info] Service: Deleting user 1
+[2025-12-25 13:02:48] [debug] Deleting user 1 from db
+[2025-12-25 13:02:48] [warning] User 1 not found in db
+[2025-12-25 13:02:48] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:03:50] [info] Controller: GET /users - processing request
+[2025-12-25 13:03:50] [info] Service: Fetching all users
+[2025-12-25 13:03:50] [debug] Fetching all users from db
+[2025-12-25 13:03:50] [debug] Fetched 2 users from db
+[2025-12-25 13:03:50] [info] Service: Fetched 2 users
+[2025-12-25 13:03:50] [info] Controller: GET /users - 200
+[2025-12-25 13:03:50] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:03:50] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:03:50] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:03:50] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:03:50] [debug] User 1 updated in db
+[2025-12-25 13:03:50] [info] Service: Updated user 1
+[2025-12-25 13:03:50] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:03:50] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:03:50] [info] Service: Deleting user 1
+[2025-12-25 13:03:50] [debug] Deleting user 1 from db
+[2025-12-25 13:03:50] [debug] Deleted user 1 from db
+[2025-12-25 13:03:50] [info] Service Deleted user 1
+[2025-12-25 13:03:50] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:04:05] [info] Controller: GET /users - processing request
+[2025-12-25 13:04:05] [info] Service: Fetching all users
+[2025-12-25 13:04:05] [debug] Fetching all users from db
+[2025-12-25 13:04:05] [debug] Fetched 2 users from db
+[2025-12-25 13:04:05] [info] Service: Fetched 2 users
+[2025-12-25 13:04:05] [info] Controller: GET /users - 200
+[2025-12-25 13:04:05] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:04:06] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:04:06] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:04:06] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:04:06] [debug] User 1 updated in db
+[2025-12-25 13:04:06] [info] Service: Updated user 1
+[2025-12-25 13:04:06] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:04:06] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:04:06] [info] Service: Deleting user 1
+[2025-12-25 13:04:06] [debug] Deleting user 1 from db
+[2025-12-25 13:04:06] [debug] Deleted user 1 from db
+[2025-12-25 13:04:06] [info] Service Deleted user 1
+[2025-12-25 13:04:06] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:04:30] [info] Controller: GET /users - processing request
+[2025-12-25 13:04:30] [info] Service: Fetching all users
+[2025-12-25 13:04:30] [debug] Fetching all users from db
+[2025-12-25 13:04:30] [debug] Fetched 2 users from db
+[2025-12-25 13:04:30] [info] Service: Fetched 2 users
+[2025-12-25 13:04:30] [info] Controller: GET /users - 200
+[2025-12-25 13:04:30] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:04:30] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:04:30] [info] Controller: POST /users - processing request
+[2025-12-25 13:04:30] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:04:30] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:04:30] [debug] User 1 added to db
+[2025-12-25 13:04:30] [info] Service: Created user 1
+[2025-12-25 13:04:30] [info] Controller: POST /users - 201
+[2025-12-25 13:04:30] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:04:30] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:04:30] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:04:30] [debug] User 1 updated in db
+[2025-12-25 13:04:30] [info] Service: Updated user 1
+[2025-12-25 13:04:30] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:04:30] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:04:30] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:04:30] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:04:30] [warning] User 1 not found in db
+[2025-12-25 13:04:30] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:04:30] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:04:30] [info] Service: Deleting user 1
+[2025-12-25 13:04:30] [debug] Deleting user 1 from db
+[2025-12-25 13:04:30] [debug] Deleted user 1 from db
+[2025-12-25 13:04:30] [info] Service Deleted user 1
+[2025-12-25 13:04:30] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:04:30] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:04:30] [info] Service: Deleting user 1
+[2025-12-25 13:04:30] [debug] Deleting user 1 from db
+[2025-12-25 13:04:30] [warning] User 1 not found in db
+[2025-12-25 13:04:30] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:06:19] [info] Controller: GET /users - processing request
+[2025-12-25 13:06:19] [info] Service: Fetching all users
+[2025-12-25 13:06:19] [debug] Fetching all users from db
+[2025-12-25 13:06:19] [debug] Fetched 2 users from db
+[2025-12-25 13:06:19] [info] Service: Fetched 2 users
+[2025-12-25 13:06:19] [info] Controller: GET /users - 200
+[2025-12-25 13:06:19] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:06:19] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:06:19] [info] Controller: POST /users - processing request
+[2025-12-25 13:06:19] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:06:19] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:06:19] [debug] User 1 added to db
+[2025-12-25 13:06:19] [info] Service: Created user 1
+[2025-12-25 13:06:19] [info] Controller: POST /users - 201
+[2025-12-25 13:06:19] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:06:19] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:06:19] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:06:19] [debug] User 1 updated in db
+[2025-12-25 13:06:19] [info] Service: Updated user 1
+[2025-12-25 13:06:19] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:06:19] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:06:19] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:06:19] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:06:19] [warning] User 1 not found in db
+[2025-12-25 13:06:19] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:06:19] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:06:19] [info] Service: Deleting user 1
+[2025-12-25 13:06:19] [debug] Deleting user 1 from db
+[2025-12-25 13:06:19] [debug] Deleted user 1 from db
+[2025-12-25 13:06:19] [info] Service Deleted user 1
+[2025-12-25 13:06:19] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:06:19] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:06:19] [info] Service: Deleting user 1
+[2025-12-25 13:06:19] [debug] Deleting user 1 from db
+[2025-12-25 13:06:19] [warning] User 1 not found in db
+[2025-12-25 13:06:19] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:09:06] [info] Controller: GET /users - processing request
+[2025-12-25 13:09:06] [info] Service: Fetching all users
+[2025-12-25 13:09:06] [debug] Fetching all users from db
+[2025-12-25 13:09:06] [debug] Fetched 2 users from db
+[2025-12-25 13:09:06] [info] Service: Fetched 2 users
+[2025-12-25 13:09:06] [info] Controller: GET /users - 200
+[2025-12-25 13:10:31] [info] Controller: GET /users - processing request
+[2025-12-25 13:10:31] [info] Service: Fetching all users
+[2025-12-25 13:10:31] [debug] Fetching all users from db
+[2025-12-25 13:10:31] [debug] Fetched 2 users from db
+[2025-12-25 13:10:31] [info] Service: Fetched 2 users
+[2025-12-25 13:10:31] [info] Controller: GET /users - 200
+[2025-12-25 13:10:31] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:10:31] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:10:31] [info] Controller: POST /users - processing request
+[2025-12-25 13:10:31] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:10:31] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:10:31] [debug] User 1 added to db
+[2025-12-25 13:10:31] [info] Service: Created user 1
+[2025-12-25 13:10:31] [info] Controller: POST /users - 201
+[2025-12-25 13:10:31] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:10:31] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:10:31] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:10:31] [debug] User 1 updated in db
+[2025-12-25 13:10:31] [info] Service: Updated user 1
+[2025-12-25 13:10:31] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:10:31] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:10:31] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:10:31] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:10:31] [warning] User 1 not found in db
+[2025-12-25 13:10:31] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:10:31] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:10:31] [info] Service: Deleting user 1
+[2025-12-25 13:10:31] [debug] Deleting user 1 from db
+[2025-12-25 13:10:31] [debug] Deleted user 1 from db
+[2025-12-25 13:10:31] [info] Service Deleted user 1
+[2025-12-25 13:10:31] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:10:32] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:10:32] [info] Service: Deleting user 1
+[2025-12-25 13:10:32] [debug] Deleting user 1 from db
+[2025-12-25 13:10:32] [warning] User 1 not found in db
+[2025-12-25 13:10:32] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:11:29] [info] Controller: GET /users - processing request
+[2025-12-25 13:11:29] [info] Service: Fetching all users
+[2025-12-25 13:11:29] [debug] Fetching all users from db
+[2025-12-25 13:11:29] [debug] Fetched 2 users from db
+[2025-12-25 13:11:29] [info] Service: Fetched 2 users
+[2025-12-25 13:11:29] [info] Controller: GET /users - 200
+[2025-12-25 13:11:29] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:11:29] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:11:29] [info] Controller: POST /users - processing request
+[2025-12-25 13:11:29] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:11:29] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:11:29] [debug] User 1 added to db
+[2025-12-25 13:11:29] [info] Service: Created user 1
+[2025-12-25 13:11:29] [info] Controller: POST /users - 201
+[2025-12-25 13:11:29] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:11:29] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:11:29] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:11:29] [debug] User 1 updated in db
+[2025-12-25 13:11:29] [info] Service: Updated user 1
+[2025-12-25 13:11:29] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:11:29] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:11:29] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:11:29] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:11:29] [warning] User 1 not found in db
+[2025-12-25 13:11:29] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:11:29] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:11:29] [info] Service: Deleting user 1
+[2025-12-25 13:11:29] [debug] Deleting user 1 from db
+[2025-12-25 13:11:29] [debug] Deleted user 1 from db
+[2025-12-25 13:11:29] [info] Service Deleted user 1
+[2025-12-25 13:11:29] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:11:29] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:11:29] [info] Service: Deleting user 1
+[2025-12-25 13:11:29] [debug] Deleting user 1 from db
+[2025-12-25 13:11:29] [warning] User 1 not found in db
+[2025-12-25 13:11:29] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:18:07] [info] Controller: GET /users - processing request
+[2025-12-25 13:18:07] [info] Service: Fetching all users
+[2025-12-25 13:18:07] [debug] Fetching all users from db
+[2025-12-25 13:18:07] [debug] Fetched 2 users from db
+[2025-12-25 13:18:07] [info] Service: Fetched 2 users
+[2025-12-25 13:18:07] [info] Controller: GET /users - 200
+[2025-12-25 13:18:07] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:18:07] [info] Service: Fetching user 1
+[2025-12-25 13:18:07] [debug] Fetching user 1 from db
+[2025-12-25 13:18:07] [debug] User {id} fetched from db
+[2025-12-25 13:18:07] [info] Service: Fetched user 1
+[2025-12-25 13:18:07] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:18:07] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:18:07] [info] Service: Fetching user 1
+[2025-12-25 13:18:07] [debug] Fetching user 1 from db
+[2025-12-25 13:18:07] [warning] User 1 not found in db
+[2025-12-25 13:18:07] [info] Service: Fetched user 1
+[2025-12-25 13:18:07] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:18:08] [info] Controller: POST /users - processing request
+[2025-12-25 13:18:08] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:18:08] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:18:08] [info] Controller: POST /users - 404
+[2025-12-25 13:18:08] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:18:08] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:18:08] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:18:08] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:18:08] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:18:08] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:18:08] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:18:08] [warning] User 1 not found in db
+[2025-12-25 13:18:08] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:18:08] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:18:08] [info] Service: Deleting user 1
+[2025-12-25 13:18:08] [debug] Deleting user 1 from db
+[2025-12-25 13:18:08] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:21:27] [info] Controller: GET /users - processing request
+[2025-12-25 13:21:27] [info] Service: Fetching all users
+[2025-12-25 13:21:27] [debug] Fetching all users from db
+[2025-12-25 13:21:27] [debug] Fetched 2 users from db
+[2025-12-25 13:21:27] [info] Service: Fetched 2 users
+[2025-12-25 13:21:27] [info] Controller: GET /users - 200
+[2025-12-25 13:21:27] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:21:27] [info] Service: Fetching user 1
+[2025-12-25 13:21:27] [debug] Fetching user 1 from db
+[2025-12-25 13:21:27] [debug] User {id} fetched from db
+[2025-12-25 13:21:27] [info] Service: Fetched user 1
+[2025-12-25 13:21:27] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:21:27] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:21:27] [info] Service: Fetching user 1
+[2025-12-25 13:21:27] [debug] Fetching user 1 from db
+[2025-12-25 13:21:27] [warning] User 1 not found in db
+[2025-12-25 13:21:27] [info] Service: Fetched user 1
+[2025-12-25 13:21:27] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:21:27] [info] Controller: POST /users - processing request
+[2025-12-25 13:21:27] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:21:27] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:21:27] [info] Controller: POST /users - 404
+[2025-12-25 13:21:27] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:21:27] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:21:27] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:21:27] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:21:27] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:21:27] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:21:27] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:21:27] [warning] User 1 not found in db
+[2025-12-25 13:21:27] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:21:27] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:21:27] [info] Service: Deleting user 1
+[2025-12-25 13:21:27] [debug] Deleting user 1 from db
+[2025-12-25 13:21:27] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:23:28] [info] Controller: GET /users - processing request
+[2025-12-25 13:23:28] [info] Service: Fetching all users
+[2025-12-25 13:23:28] [debug] Fetching all users from db
+[2025-12-25 13:23:28] [debug] Fetched 2 users from db
+[2025-12-25 13:23:28] [info] Service: Fetched 2 users
+[2025-12-25 13:23:28] [info] Controller: GET /users - 200
+[2025-12-25 13:23:28] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:23:28] [info] Service: Fetching user 1
+[2025-12-25 13:23:28] [debug] Fetching user 1 from db
+[2025-12-25 13:23:28] [debug] User {id} fetched from db
+[2025-12-25 13:23:28] [info] Service: Fetched user 1
+[2025-12-25 13:23:28] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:23:28] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:23:28] [info] Service: Fetching user 1
+[2025-12-25 13:23:28] [debug] Fetching user 1 from db
+[2025-12-25 13:23:28] [warning] User 1 not found in db
+[2025-12-25 13:23:28] [info] Service: Fetched user 1
+[2025-12-25 13:23:28] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:23:29] [info] Controller: POST /users - processing request
+[2025-12-25 13:23:29] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:23:29] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:23:29] [debug] User 1 added to db
+[2025-12-25 13:23:29] [info] Service: Created user 1
+[2025-12-25 13:23:29] [info] Controller: POST /users - 201
+[2025-12-25 13:23:29] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:23:29] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:23:29] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:23:29] [debug] User 1 updated in db
+[2025-12-25 13:23:29] [info] Service: Updated user 1
+[2025-12-25 13:23:29] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:23:29] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:23:29] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:23:29] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:23:29] [warning] User 1 not found in db
+[2025-12-25 13:23:29] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:23:29] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:23:29] [info] Service: Deleting user 1
+[2025-12-25 13:23:29] [debug] Deleting user 1 from db
+[2025-12-25 13:23:29] [debug] Deleted user 1 from db
+[2025-12-25 13:23:29] [info] Service Deleted user 1
+[2025-12-25 13:23:29] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:23:29] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:23:29] [info] Service: Deleting user 1
+[2025-12-25 13:23:29] [debug] Deleting user 1 from db
+[2025-12-25 13:23:29] [warning] User 1 not found in db
+[2025-12-25 13:23:29] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:44:56] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:44:56] [info] Service: Fetching user 1
+[2025-12-25 13:44:56] [debug] Fetching user 1 from db
+[2025-12-25 13:44:56] [warning] User 1 not found in db
+[2025-12-25 13:44:56] [info] Service: Fetched user 1
+[2025-12-25 13:44:56] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:45:55] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:45:55] [info] Service: Fetching user 1
+[2025-12-25 13:45:55] [debug] Fetching user 1 from db
+[2025-12-25 13:45:55] [debug] User {id} fetched from db
+[2025-12-25 13:45:55] [info] Service: Fetched user 1
+[2025-12-25 13:45:55] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:45:56] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:45:56] [info] Service: Fetching user 1
+[2025-12-25 13:45:56] [debug] Fetching user 1 from db
+[2025-12-25 13:45:56] [warning] User 1 not found in db
+[2025-12-25 13:45:56] [info] Service: Fetched user 1
+[2025-12-25 13:45:56] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:45:57] [info] Controller: POST /users - processing request
+[2025-12-25 13:45:57] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:45:57] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:45:57] [debug] User 1 added to db
+[2025-12-25 13:45:57] [info] Service: Created user 1
+[2025-12-25 13:45:57] [info] Controller: POST /users - 201
+[2025-12-25 13:45:58] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:45:58] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:45:58] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:45:58] [debug] User 1 updated in db
+[2025-12-25 13:45:58] [info] Service: Updated user 1
+[2025-12-25 13:45:58] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:45:58] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:45:58] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:45:58] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:45:58] [warning] User 1 not found in db
+[2025-12-25 13:45:58] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:45:59] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:45:59] [info] Service: Deleting user 1
+[2025-12-25 13:45:59] [debug] Deleting user 1 from db
+[2025-12-25 13:45:59] [debug] Deleted user 1 from db
+[2025-12-25 13:45:59] [info] Service Deleted user 1
+[2025-12-25 13:45:59] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:45:59] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:45:59] [info] Service: Deleting user 1
+[2025-12-25 13:45:59] [debug] Deleting user 1 from db
+[2025-12-25 13:45:59] [warning] User 1 not found in db
+[2025-12-25 13:45:59] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:46:34] [info] Controller: GET /users - processing request
+[2025-12-25 13:46:34] [info] Service: Fetching all users
+[2025-12-25 13:46:34] [debug] Fetching all users from db
+[2025-12-25 13:46:34] [debug] Fetched 2 users from db
+[2025-12-25 13:46:34] [info] Service: Fetched 2 users
+[2025-12-25 13:46:34] [info] Controller: GET /users - 200
+[2025-12-25 13:46:34] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:46:34] [info] Service: Fetching user 1
+[2025-12-25 13:46:34] [debug] Fetching user 1 from db
+[2025-12-25 13:46:34] [debug] User {id} fetched from db
+[2025-12-25 13:46:34] [info] Service: Fetched user 1
+[2025-12-25 13:46:34] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:46:34] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:46:34] [info] Service: Fetching user 1
+[2025-12-25 13:46:34] [debug] Fetching user 1 from db
+[2025-12-25 13:46:34] [warning] User 1 not found in db
+[2025-12-25 13:46:34] [info] Service: Fetched user 1
+[2025-12-25 13:46:34] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:46:35] [info] Controller: POST /users - processing request
+[2025-12-25 13:46:35] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:46:35] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:46:35] [debug] User 1 added to db
+[2025-12-25 13:46:35] [info] Service: Created user 1
+[2025-12-25 13:46:35] [info] Controller: POST /users - 201
+[2025-12-25 13:46:35] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:46:35] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:46:35] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:46:35] [debug] User 1 updated in db
+[2025-12-25 13:46:35] [info] Service: Updated user 1
+[2025-12-25 13:46:35] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:46:35] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:46:35] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:46:35] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:46:35] [warning] User 1 not found in db
+[2025-12-25 13:46:35] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:46:35] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:46:35] [info] Service: Deleting user 1
+[2025-12-25 13:46:35] [debug] Deleting user 1 from db
+[2025-12-25 13:46:35] [debug] Deleted user 1 from db
+[2025-12-25 13:46:35] [info] Service Deleted user 1
+[2025-12-25 13:46:35] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:46:35] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:46:35] [info] Service: Deleting user 1
+[2025-12-25 13:46:35] [debug] Deleting user 1 from db
+[2025-12-25 13:46:35] [warning] User 1 not found in db
+[2025-12-25 13:46:35] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:48:11] [info] Controller: GET /users - processing request
+[2025-12-25 13:48:11] [info] Service: Fetching all users
+[2025-12-25 13:48:11] [debug] Fetching all users from db
+[2025-12-25 13:48:11] [debug] Fetched 2 users from db
+[2025-12-25 13:48:11] [info] Service: Fetched 2 users
+[2025-12-25 13:48:11] [info] Controller: GET /users - 200
+[2025-12-25 13:48:11] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:48:11] [info] Service: Fetching user 1
+[2025-12-25 13:48:11] [debug] Fetching user 1 from db
+[2025-12-25 13:48:11] [debug] User {id} fetched from db
+[2025-12-25 13:48:11] [info] Service: Fetched user 1
+[2025-12-25 13:48:11] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:48:11] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:48:11] [info] Service: Fetching user 1
+[2025-12-25 13:48:11] [debug] Fetching user 1 from db
+[2025-12-25 13:48:11] [warning] User 1 not found in db
+[2025-12-25 13:48:11] [info] Service: Fetched user 1
+[2025-12-25 13:48:11] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:48:11] [info] Controller: POST /users - processing request
+[2025-12-25 13:48:11] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:48:11] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:48:11] [debug] User 1 added to db
+[2025-12-25 13:48:11] [info] Service: Created user 1
+[2025-12-25 13:48:11] [info] Controller: POST /users - 201
+[2025-12-25 13:48:11] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:48:11] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:48:11] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:48:11] [debug] User 1 updated in db
+[2025-12-25 13:48:11] [info] Service: Updated user 1
+[2025-12-25 13:48:11] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:48:11] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:48:11] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:48:11] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:48:11] [warning] User 1 not found in db
+[2025-12-25 13:48:11] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:48:11] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:48:11] [info] Service: Deleting user 1
+[2025-12-25 13:48:11] [debug] Deleting user 1 from db
+[2025-12-25 13:48:11] [debug] Deleted user 1 from db
+[2025-12-25 13:48:11] [info] Service Deleted user 1
+[2025-12-25 13:48:11] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:48:12] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:48:12] [info] Service: Deleting user 1
+[2025-12-25 13:48:12] [debug] Deleting user 1 from db
+[2025-12-25 13:48:12] [warning] User 1 not found in db
+[2025-12-25 13:48:12] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:48:16] [info] Controller: GET /users - processing request
+[2025-12-25 13:48:16] [info] Service: Fetching all users
+[2025-12-25 13:48:16] [debug] Fetching all users from db
+[2025-12-25 13:48:16] [debug] Fetched 2 users from db
+[2025-12-25 13:48:16] [info] Service: Fetched 2 users
+[2025-12-25 13:48:16] [info] Controller: GET /users - 200
+[2025-12-25 13:48:16] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:48:16] [info] Service: Fetching user 1
+[2025-12-25 13:48:16] [debug] Fetching user 1 from db
+[2025-12-25 13:48:16] [debug] User {id} fetched from db
+[2025-12-25 13:48:16] [info] Service: Fetched user 1
+[2025-12-25 13:48:16] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:48:16] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:48:16] [info] Service: Fetching user 1
+[2025-12-25 13:48:16] [debug] Fetching user 1 from db
+[2025-12-25 13:48:16] [warning] User 1 not found in db
+[2025-12-25 13:48:16] [info] Service: Fetched user 1
+[2025-12-25 13:48:16] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:48:17] [info] Controller: POST /users - processing request
+[2025-12-25 13:48:17] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:48:17] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:48:17] [debug] User 1 added to db
+[2025-12-25 13:48:17] [info] Service: Created user 1
+[2025-12-25 13:48:17] [info] Controller: POST /users - 201
+[2025-12-25 13:48:17] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:48:17] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:48:17] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:48:17] [debug] User 1 updated in db
+[2025-12-25 13:48:17] [info] Service: Updated user 1
+[2025-12-25 13:48:17] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 13:48:17] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:48:17] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:48:17] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:48:17] [warning] User 1 not found in db
+[2025-12-25 13:48:17] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:48:17] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:48:17] [info] Service: Deleting user 1
+[2025-12-25 13:48:17] [debug] Deleting user 1 from db
+[2025-12-25 13:48:17] [debug] Deleted user 1 from db
+[2025-12-25 13:48:17] [info] Service Deleted user 1
+[2025-12-25 13:48:17] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 13:48:17] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:48:17] [info] Service: Deleting user 1
+[2025-12-25 13:48:17] [debug] Deleting user 1 from db
+[2025-12-25 13:48:17] [warning] User 1 not found in db
+[2025-12-25 13:48:17] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:48:27] [info] Controller: GET /users - processing request
+[2025-12-25 13:48:27] [info] Service: Fetching all users
+[2025-12-25 13:48:27] [debug] Fetching all users from db
+[2025-12-25 13:48:27] [debug] Fetched 0 users from db
+[2025-12-25 13:48:27] [info] Service: Fetched 0 users
+[2025-12-25 13:48:27] [info] Controller: GET /users - 200
+[2025-12-25 13:54:38] [info] Controller: GET /users - processing request
+[2025-12-25 13:54:38] [info] Service: Fetching all users
+[2025-12-25 13:54:38] [debug] Fetching all users from db
+[2025-12-25 13:54:38] [debug] Fetched 20 users from db
+[2025-12-25 13:54:38] [info] Service: Fetched 20 users
+[2025-12-25 13:54:38] [info] Controller: GET /users - 200
+[2025-12-25 13:59:34] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:59:34] [info] Service: Fetching user 1
+[2025-12-25 13:59:34] [debug] Fetching user 1 from db
+[2025-12-25 13:59:34] [warning] User 1 not found in db
+[2025-12-25 13:59:34] [info] Service: Fetched user 1
+[2025-12-25 13:59:34] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:59:35] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:59:35] [info] Service: Fetching user 1
+[2025-12-25 13:59:35] [debug] Fetching user 1 from db
+[2025-12-25 13:59:35] [warning] User 1 not found in db
+[2025-12-25 13:59:35] [info] Service: Fetched user 1
+[2025-12-25 13:59:35] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:59:36] [info] Controller: POST /users - processing request
+[2025-12-25 13:59:36] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:59:36] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:59:36] [debug] User 39 added to db
+[2025-12-25 13:59:36] [info] Service: Created user 39
+[2025-12-25 13:59:36] [info] Controller: POST /users - 201
+[2025-12-25 13:59:37] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:59:37] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:59:37] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:59:37] [warning] User 1 not found in db
+[2025-12-25 13:59:37] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:59:38] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:59:38] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:59:38] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:59:38] [warning] User 1 not found in db
+[2025-12-25 13:59:38] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:59:39] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:59:39] [info] Service: Deleting user 1
+[2025-12-25 13:59:39] [debug] Deleting user 1 from db
+[2025-12-25 13:59:39] [warning] User 1 not found in db
+[2025-12-25 13:59:39] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 13:59:51] [info] Controller: GET /users - processing request
+[2025-12-25 13:59:51] [info] Service: Fetching all users
+[2025-12-25 13:59:51] [debug] Fetching all users from db
+[2025-12-25 13:59:51] [debug] Fetched 21 users from db
+[2025-12-25 13:59:51] [info] Service: Fetched 21 users
+[2025-12-25 13:59:51] [info] Controller: GET /users - 200
+[2025-12-25 13:59:51] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:59:51] [info] Service: Fetching user 1
+[2025-12-25 13:59:51] [debug] Fetching user 1 from db
+[2025-12-25 13:59:51] [warning] User 1 not found in db
+[2025-12-25 13:59:51] [info] Service: Fetched user 1
+[2025-12-25 13:59:51] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:59:51] [info] Controller: GET /users/1 - processing request
+[2025-12-25 13:59:51] [info] Service: Fetching user 1
+[2025-12-25 13:59:51] [debug] Fetching user 1 from db
+[2025-12-25 13:59:51] [warning] User 1 not found in db
+[2025-12-25 13:59:51] [info] Service: Fetched user 1
+[2025-12-25 13:59:51] [info] Controller: GET /users/1 - 200
+[2025-12-25 13:59:51] [info] Controller: POST /users - processing request
+[2025-12-25 13:59:51] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 13:59:51] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 13:59:51] [debug] User 40 added to db
+[2025-12-25 13:59:51] [info] Service: Created user 40
+[2025-12-25 13:59:51] [info] Controller: POST /users - 201
+[2025-12-25 13:59:51] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:59:51] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:59:51] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:59:51] [warning] User 1 not found in db
+[2025-12-25 13:59:51] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:59:51] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 13:59:51] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 13:59:51] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 13:59:51] [warning] User 1 not found in db
+[2025-12-25 13:59:51] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 13:59:52] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 13:59:52] [info] Service: Deleting user 1
+[2025-12-25 13:59:52] [debug] Deleting user 1 from db
+[2025-12-25 13:59:52] [warning] User 1 not found in db
+[2025-12-25 13:59:52] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 14:06:36] [info] Controller: GET /users - processing request
+[2025-12-25 14:06:36] [info] Service: Fetching all users
+[2025-12-25 14:06:36] [debug] Fetching all users from db
+[2025-12-25 14:06:36] [debug] Fetched 2 users from db
+[2025-12-25 14:06:36] [info] Service: Fetched 2 users
+[2025-12-25 14:06:36] [info] Controller: GET /users - 200
+[2025-12-25 14:06:36] [info] Controller: GET /users/1 - processing request
+[2025-12-25 14:06:36] [info] Service: Fetching user 1
+[2025-12-25 14:06:36] [debug] Fetching user 1 from db
+[2025-12-25 14:06:36] [debug] User {id} fetched from db
+[2025-12-25 14:06:36] [info] Service: Fetched user 1
+[2025-12-25 14:06:36] [info] Controller: GET /users/1 - 200
+[2025-12-25 14:06:37] [info] Controller: GET /users/1 - processing request
+[2025-12-25 14:06:37] [info] Service: Fetching user 1
+[2025-12-25 14:06:37] [debug] Fetching user 1 from db
+[2025-12-25 14:06:37] [warning] User 1 not found in db
+[2025-12-25 14:06:37] [info] Service: Fetched user 1
+[2025-12-25 14:06:37] [info] Controller: GET /users/1 - 200
+[2025-12-25 14:06:37] [info] Controller: POST /users - processing request
+[2025-12-25 14:06:37] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 14:06:37] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 14:06:37] [debug] User 1 added to db
+[2025-12-25 14:06:37] [info] Service: Created user 1
+[2025-12-25 14:06:37] [info] Controller: POST /users - 201
+[2025-12-25 14:06:37] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 14:06:37] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 14:06:37] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 14:06:37] [debug] User 1 updated in db
+[2025-12-25 14:06:37] [info] Service: Updated user 1
+[2025-12-25 14:06:37] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 14:06:37] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 14:06:37] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 14:06:37] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 14:06:37] [warning] User 1 not found in db
+[2025-12-25 14:06:37] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 14:06:37] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 14:06:37] [info] Service: Deleting user 1
+[2025-12-25 14:06:37] [debug] Deleting user 1 from db
+[2025-12-25 14:06:37] [debug] Deleted user 1 from db
+[2025-12-25 14:06:37] [info] Service Deleted user 1
+[2025-12-25 14:06:37] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 14:06:37] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 14:06:37] [info] Service: Deleting user 1
+[2025-12-25 14:06:37] [debug] Deleting user 1 from db
+[2025-12-25 14:06:37] [warning] User 1 not found in db
+[2025-12-25 14:06:37] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 14:06:40] [info] Controller: GET /users - processing request
+[2025-12-25 14:06:40] [info] Service: Fetching all users
+[2025-12-25 14:06:40] [debug] Fetching all users from db
+[2025-12-25 14:06:40] [debug] Fetched 2 users from db
+[2025-12-25 14:06:40] [info] Service: Fetched 2 users
+[2025-12-25 14:06:40] [info] Controller: GET /users - 200
+[2025-12-25 14:06:40] [info] Controller: GET /users/1 - processing request
+[2025-12-25 14:06:40] [info] Service: Fetching user 1
+[2025-12-25 14:06:40] [debug] Fetching user 1 from db
+[2025-12-25 14:06:40] [debug] User {id} fetched from db
+[2025-12-25 14:06:40] [info] Service: Fetched user 1
+[2025-12-25 14:06:40] [info] Controller: GET /users/1 - 200
+[2025-12-25 14:06:41] [info] Controller: GET /users/1 - processing request
+[2025-12-25 14:06:41] [info] Service: Fetching user 1
+[2025-12-25 14:06:41] [debug] Fetching user 1 from db
+[2025-12-25 14:06:41] [warning] User 1 not found in db
+[2025-12-25 14:06:41] [info] Service: Fetched user 1
+[2025-12-25 14:06:41] [info] Controller: GET /users/1 - 200
+[2025-12-25 14:06:41] [info] Controller: POST /users - processing request
+[2025-12-25 14:06:41] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 14:06:41] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 14:06:41] [debug] User 1 added to db
+[2025-12-25 14:06:41] [info] Service: Created user 1
+[2025-12-25 14:06:41] [info] Controller: POST /users - 201
+[2025-12-25 14:06:41] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 14:06:41] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 14:06:41] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 14:06:41] [debug] User 1 updated in db
+[2025-12-25 14:06:41] [info] Service: Updated user 1
+[2025-12-25 14:06:41] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 14:06:41] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 14:06:41] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 14:06:41] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 14:06:41] [warning] User 1 not found in db
+[2025-12-25 14:06:41] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 14:06:41] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 14:06:41] [info] Service: Deleting user 1
+[2025-12-25 14:06:41] [debug] Deleting user 1 from db
+[2025-12-25 14:06:41] [debug] Deleted user 1 from db
+[2025-12-25 14:06:41] [info] Service Deleted user 1
+[2025-12-25 14:06:41] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 14:06:41] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 14:06:41] [info] Service: Deleting user 1
+[2025-12-25 14:06:41] [debug] Deleting user 1 from db
+[2025-12-25 14:06:41] [warning] User 1 not found in db
+[2025-12-25 14:06:41] [info] Controller: DELETE /users/{id} - 404
+[2025-12-25 14:06:47] [info] Controller: GET /users - processing request
+[2025-12-25 14:06:47] [info] Service: Fetching all users
+[2025-12-25 14:06:47] [debug] Fetching all users from db
+[2025-12-25 14:06:47] [debug] Fetched 22 users from db
+[2025-12-25 14:06:47] [info] Service: Fetched 22 users
+[2025-12-25 14:06:47] [info] Controller: GET /users - 200
+[2025-12-25 14:08:46] [info] Controller: GET /users - processing request
+[2025-12-25 14:08:46] [info] Service: Fetching all users
+[2025-12-25 14:08:46] [debug] Fetching all users from db
+[2025-12-25 14:08:46] [debug] Fetched 22 users from db
+[2025-12-25 14:08:46] [info] Service: Fetched 22 users
+[2025-12-25 14:08:46] [info] Controller: GET /users - 200
+[2025-12-25 14:08:52] [info] Controller: GET /users - processing request
+[2025-12-25 14:08:52] [info] Service: Fetching all users
+[2025-12-25 14:08:52] [debug] Fetching all users from db
+[2025-12-25 14:08:52] [debug] Fetched 2 users from db
+[2025-12-25 14:08:52] [info] Service: Fetched 2 users
+[2025-12-25 14:08:52] [info] Controller: GET /users - 200
+[2025-12-25 14:08:52] [info] Controller: GET /users/1 - processing request
+[2025-12-25 14:08:52] [info] Service: Fetching user 1
+[2025-12-25 14:08:52] [debug] Fetching user 1 from db
+[2025-12-25 14:08:52] [debug] User {id} fetched from db
+[2025-12-25 14:08:52] [info] Service: Fetched user 1
+[2025-12-25 14:08:52] [info] Controller: GET /users/1 - 200
+[2025-12-25 14:08:52] [info] Controller: GET /users/1 - processing request
+[2025-12-25 14:08:52] [info] Service: Fetching user 1
+[2025-12-25 14:08:52] [debug] Fetching user 1 from db
+[2025-12-25 14:08:52] [warning] User 1 not found in db
+[2025-12-25 14:08:52] [info] Service: Fetched user 1
+[2025-12-25 14:08:52] [info] Controller: GET /users/1 - 200
+[2025-12-25 14:08:52] [info] Controller: POST /users - processing request
+[2025-12-25 14:08:52] [info] Service: Creating user Valik age 92 money 45000 visa 1
+[2025-12-25 14:08:52] [debug] Adding user Valik age 92 money 45000 visa 1 to db
+[2025-12-25 14:08:52] [debug] User 1 added to db
+[2025-12-25 14:08:52] [info] Service: Created user 1
+[2025-12-25 14:08:52] [info] Controller: POST /users - 201
+[2025-12-25 14:08:52] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 14:08:52] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 14:08:52] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 14:08:52] [debug] User 1 updated in db
+[2025-12-25 14:08:52] [info] Service: Updated user 1
+[2025-12-25 14:08:52] [info] Controller: PATCH /users/{id} - 200
+[2025-12-25 14:08:52] [info] Controller: PATCH /users/1 - processing request
+[2025-12-25 14:08:52] [info] Service: Updating user 1 to name Oleg age 52 money 666 visa 
+[2025-12-25 14:08:52] [debug] Update user 1 in db to name Oleg age 52 money 666 visa 
+[2025-12-25 14:08:52] [warning] User 1 not found in db
+[2025-12-25 14:08:52] [info] Controller: PATCH /users/{id} - 404
+[2025-12-25 14:08:53] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 14:08:53] [info] Service: Deleting user 1
+[2025-12-25 14:08:53] [debug] Deleting user 1 from db
+[2025-12-25 14:08:53] [debug] Deleted user 1 from db
+[2025-12-25 14:08:53] [info] Service Deleted user 1
+[2025-12-25 14:08:53] [info] Controller: DELETE /users/{id} - 204
+[2025-12-25 14:08:53] [info] Controller: DELETE /users/1 - processing request
+[2025-12-25 14:08:53] [info] Service: Deleting user 1
+[2025-12-25 14:08:53] [debug] Deleting user 1 from db
+[2025-12-25 14:08:53] [warning] User 1 not found in db
+[2025-12-25 14:08:53] [info] Controller: DELETE /users/{id} - 404

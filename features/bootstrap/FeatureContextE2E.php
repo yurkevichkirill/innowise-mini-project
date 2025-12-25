@@ -6,7 +6,7 @@ use App\Container;
 use App\Logger;
 use App\Router;
 use App\Services\ConnectionServiceInterface;
-use App\TestDB;
+use App\DB;
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Step\Given;
 use Behat\Step\When;
@@ -19,17 +19,24 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
 {
     private ?Container $container = null;
     private ?Router $router = null;
-    private ?TestDB $db = null;
+    private ?DB $db = null;
     private array $defaultValues = [
         ['Valik', 92, 45000, true],
         ['Seriy', 54, 3400, false]
     ];
     private ?string $lastResponse = null;
 
+    #[\Behat\Hook\BeforeScenario]
+    public static function putEnvs(): void
+    {
+        putenv("TEST_MODE=yes");
+
+        $file = __DIR__ . "/../../.env.test";
+        file_put_contents($file, "TEST_MODE=yes");
+    }
     protected function setUp(): void
     {
         $this->container = new Container();
-//        putenv('TEST_MODE=yes');
 
         $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../../views');
         $twig = new \Twig\Environment($loader, [
@@ -48,7 +55,7 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
 
     private function setUpDb(): void
     {
-        $this->db = $this->container->get(\App\TestDB::class);
+        $this->db = $this->container->get(\App\DB::class);
 
         $this->db->getConnection()->exec('DROP TABLE IF EXISTS users');
         $this->db->getConnection()->exec('CREATE TABLE users (
@@ -181,5 +188,14 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         $jsonTestData = json_encode($testData);
 
         \PHPUnit\Framework\assertEquals($jsonTestData, $this->lastResponse);
+    }
+
+    #[\Behat\Hook\AfterScenario]
+    public static function resetEnvs(): void
+    {
+        putenv("TEST_MODE=no");
+
+        $file = __DIR__ . "/../../.env.test";
+        file_put_contents($file, "TEST_MODE=no");
     }
 }

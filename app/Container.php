@@ -23,7 +23,7 @@ class Container implements ContainerInterface
     public function __construct() {
         $this->objects[UserServiceInterface::class] = UserService::class;
         $this->objects[UserRepositoryInterface::class] = UserRepository::class;
-        $this->objects[ConnectionServiceInterface::class] = TestDB::class;
+        $this->objects[ConnectionServiceInterface::class] = DB::class;
     }
     public function has(string $id): bool
     {

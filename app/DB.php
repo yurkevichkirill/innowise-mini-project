@@ -7,6 +7,7 @@ namespace App;
 use AllowDynamicProperties;
 use App\Attributes\FromEnv;
 use App\Services\ConnectionServiceInterface;
+use PDO;
 
 #[AllowDynamicProperties]
 class DB implements ConnectionServiceInterface
@@ -19,7 +20,14 @@ class DB implements ConnectionServiceInterface
         #[FromEnv('DB_PASS')]
         string $password,
     ) {
-        $this->pdo = new \PDO($dsn, $user, $password);
+        $file = __DIR__ . "/../.env.test";
+        $fileData = file_get_contents($file);
+        if(str_contains($fileData, 'yes')) {
+            $testDsn = getenv("TEST_DB_DSN");
+            $this->pdo = new PDO($testDsn);
+        } else {
+            $this->pdo = new PDO($dsn, $user, $password);
+        }
     }
     public function getConnection(): \PDO {
         return $this->pdo;
