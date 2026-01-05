@@ -6,7 +6,8 @@ namespace App;
 
 use App\Attributes\FromEnv;
 use App\Services\ConnectionServiceInterface;
-use App\Services\TestUserRepository;
+use App\Services\StreamService;
+use App\Services\StreamServiceInterface;
 use App\Services\UserRepository;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserService;
@@ -24,6 +25,7 @@ class Container implements ContainerInterface
         $this->objects[UserServiceInterface::class] = UserService::class;
         $this->objects[UserRepositoryInterface::class] = UserRepository::class;
         $this->objects[ConnectionServiceInterface::class] = DB::class;
+        $this->objects[StreamServiceInterface::class] = StreamService::class;
     }
     public function has(string $id): bool
     {

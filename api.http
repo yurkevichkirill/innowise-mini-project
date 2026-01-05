@@ -1,0 +1,36 @@
+### GET request to all users
+GET http://localhost/api/users
+
+###
+
+### GET request to user with id 20
+GET http://localhost/api/users/79
+
+###
+
+### POST request to user Oleg age 52 money 33.3 with visa
+POST http://localhost/api/users
+Content-Type: application/json
+
+{
+  "name": "Oleg",
+  "age": 52,
+  "money": 33.3,
+  "has_visa": false
+}
+
+###
+
+### PATCH request to user 46 with name Oleg age 54 money 66.6 with visa
+PATCH http://localhost/api/users/79
+Content-Type: application/json
+
+{
+  "has_visa": true
+}
+
+###
+
+### DELETE reauest to user 46
+DELETE http://localhost/api/users/80
+Content-Type: application/json

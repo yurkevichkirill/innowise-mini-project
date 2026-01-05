@@ -1,5 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 table {
-    width: 100%;
+    width: 80vw;
     border-collapse: collapse;
     text-align: center;
 }
@@ -7,4 +13,44 @@ table {
 table tr th, table tr td {
     border: 1px #eee solid;
     padding: 5px;
+}
+
+td {
+    width: 200px;
+}
+
+button, input {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-size: 14px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+.delete {
+    background-color: #dc4949;
+}
+
+.edit {
+    background-color: #e3af3c;
+}
+
+.create {
+    background-color: #a3e83c;
+}
+
+input {
+    margin: 0;
+    width: 100%;
+}
+
+input:focus {
+    background-color: #e6e6e6;
 }

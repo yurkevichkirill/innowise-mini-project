@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\Models\User;
+use App\Models\UserDTO;
 
 interface UserServiceInterface
 {
-    public function getUsers(): array;
-    public function getUser(int $id): ?User;
-    public function createUser(string $name, int $age, float $money, bool $has_visa): ?User;
-    public function updateUser(int $id, string $name, int $age, float $money, bool $has_visa): ?User;
-    public function deleteUser(int $id): void;
+    public function create(string $name, int $age, float $money, bool $has_visa): ?UserDTO;
+    public function update(?int $id, ?string $name, ?int $age, ?float $money, ?bool $has_visa): ?UserDTO;
 }

@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 use App\App;
 use App\Container;
-use App\Controllers\User\UserController;
-use App\DB;
 use App\Logger;
 use App\Router;
-use App\Services\ConnectionServiceInterface;
-use App\Services\UserRepository;
-use App\Services\UserService;
-use App\TestDB;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Psr\Log\LoggerInterface;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
@@ -22,12 +20,12 @@ $dotenv->load();
 $container = new Container();
 $router = new Router($container);
 
-$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../views');
-$twig = new \Twig\Environment($loader, [
+$loader = new FilesystemLoader(__DIR__ . '/../views');
+$twig = new Environment($loader, [
     'cache' => false
 ]);
 
-$container->singleton(\Twig\Environment::class, $twig);
+$container->singleton(Environment::class, $twig);
 
 $logger = new Logger();
 $container->singleton(LoggerInterface::class, $logger);
@@ -38,7 +36,7 @@ try {
         $router,
         ['uri' => $_SERVER['REQUEST_URI'], 'method' => $_SERVER['REQUEST_METHOD']]
     )->run();
-} catch (\Psr\Container\NotFoundExceptionInterface|\Psr\Container\ContainerExceptionInterface $e) {
+} catch (NotFoundExceptionInterface|ContainerExceptionInterface $e) {
     echo "Error $e";
 } catch (ReflectionException $e) {
     echo "Error with reflection $e";

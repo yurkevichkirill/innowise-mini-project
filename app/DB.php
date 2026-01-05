@@ -16,9 +16,9 @@ class DB implements ConnectionServiceInterface
         #[FromEnv('DB_DSN')]
         string $dsn,
         #[FromEnv('DB_USER')]
-        string $user,
+        string $user = "",
         #[FromEnv('DB_PASS')]
-        string $password,
+        string $password = "",
     ) {
         $file = __DIR__ . "/../.env.test";
         $fileData = file_get_contents($file);
@@ -29,7 +29,7 @@ class DB implements ConnectionServiceInterface
             $this->pdo = new PDO($dsn, $user, $password);
         }
     }
-    public function getConnection(): \PDO {
+    public function getConnection(): PDO {
         return $this->pdo;
     }
 }

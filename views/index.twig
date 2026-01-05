@@ -2,17 +2,100 @@
 <html lang="en">
 <head>
     {% block head %}
-    {#    Find from index#}
+
         <link rel="stylesheet" href="/styles/style.css">
         <title>{% block title %}My webpage{% endblock %}</title>
     {% endblock %}
 </head>
-<body>
-    <div id="content">{% block content %} {% endblock %}</div>
-    <div id="footer">
-        {% block footer %}
-            &copy; Copyright 2025 by <a href="https://github.com/yurkevichkirill">Yurkevich Kirill</a>
-        {% endblock %}
-    </div>
-</body>
+    <body>
+        <div id="content">{% block content %} {% endblock %}</div>
+        <div id="footer">
+            {% block footer %}
+                &copy; Copyright 2025 by <a href="https://github.com/yurkevichkirill">Yurkevich Kirill</a>
+            {% endblock %}
+        </div>
+        <script>
+            document.querySelectorAll(".delete").forEach(button => {
+                button.addEventListener("click", async function(e) {
+                    await fetch(`http://localhost/api/users/${button.dataset.id}`, {
+                        method: 'DELETE',
+                        headers: { 'Content-Type': 'application/json' }
+                    });
+                    location.reload();
+                });
+            });
+
+            document.querySelector(".create").addEventListener("click", async function(e) {
+                const name = document.getElementById("inp-name-new").value;
+                const age = Number(document.getElementById("inp-age-new").value);
+                const money = Number(document.getElementById("inp-money-new").value);
+                const visa = document.getElementById("inp-visa-new").checked;
+
+                if(name.length === 0) {
+                    alert("Name cannot be an empty")
+                    return;
+                }
+                if(isNaN(age) || age < 1 || age > 150) {
+                    alert("Age should be a number between 1 and 150");
+                    return;
+                }
+                if(isNaN(money) || money < 0) {
+                    alert("Money should be a number more than 0");
+                    return;
+                }
+
+                await fetch("http://localhost/api/users", {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        "name": name,
+                        "age": age,
+                        "money": money,
+                        "has_visa": visa
+                    })
+                });
+                location.reload();
+            });
+
+            document.querySelector(".edit").addEventListener("click", async function(e) {
+                if(!document.getElementById("inp-id-edit").value) return;
+                const id = Number(document.getElementById("inp-id-edit").value);
+                const json = {};
+
+                const nameInp = document.getElementById("inp-name-edit").value;
+                if(nameInp) {
+                    json['name'] = document.getElementById("inp-name-edit").value;
+                }
+
+                const ageInp = document.getElementById("inp-age-edit").value;
+                if(ageInp) {
+                    let age = Number(ageInp);
+                    if(isNaN(age) || age < 1 || age > 150) {
+                        alert("Age should be a number between 1 and 150");
+                        return;
+                    }
+                    json['age'] = Number(document.getElementById("inp-age-edit").value);
+                }
+
+                const moneyInp = document.getElementById("inp-money-edit").value
+                if(moneyInp) {
+                    let money = Number(moneyInp);
+                    if(isNaN(money) || money < 0) {
+                        alert("Money should be a number more than 0");
+                        return;
+                    }
+                    json['money'] = Number(document.getElementById("inp-money-edit").value);
+                }
+
+                json['has_visa'] = document.getElementById("inp-visa-edit").checked;
+
+                await fetch(`http://localhost/api/users/${id}`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(json)
+                });
+                location.reload();
+            });
+        </script>
+    </body>
 </html>

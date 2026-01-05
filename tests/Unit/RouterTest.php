@@ -5,17 +5,20 @@ declare(strict_types=1);
 namespace Unit;
 
 use App\Container;
-use App\Controllers\User\UserController;
-use App\Models\User;
+use App\Controllers\APIController;
 use App\Router;
-use App\Services\UserService;
-use App\Services\UserServiceInterface;
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\TestCase;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use ReflectionException;
-use Twig\Environment;
 
+#[AllowMockObjectsWithoutExpectations]
 class RouterTest extends TestCase
 {
+    /**
+     * @throws ReflectionException
+     */
     public function testRegisterRoutes(): void
     {
         $container = new Container();
@@ -24,46 +27,54 @@ class RouterTest extends TestCase
         $router->initializeControllers();
 
         $this->assertArrayHasKey('GET', $router->routes);
-        $this->assertArrayHasKey('/', $router->routes['GET']);
-        $this->assertArrayHasKey('/users', $router->routes['GET']);
-        $this->assertArrayHasKey('/users/{id}', $router->routes['GET']);
+        $this->assertArrayHasKey('/api/users', $router->routes['GET']);
+        $this->assertArrayHasKey('/api/users/{id}', $router->routes['GET']);
         $this->assertArrayHasKey('POST', $router->routes);
-        $this->assertArrayHasKey('/users', $router->routes['POST']);
+        $this->assertArrayHasKey('/api/users', $router->routes['POST']);
+        $this->assertArrayHasKey('PATCH', $router->routes);
+        $this->assertArrayHasKey('/api/users/{id}', $router->routes['PATCH']);
+        $this->assertArrayHasKey('DELETE', $router->routes);
+        $this->assertArrayHasKey('/api/users/{id}', $router->routes['DELETE']);
     }
 
+    /**
+     * @throws NotFoundExceptionInterface
+     * @throws ContainerExceptionInterface
+     * @throws ReflectionException
+     */
     public function testHandleStaticRoutes(): void
     {
-        $controller = $this->createMock(UserController::class);
+        $controller = $this->createMock(APIController::class);
         $controller->expects($this->once())
-            ->method('showAllUsers');
-
-        $controller->expects($this->once())
-            ->method('index');
+            ->method('showAll');
 
         $controller->expects($this->once())
             ->method('store');
 
         $container = $this->createMock(Container::class);
         $container->method('get')
-            ->with(UserController::class)
+            ->with(APIController::class)
             ->willReturn($controller);
 
         $router = new Router($container);
-        $router->register('GET', '/users', [UserController::class, 'showAllUsers']);
-        $router->register('GET', '/', [UserController::class, 'index']);
-        $router->register('POST', '/users', [UserController::class, 'store']);
+        $router->register('GET', '/api/users', [APIController::class, 'showAll']);
+        $router->register('POST', '/api/users', [APIController::class, 'store']);
 
-        $router->handler('/', 'GET');
-        $router->handler('/users', 'GET');
-        $router->handler('/users', 'POST');
+        $router->handler('/api/users', 'GET');
+        $router->handler('/api/users', 'POST');
     }
 
+    /**
+     * @throws NotFoundExceptionInterface
+     * @throws ContainerExceptionInterface
+     * @throws ReflectionException
+     */
     public function testHandleDynamicRoutes(): void
     {
         $testId = 1;
-        $controller = $this->createMock(UserController::class);
+        $controller = $this->createMock(APIController::class);
         $controller->expects($this->once())
-            ->method('showUser')
+            ->method('show')
             ->with($testId);
 
         $controller->expects($this->once())
@@ -76,19 +87,24 @@ class RouterTest extends TestCase
 
         $container = $this->createMock(Container::class);
         $container->method('get')
-            ->with(UserController::class)
+            ->with(APIController::class)
             ->willReturn($controller);
 
         $router = new Router($container);
-        $router->register('GET', '/users/{id}', [UserController::class, 'showUser']);
-        $router->register('PATCH', '/users/{id}', [UserController::class, 'update']);
-        $router->register('DELETE', '/users/{id}', [UserController::class, 'remove']);
+        $router->register('GET', '/api/users/{id}', [APIController::class, 'show']);
+        $router->register('PATCH', '/api/users/{id}', [APIController::class, 'update']);
+        $router->register('DELETE', '/api/users/{id}', [APIController::class, 'remove']);
 
-        $router->handler("/users/$testId", 'GET');
-        $router->handler("/users/$testId", 'PATCH');
-        $router->handler("/users/$testId", 'DELETE');
+        $router->handler("/api/users/$testId", 'GET');
+        $router->handler("/api/users/$testId", 'PATCH');
+        $router->handler("/api/users/$testId", 'DELETE');
     }
 
+    /**
+     * @throws ContainerExceptionInterface
+     * @throws ReflectionException
+     * @throws NotFoundExceptionInterface
+     */
     public function testHandleUnknownRoute(): void
     {
         $container = $this->createStub(Container::class);

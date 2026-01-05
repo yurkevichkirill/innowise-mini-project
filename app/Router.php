@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace App;
 
 use App\Attributes\Route;
-use App\Controllers\User\UserController;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
+use ReflectionAttribute;
+use ReflectionClass;
 use ReflectionException;
 
 class Router
@@ -15,7 +16,7 @@ class Router
     public array $routes = [];
 
     public function __construct(
-        private Container $container
+        private readonly Container $container
     ) {}
 
     /**
@@ -36,9 +37,9 @@ class Router
      */
     public function registerFromController($controller): void
     {
-        $reflectionController = new \ReflectionClass($controller);
+        $reflectionController = new ReflectionClass($controller);
         foreach($reflectionController->getMethods() as $method) {
-            $attributes = $method->getAttributes(Route::class, \ReflectionAttribute::IS_INSTANCEOF);
+            $attributes = $method->getAttributes(Route::class, ReflectionAttribute::IS_INSTANCEOF);
             foreach($attributes as $attribute) {
                 $route = $attribute->newInstance();
 
@@ -72,8 +73,9 @@ class Router
     }
 
     /**
-     * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
+     * @throws ContainerExceptionInterface
+     * @throws ReflectionException
      */
     public function handler($uri, $method): void
     {
@@ -125,13 +127,23 @@ class Router
 
     /**
      * @throws ContainerExceptionInterface
+     * @throws ReflectionException
      * @throws NotFoundExceptionInterface
      */
     private function callHandler($handler, $params): void
     {
         [$class_name, $method_name] = $handler;
         $controller = $this->container->get($class_name);
-        call_user_func_array([$controller, $method_name], $params);
+        $response = call_user_func_array([$controller, $method_name], $params);
+
+        http_response_code($response->getStatusCode());
+        foreach ($response->getHeaders() as $name => $values) {
+            foreach ($values as $value) {
+                header("$name: $value");
+            }
+        }
+
+        echo $response->getBody()->getContents();
     }
 
     private function notFound(): void

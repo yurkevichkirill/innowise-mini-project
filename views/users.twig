@@ -5,28 +5,68 @@
     {{ parent() }}
 {% endblock %}
 {% block content%}
-<table>
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Money</th>
-        <th>Has visa</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for user in users %}
-        <tr>
-            <td>{{ user.id }}</td>
-            <td>{{ user.name }}</td>
-            <td>{{ user.age }}</td>
-            <td>{{ user.money }}</td>
-            <td>{{ user.hasVisa ? '1' : '0' }}</td>
-        </tr>
-    {% else %}
-        <tr><td colspan="5">No Users Found</td></tr>
-    {% endfor %}
-    </tbody>
-</table>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Money</th>
+                <th>Has visa</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.money }}</td>
+                <td>{{ user.hasVisa ? '1' : '0' }}</td>
+                <td>
+                    <button data-id={{ user.id }} class="delete">Удалить</button>
+                </td>
+            </tr>
+        {% endfor %}
+            <tr>
+                <td>
+                    <input id="inp-id-edit">
+                </td>
+                <td>
+                    <input id="inp-name-edit">
+                </td>
+                <td>
+                    <input id="inp-age-edit">
+                </td>
+                <td>
+                    <input id="inp-money-edit">
+                </td>
+                <td>
+                    <input type="checkbox" id="inp-visa-edit">
+                </td>
+                <td colspan="2">
+                    <button class="edit">Изменить</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="inp-name-new">
+                </td>
+                <td>
+                    <input id="inp-age-new">
+                </td>
+                <td>
+                    <input id="inp-money-new">
+                </td>
+                <td>
+                    <input type="checkbox" id="inp-visa-new">
+                </td>
+                <td colspan="2">
+                    <button class="create">Создать</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 {% endblock %}

@@ -4,15 +4,14 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\Models\User;
+use App\Models\UserDTO;
 
 interface UserRepositoryInterface
 {
-    public function getUsers(): array;
-    public function getUser(int $id): ?User;
-    public function addUser(string $name, int $age, float $money, bool $has_visa): void;
-    public function updateUser(int $id, string $name, int $age, float $money, bool $has_visa): void;
-    public function deleteUser($id): void;
+    public function getAll(): array;
+    public function get(int $id): ?UserDTO;
+    public function delete(int $id): void;
+    public function save(UserDTO $dto): UserDTO;
     public function existUser($id): bool;
     public function getLastId(): string;
 }

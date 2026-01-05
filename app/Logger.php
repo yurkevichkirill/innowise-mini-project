@@ -6,12 +6,13 @@ namespace App;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
+use Stringable;
 
-class Logger implements LoggerInterface
+readonly class Logger implements LoggerInterface
 {
     public function __construct(
         private string $logFile = '/var/www/tmp/logs/app.log',
-        private int $minLevel = 100
+        private int    $minLevel = 100
     ){
         $dirName = dirname($this->logFile);
 
@@ -23,7 +24,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function emergency(\Stringable|string $message, array $context = []): void
+    public function emergency(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::EMERGENCY, $message, $context);
     }
@@ -31,7 +32,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function alert(\Stringable|string $message, array $context = []): void
+    public function alert(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::ALERT, $message, $context);
     }
@@ -39,7 +40,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function critical(\Stringable|string $message, array $context = []): void
+    public function critical(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::CRITICAL, $message, $context);
     }
@@ -47,7 +48,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function error(\Stringable|string $message, array $context = []): void
+    public function error(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::ERROR, $message, $context);
     }
@@ -55,7 +56,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function warning(\Stringable|string $message, array $context = []): void
+    public function warning(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::WARNING, $message, $context);
     }
@@ -63,7 +64,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function notice(\Stringable|string $message, array $context = []): void
+    public function notice(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::NOTICE, $message, $context);
     }
@@ -71,7 +72,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function info(\Stringable|string $message, array $context = []): void
+    public function info(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::INFO, $message, $context);
     }
@@ -79,7 +80,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function debug(\Stringable|string $message, array $context = []): void
+    public function debug(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::DEBUG, $message, $context);
     }
@@ -87,7 +88,7 @@ class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
-    public function log($level, \Stringable|string $message, array $context = []): void
+    public function log($level, Stringable|string $message, array $context = []): void
     {
         if(!$this->isLevelEnabled($level)) {
             return;

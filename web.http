@@ -1,0 +1,10 @@
+### GET starting page
+GET http://localhost
+
+### GET request to all users
+GET http://localhost/users
+
+###
+
+### GET request to user with id 79
+GET http://localhost/users/79

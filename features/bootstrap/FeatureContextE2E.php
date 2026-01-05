@@ -5,17 +5,25 @@ declare(strict_types=1);
 use App\Container;
 use App\Logger;
 use App\Router;
-use App\Services\ConnectionServiceInterface;
 use App\DB;
-use Behat\Behat\Tester\Exception\PendingException;
+use Behat\Behat\Context\Context;
+use Behat\Hook\AfterScenario;
+use Behat\Hook\BeforeScenario;
 use Behat\Step\Given;
 use Behat\Step\When;
 use Behat\Step\Then;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Log\LoggerInterface;
 use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+use function PHPUnit\Framework\assertEmpty;
+use function PHPUnit\Framework\assertEquals;
 
-class FeatureContextE2E implements \Behat\Behat\Context\Context
+class FeatureContextE2E implements Context
 {
     private ?Container $container = null;
     private ?Router $router = null;
@@ -24,9 +32,10 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         ['Valik', 92, 45000, true],
         ['Seriy', 54, 3400, false]
     ];
-    private ?string $lastResponse = null;
+    private ?ResponseInterface $lastResponse = null;
+    private ?array $lastResponseData = null;
 
-    #[\Behat\Hook\BeforeScenario]
+    #[BeforeScenario]
     public static function putEnvs(): void
     {
         putenv("TEST_MODE=yes");
@@ -34,15 +43,16 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         $file = __DIR__ . "/../../.env.test";
         file_put_contents($file, "TEST_MODE=yes");
     }
+
     protected function setUp(): void
     {
         $this->container = new Container();
 
-        $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../../views');
-        $twig = new \Twig\Environment($loader, [
+        $loader = new FilesystemLoader(__DIR__ . '/../../views');
+        $twig = new Environment($loader, [
             'cache' => false
         ]);
-        $this->container->singleton(\Twig\Environment::class, $twig);
+        $this->container->singleton(Environment::class, $twig);
 
         $logger = new Logger();
         $this->container->singleton(LoggerInterface::class, $logger);
@@ -53,9 +63,14 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         $this->setUpDb();
     }
 
+    /**
+     * @throws ReflectionException
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     private function setUpDb(): void
     {
-        $this->db = $this->container->get(\App\DB::class);
+        $this->db = $this->container->get(DB::class);
 
         $this->db->getConnection()->exec('DROP TABLE IF EXISTS users');
         $this->db->getConnection()->exec('CREATE TABLE users (
@@ -69,7 +84,7 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
     }
 
     #[Given('initialize db with default values')]
-    public function initializeDbWithDefaultValues()
+    public function initializeDbWithDefaultValues(): void
     {
         if(!isset($this->router)) {
             $this->setUp();
@@ -84,8 +99,11 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         }
     }
 
+    /**
+     * @throws GuzzleException
+     */
     #[When('send :arg1 to request :arg2')]
-    public function sendToRequest($method, $uri): void
+    public function sendToRequest(string $method, string $uri): void
     {
         $client = new Client([
             'base_uri' => 'http://nginx',
@@ -94,35 +112,32 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         ]);
 
         $this->lastResponse = $client
-            ->request($method, $uri)
-            ->getBody()
-            ->getContents();
+            ->request($method, $uri);
     }
 
     #[Then('response should contain :arg1')]
-    public function responseShouldContain($data)
+    public function responseShouldContain(string $data): void
     {
-        \PHPUnit\Framework\assertStringContainsString($data, $this->lastResponse);
+        $jsonResult = $this->lastResponse->getBody()->getContents();
+        $result = array_values(json_decode($jsonResult, true))[0];
+        assertEquals($data, $result);
     }
 
     #[Given('empty db')]
-    public function emptyD()
+    public function emptyDb(): void
     {
         if(!isset($this->router)) {
             $this->setUp();
         }
     }
 
+    /**
+     * @throws GuzzleException
+     */
     #[When('send :arg1 to request :arg2 with name :arg3 age :arg5 money :arg6 :arg4 visa')]
-    public function sendToRequestWithNameAgeMoneyVisa($method, $uri, $name, $age, $money, $visaStr)
+    public function sendToRequestWithNameAgeMoneyVisa(string $method, string $uri, string $name, int $age, float $money, string $visaStr): void
     {
         $has_visa = $visaStr === 'with';
-        $jsonData = json_encode([
-            'name' => $name,
-            'age' => $age,
-            'money' => $money,
-            'has_visa' => $has_visa
-        ]);
 
         $client = new Client([
             'base_uri' => 'http://nginx',
@@ -137,19 +152,19 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
                 'money' => $money,
                 'has_visa' => $has_visa
             ]
-        ])->getBody()->getContents();
+        ]);
     }
 
     #[Then('db should have :arg1 user')]
-    public function dbShouldHaveUser($count)
+    public function dbShouldHaveUser($count): void
     {
         $stmt = $this->db->getConnection()->query("SELECT COUNT(id) FROM users");
         $result = $stmt->fetchColumn();
-        \PHPUnit\Framework\assertEquals($count, $result);
+        assertEquals($count, $result);
     }
 
     #[Then('user :arg3 should have name :arg1 age :arg4 money :arg5 :arg2 visa')]
-    public function userShouldHaveNameAgeMoneyVisa($id, $name, $age, $money, $visaStr)
+    public function userShouldHaveNameAgeMoneyVisa($id, $name, $age, $money, $visaStr): void
     {
         $has_visa = $visaStr === 'with';
 
@@ -166,31 +181,56 @@ class FeatureContextE2E implements \Behat\Behat\Context\Context
         $stmt->execute([$id]);
         $resultVisa = $stmt->fetchColumn();
 
-        \PHPUnit\Framework\assertEquals($name, $resultName);
-        \PHPUnit\Framework\assertEquals($age, $resultAge);
-        \PHPUnit\Framework\assertEquals($money, $resultMoney);
-        \PHPUnit\Framework\assertEquals($has_visa, $resultVisa);
+        assertEquals($name, $resultName);
+        assertEquals($age, $resultAge);
+        assertEquals($money, $resultMoney);
+        assertEquals($has_visa, $resultVisa);
     }
 
-    #[Then('response should contain name :arg1 age :arg3 money :arg4 :arg2 visa')]
-    public function responseShouldContainNameAgeMoneyVisa($name, $age, $money, $visaStr): void
+    /**
+     * @Then /^response should contain user with id (\d+) name "([^"]*)" age (\d+) money (\d+) "([^"]*)" visa$/
+     */
+    public function responseShouldContainUserWithIdNameAgeMoneyVisa(int $id, string $name, int $age, float $money, string $visaStr): void
     {
         $has_visa = $visaStr === 'with';
-        $testData = [
-            'user' => [
-                'id' => 1,
-                'name' => (string)$name,
-                'age' => (int)$age,
-                'money' => (float)$money,
-                'has_visa' => $has_visa
-            ]
-        ];
-        $jsonTestData = json_encode($testData);
+        $testData = ['user' => [
+            'id' => $id,
+            'name' => $name,
+            'age' => $age,
+            'money' => $money,
+            'has_visa' => $has_visa
+        ]];
 
-        \PHPUnit\Framework\assertEquals($jsonTestData, $this->lastResponse);
+        if(!isset($this->lastResponseData)) {
+            $this->lastResponseData = json_decode($this->lastResponse->getBody()->getContents(), true);
+        }
+
+        if(count($this->lastResponseData) > 1) {
+            $resultObj = $this->lastResponseData[$id - 1];
+        } else {
+            $resultObj = $this->lastResponseData;
+        }
+
+        assertEquals($testData, $resultObj);
     }
 
-    #[\Behat\Hook\AfterScenario]
+    /**
+     * @Given /^response code should be (\d+)$/
+     */
+    public function responseCodeShouldBe($code): void
+    {
+        assertEquals($code, $this->lastResponse->getStatusCode());
+    }
+
+    /**
+     * @Then /^response body should be empty$/
+     */
+    public function responseBodyShouldBeEmpty(): void
+    {
+        assertEmpty($this->lastResponse->getBody()->getContents());
+    }
+
+    #[AfterScenario]
     public static function resetEnvs(): void
     {
         putenv("TEST_MODE=no");
