@@ -13,7 +13,7 @@ class Response implements ResponseInterface
 {
     private string $protocolVersion = '1.1';
     private array $headers = [];
-    private ?StreamInterface $body;
+    private StreamInterface $body;
     private int $statusCode = 200;
     private string $reasonPhrase = 'OK';
 
@@ -23,7 +23,7 @@ class Response implements ResponseInterface
         int $status = 200,
         string $reason = ''
     ) {
-        $this->body = $this->createStream($body) ?? $this->createEmptyStream();
+        $this->body = $this->createStream($body);
         $this->headers = $this->normalizeHeaders($headers);
         $this->statusCode = $status;
         $this->reasonPhrase = $reason ?: $this->getDefaultReason($status);
@@ -123,13 +123,6 @@ class Response implements ResponseInterface
     public function getReasonPhrase(): string
     {
         return $this->reasonPhrase;
-    }
-
-    private function createEmptyStream(): StreamInterface
-    {
-        $stream = fopen('php://temp', 'r+');
-        if (!$stream) throw new \RuntimeException('Cannot create stream');
-        return new Stream($stream);
     }
 
     private function normalizeHeaders(array $headers): array

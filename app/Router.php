@@ -6,7 +6,6 @@ namespace App;
 
 use App\Attributes\Route;
 use App\Controllers\APIController;
-use GuzzleHttp\Psr7\Uri;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Message\RequestInterface;
@@ -112,11 +111,6 @@ class Router
         return "#^" . implode('/', $segments) . "$#";
     }
 
-    private function extractParam(array $segments): string
-    {
-        return end($segments);
-    }
-
     private function normalizePath(string $path): string
     {
         $path = preg_replace('#/+#', '/', $path);
@@ -148,11 +142,4 @@ class Router
 
         echo $response->getBody()->getContents();
     }
-
-//    private function notFound(): void
-//    {
-//        http_response_code(404);
-//        header('Content-Type: application/json');
-//        echo json_encode(['error' => 'Not Found']);
-//    }
 }

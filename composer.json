@@ -21,6 +21,9 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^12",
-        "behat/behat": "^3.29"
+        "behat/behat": "^3.29",
+        "symplify/easy-coding-standard": "^13.0",
+        "phpstan/phpstan": "^2.1",
+        "vimeo/psalm": "^6.14"
     }
 }

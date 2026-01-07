@@ -5,11 +5,8 @@ declare(strict_types=1);
 namespace App;
 
 use App\Attributes\FromEnv;
+use App\Exceptions\ContainerException;
 use App\Services\ConnectionServiceInterface;
-use App\Services\HttpTransform;
-use App\Services\HttpTransformInterface;
-use App\Services\StreamService;
-use App\Services\StreamServiceInterface;
 use App\Services\UserRepository;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserService;
@@ -17,6 +14,7 @@ use App\Services\UserServiceInterface;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
+use ReflectionException;
 
 class Container implements ContainerInterface
 {
@@ -27,7 +25,6 @@ class Container implements ContainerInterface
         $this->objects[UserServiceInterface::class] = UserService::class;
         $this->objects[UserRepositoryInterface::class] = UserRepository::class;
         $this->objects[ConnectionServiceInterface::class] = DB::class;
-        $this->objects[StreamServiceInterface::class] = StreamService::class;
     }
     public function has(string $id): bool
     {
@@ -36,8 +33,7 @@ class Container implements ContainerInterface
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws \ReflectionException
-     * @throws NotFoundExceptionInterface
+     * @throws ReflectionException|ContainerException
      */
     public function get(string $id): mixed
     {
@@ -50,8 +46,9 @@ class Container implements ContainerInterface
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws \ReflectionException
+     * @throws ReflectionException
      * @throws NotFoundExceptionInterface
+     * @throws ContainerException
      */
     public function prepareObject(string $dependency): object
     {
@@ -83,7 +80,16 @@ class Container implements ContainerInterface
                 $envName = $attribute->getArguments()[0];
                 $args[$argument->getName()] = getenv($envName);
             } else {
-                $argumentType = $argument->getType()->getName();
+                $type = $argument->getType();
+                if (!$type) {
+                    throw new ContainerException("Parameter '{$argument->getName()}' has no type");
+                }
+
+                if (!$type instanceof \ReflectionNamedType) {
+                    throw new ContainerException("UnionType not supported for '{$argument->getName()}'");
+                }
+
+                $argumentType = $type->getName();
                 $args[$argument->getName()] = $this->get($argumentType);
             }
         }

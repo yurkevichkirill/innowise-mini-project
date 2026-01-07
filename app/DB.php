@@ -12,6 +12,7 @@ use PDO;
 #[AllowDynamicProperties]
 class DB implements ConnectionServiceInterface
 {
+    private PDO $pdo;
     public function __construct(
         #[FromEnv('DB_DSN')]
         string $dsn,

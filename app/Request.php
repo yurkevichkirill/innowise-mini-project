@@ -17,7 +17,7 @@ class Request implements RequestInterface
     private string $method;
     private string $protocolVersion = '1.1';
     private array $headers = [];
-    private ?StreamInterface $body;
+    private StreamInterface $body;
     private string $requestTarget;
 
     public function __construct(
@@ -163,13 +163,11 @@ class Request implements RequestInterface
     {
         $clone = clone $this;
         if(!$preserveHost) {
-            $clone->headers = $this->normalizeHeaders($clone->headers);
-            $host = $uri->getHost();
-            if ($host) {
-                $clone->headers['host'] = [$host . ($uri->getPort()) ? ":" . $uri->getPort() : ""];
-            } else {
-                unset($clone->headers['host']);
+            $hostHeader = $uri->getHost();
+            if ($port = $uri->getPort()) {
+                $hostHeader .= ':' . $port;
             }
+            $clone->headers['host'] = [$hostHeader];
         }
         return $clone;
     }
