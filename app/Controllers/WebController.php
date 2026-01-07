@@ -16,7 +16,7 @@ use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 
-readonly class WebController
+final readonly class WebController
 {
     public function __construct(
         private UserRepositoryInterface $userRepository,

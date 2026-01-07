@@ -6,7 +6,7 @@ namespace App\Exceptions;
 
 use Throwable;
 
-class ContainerException extends \Exception
+final class ContainerException extends \Exception
 {
     public function __construct(string $message = "", int $code = 0, ?Throwable $previous = null)
     {

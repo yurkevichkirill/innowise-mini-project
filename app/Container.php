@@ -11,12 +11,13 @@ use App\Services\UserRepository;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserService;
 use App\Services\UserServiceInterface;
+use Override;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use ReflectionException;
 
-class Container implements ContainerInterface
+final class Container implements ContainerInterface
 {
     private array $objects = [];
     private array $singletons = [];
@@ -26,6 +27,8 @@ class Container implements ContainerInterface
         $this->objects[UserRepositoryInterface::class] = UserRepository::class;
         $this->objects[ConnectionServiceInterface::class] = DB::class;
     }
+
+    #[Override]
     public function has(string $id): bool
     {
         return isset($this->objects[$id]) || isset($this->singletons[$id]) || class_exists($id);
@@ -35,6 +38,7 @@ class Container implements ContainerInterface
      * @throws ContainerExceptionInterface
      * @throws ReflectionException|ContainerException
      */
+    #[Override]
     public function get(string $id): mixed
     {
         if(isset($this->singletons[$id])) {

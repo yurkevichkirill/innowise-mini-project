@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace App;
 
+use Override;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 use Stringable;
 
-readonly class Logger implements LoggerInterface
+final readonly class Logger implements LoggerInterface
 {
     public function __construct(
         private string $logFile = '/var/www/tmp/logs/app.log',
@@ -24,6 +25,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function emergency(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::EMERGENCY, $message, $context);
@@ -32,6 +34,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function alert(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::ALERT, $message, $context);
@@ -40,6 +43,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function critical(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::CRITICAL, $message, $context);
@@ -48,6 +52,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function error(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::ERROR, $message, $context);
@@ -56,6 +61,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function warning(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::WARNING, $message, $context);
@@ -64,6 +70,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function notice(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::NOTICE, $message, $context);
@@ -72,6 +79,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function info(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::INFO, $message, $context);
@@ -80,6 +88,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function debug(Stringable|string $message, array $context = []): void
     {
         $this->log(LogLevel::DEBUG, $message, $context);
@@ -88,6 +97,7 @@ readonly class Logger implements LoggerInterface
     /**
      * @inheritDoc
      */
+    #[Override]
     public function log($level, Stringable|string $message, array $context = []): void
     {
         if(!$this->isLevelEnabled($level)) {

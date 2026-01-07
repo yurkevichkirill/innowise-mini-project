@@ -7,7 +7,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
   array (
     '/var/www/app/Router.php' => 
     array (
-      0 => '6f2f527d3048c200c6427720a7c0e43bf0fbe330',
+      0 => 'c29eaceba866669e6783b2ee9ac41c7f2fea54b6',
       1 => 
       array (
         0 => 'app\\router',
@@ -31,7 +31,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/App.php' => 
     array (
-      0 => '09c28b9d3474cbcd6312fe7496179bae4258c9ab',
+      0 => '9cc030e419a8acdb7f9218f0a87813240281cde4',
       1 => 
       array (
         0 => 'app\\app',
@@ -47,7 +47,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Response.php' => 
     array (
-      0 => '116221595e2cdf59448b497580b370a8f8f36559',
+      0 => '9e11b0b7f0fa1fbf0cddae896727700912459385',
       1 => 
       array (
         0 => 'app\\response',
@@ -80,7 +80,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Logger.php' => 
     array (
-      0 => 'd7d394418da0e183e32e0555db925800329257a6',
+      0 => '8e7fe252e5b9ee677e66f74d01f8b756424f7212',
       1 => 
       array (
         0 => 'app\\logger',
@@ -106,7 +106,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Models/UserDTO.php' => 
     array (
-      0 => 'd257a823db9bf139ddf1c241f0ab99811d606ea2',
+      0 => '24c4fcd8bb4776ff1fb4be612146c84fa2fd6c55',
       1 => 
       array (
         0 => 'app\\models\\userdto',
@@ -127,7 +127,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Container.php' => 
     array (
-      0 => '1875e170ed6cc4c294b67829c43a32a743837923',
+      0 => '73ae07548ce2d5a540d5d2086d7e390700ee66ba',
       1 => 
       array (
         0 => 'app\\container',
@@ -147,7 +147,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Services/UserService.php' => 
     array (
-      0 => 'dc9103c38245c141219cda94f20d98cc87dc26ef',
+      0 => '5881ec0109fde6468b35bb914d6a8933677fed52',
       1 => 
       array (
         0 => 'app\\services\\userservice',
@@ -164,7 +164,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Services/UserServiceInterface.php' => 
     array (
-      0 => '6219df37d47c5dcc4a4a96fc343a323354ad7b99',
+      0 => 'c1e9274c5ab43d2376790f287ceae6c95a7f2da7',
       1 => 
       array (
         0 => 'app\\services\\userserviceinterface',
@@ -180,7 +180,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Services/UserRepositoryInterface.php' => 
     array (
-      0 => '65f1902b33a1093fe27d12807e90307bb1875a47',
+      0 => '0ebd0435ffce2af06b07056f0d5abc83c7880271',
       1 => 
       array (
         0 => 'app\\services\\userrepositoryinterface',
@@ -200,7 +200,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Services/UserRepository.php' => 
     array (
-      0 => 'f456d0b0b91274f338ed104cfe97cb9ef4a580f5',
+      0 => '3b4bf9ab4d7438493076470efdb14eb82175aec0',
       1 => 
       array (
         0 => 'app\\services\\userrepository',
@@ -221,7 +221,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Services/HttpTransformInterface.php' => 
     array (
-      0 => 'fc6b4f8d5faad9c335387a98e2c41ca6e3e5163f',
+      0 => 'a43e306c9b8fd8b82847514d69659cf50ffc8518',
       1 => 
       array (
         0 => 'app\\services\\httptransforminterface',
@@ -257,7 +257,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Services/HttpTransform.php' => 
     array (
-      0 => '102a3f437bbd317269b59331378301c831a675fb',
+      0 => '4048163528e993fed38bdc6057027a92cf7d26d2',
       1 => 
       array (
         0 => 'app\\services\\httptransform',
@@ -278,7 +278,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Request.php' => 
     array (
-      0 => 'ae8115c634fe4b8120813ccb74ac257a0ef46d12',
+      0 => 'ef4c903d76e3ab5bfd2564ba9e9b4394376a9193',
       1 => 
       array (
         0 => 'app\\request',
@@ -313,7 +313,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/DB.php' => 
     array (
-      0 => '696a3ad13ecee1577d96e63a7e50e210c0df5dfc',
+      0 => '3835d1a5ee799be1ec7785e7846ffccc893e66b6',
       1 => 
       array (
         0 => 'app\\db',
@@ -329,7 +329,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Exceptions/UserNotFoundException.php' => 
     array (
-      0 => '5a4478c6ade098393777934eacf8e81abd3a0eae',
+      0 => '68475ede130e9dc4a1025a07479fb38163ae5352',
       1 => 
       array (
         0 => 'app\\exceptions\\usernotfoundexception',
@@ -344,7 +344,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Controllers/WebController.php' => 
     array (
-      0 => 'be8068275ccb7d6fec3188bfe236648dec9a323e',
+      0 => 'ad4e193a390384cdd5bdfe33f486e9a2b19e0887',
       1 => 
       array (
         0 => 'app\\controllers\\webcontroller',
@@ -362,7 +362,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Controllers/APIController.php' => 
     array (
-      0 => 'f637f9b658830bd4539fb9d356c618fe836635e6',
+      0 => '26324a9f0e6a792f8e4758599599222e05255918',
       1 => 
       array (
         0 => 'app\\controllers\\apicontroller',
@@ -383,7 +383,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Attributes/Get.php' => 
     array (
-      0 => '64ba253e1dc81cc05fa3a0c98bc0cf9068b62b86',
+      0 => 'aff16c4bdfe654e2101a570e252ce205e6de36b4',
       1 => 
       array (
         0 => 'app\\attributes\\get',
@@ -398,7 +398,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Attributes/Post.php' => 
     array (
-      0 => '63dda884af535e0824a476db2459d3bfa4f07d15',
+      0 => 'e465a4f7b7d1fd80511e8df63625c0fa4c48532f',
       1 => 
       array (
         0 => 'app\\attributes\\post',
@@ -413,7 +413,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Attributes/Delete.php' => 
     array (
-      0 => '8b5bc70b7b3e6de0e3ba0ef1ca7e438c5617aa4d',
+      0 => '8f124208383c383c2c1f0e42e1a878d49cb5de4f',
       1 => 
       array (
         0 => 'app\\attributes\\delete',
@@ -428,7 +428,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Attributes/Patch.php' => 
     array (
-      0 => '2f09b168819800fc2802355493b3510912b94192',
+      0 => '54d8df39e13186b9b266ef7b41baaa521067a198',
       1 => 
       array (
         0 => 'app\\attributes\\patch',
@@ -458,7 +458,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Attributes/FromEnv.php' => 
     array (
-      0 => '8f8975283dc74448a96db5949db4f5a9783c4049',
+      0 => '7c8e3e3f0c78f071e8ccff6c8372d10422520135',
       1 => 
       array (
         0 => 'app\\attributes\\fromenv',
@@ -473,7 +473,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Exceptions/ContainerException.php' => 
     array (
-      0 => 'ae8cd6a2de46fcb3616ff4c71d820103ba12fcaa',
+      0 => '87fcccf1202286546f13614e80d5f3b14ff0f6ab',
       1 => 
       array (
         0 => 'app\\exceptions\\containerexception',

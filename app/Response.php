@@ -5,11 +5,12 @@ namespace App;
 
 use GuzzleHttp\Psr7\Stream;
 use http\Exception\RuntimeException;
+use Override;
 use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 
-class Response implements ResponseInterface
+final class Response implements ResponseInterface
 {
     private string $protocolVersion = '1.1';
     private array $headers = [];
@@ -29,11 +30,13 @@ class Response implements ResponseInterface
         $this->reasonPhrase = $reason ?: $this->getDefaultReason($status);
     }
 
+    #[Override]
     public function getProtocolVersion(): string
     {
         return $this->protocolVersion;
     }
 
+    #[Override]
     public function withProtocolVersion(string $version): MessageInterface
     {
         $clone = clone $this;
@@ -41,27 +44,32 @@ class Response implements ResponseInterface
         return $clone;
     }
 
+    #[Override]
     public function getHeaders(): array
     {
         return $this->headers;
     }
 
+    #[Override]
     public function hasHeader(string $name): bool
     {
         return isset($this->headers[strtolower($name)]);
     }
 
+    #[Override]
     public function getHeader(string $name): array
     {
         $key = strtolower($name);
         return $this->hasHeader($name) ? $this->headers[$key] : [];
     }
 
+    #[Override]
     public function getHeaderLine(string $name): string
     {
         return implode(', ', $this->getHeader($name));
     }
 
+    #[Override]
     public function withHeader(string $name, $value): MessageInterface
     {
         $clone = clone $this;
@@ -69,6 +77,7 @@ class Response implements ResponseInterface
         return $clone;
     }
 
+    #[Override]
     public function withAddedHeader(string $name, $value): MessageInterface
     {
         $clone = clone $this;
@@ -76,6 +85,7 @@ class Response implements ResponseInterface
         return $clone;
     }
 
+    #[Override]
     public function withoutHeader(string $name): MessageInterface
     {
         $clone = clone $this;
@@ -83,11 +93,13 @@ class Response implements ResponseInterface
         return $clone;
     }
 
+    #[Override]
     public function getBody(): StreamInterface
     {
         return $this->body;
     }
 
+    #[Override]
     public function withBody(StreamInterface $body): MessageInterface
     {
         $clone = clone $this;
@@ -107,11 +119,13 @@ class Response implements ResponseInterface
         return new Stream($stream);
     }
 
+    #[Override]
     public function getStatusCode(): int
     {
         return $this->statusCode;
     }
 
+    #[Override]
     public function withStatus(int $code, string $reasonPhrase = ''): ResponseInterface
     {
         $clone = clone $this;
@@ -120,6 +134,7 @@ class Response implements ResponseInterface
         return $clone;
     }
 
+    #[Override]
     public function getReasonPhrase(): string
     {
         return $this->reasonPhrase;

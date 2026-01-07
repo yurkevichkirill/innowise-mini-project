@@ -7,16 +7,18 @@ namespace App\Services;
 use App\Exceptions\UserNotFoundException;
 use App\Models\UserDTO;
 use Exception;
+use Override;
 use PDO;
 use Psr\Log\LoggerInterface;
 
-readonly class UserRepository implements UserRepositoryInterface
+final readonly class UserRepository implements UserRepositoryInterface
 {
     public function __construct(
         private ConnectionServiceInterface $context,
         private LoggerInterface $logger
     ) {}
 
+    #[Override]
     public function getAll(): array
     {
         $users = [];
@@ -31,7 +33,8 @@ readonly class UserRepository implements UserRepositoryInterface
     /**
      * @throws UserNotFoundException
      */
-    public function get($id): ?UserDTO
+    #[Override]
+    public function get($id): UserDTO
     {
         $stmt = $this->context->getConnection()->prepare("SELECT * FROM users WHERE id = ?");
         $stmt->execute([$id]);
@@ -44,6 +47,7 @@ readonly class UserRepository implements UserRepositoryInterface
         return new UserDTO($row['id'], $row['name'], $row['age'], $row['money'], (bool)$row['has_visa']);
     }
 
+    #[Override]
     public function save(UserDTO $dto): UserDTO
     {
         $data = $dto->toArray();
@@ -74,7 +78,12 @@ readonly class UserRepository implements UserRepositoryInterface
             return $this->get($params[':id']);
         } else {
             $stmt = $this->context->getConnection()->prepare("INSERT INTO users (name, age, money, has_visa) VALUES (?, ?, ?, ?)");
-            $stmt->execute([$params[':name'], $params[':age'], $params[':money'], $params[':has_visa']]);
+            $stmt->execute([
+                $params[':name'] ?? null,
+                $params[':age'] ?? null,
+                $params[':money'] ?? null,
+                $params[':has_visa'] ?? null
+            ]);
             return $this->get($this->getLastId());
         }
     }
@@ -82,6 +91,7 @@ readonly class UserRepository implements UserRepositoryInterface
     /**
      * @throws Exception
      */
+    #[Override]
     public function delete($id): void
     {
         if(!$this->existUser($id)){
@@ -92,6 +102,7 @@ readonly class UserRepository implements UserRepositoryInterface
         $stmt->execute([$id]);
     }
 
+    #[Override]
     public function existUser($id): bool
     {
         $stmt = $this->context->getConnection()->prepare("SELECT 1 FROM users WHERE id = ?");
@@ -100,6 +111,7 @@ readonly class UserRepository implements UserRepositoryInterface
         return $stmt->fetch() !== false;
     }
 
+    #[Override]
     public function getLastId(): string
     {
         return $this->context->getConnection()->lastInsertId();

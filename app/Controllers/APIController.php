@@ -17,7 +17,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\Translation\Exception\NotFoundResourceException;
 
-readonly class APIController
+final readonly class APIController
 {
     public function __construct(
         private UserServiceInterface $userService,

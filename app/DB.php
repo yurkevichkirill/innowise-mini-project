@@ -7,10 +7,11 @@ namespace App;
 use AllowDynamicProperties;
 use App\Attributes\FromEnv;
 use App\Services\ConnectionServiceInterface;
+use Override;
 use PDO;
 
 #[AllowDynamicProperties]
-class DB implements ConnectionServiceInterface
+final class DB implements ConnectionServiceInterface
 {
     private PDO $pdo;
     public function __construct(
@@ -30,6 +31,7 @@ class DB implements ConnectionServiceInterface
             $this->pdo = new PDO($dsn, $user, $password);
         }
     }
+    #[Override]
     public function getConnection(): PDO {
         return $this->pdo;
     }

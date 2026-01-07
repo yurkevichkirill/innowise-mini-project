@@ -7,7 +7,7 @@ namespace App\Attributes;
 use Attribute;
 
 #[Attribute]
-class Delete extends Route
+final class Delete extends Route
 {
     public function __construct(string $routePath, string $method = 'DELETE')
     {

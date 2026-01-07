@@ -13,7 +13,7 @@ use ReflectionAttribute;
 use ReflectionClass;
 use ReflectionException;
 
-class Router
+final class Router
 {
     public array $routes = [];
 

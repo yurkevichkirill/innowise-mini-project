@@ -6,35 +6,41 @@ namespace App\Services;
 
 use App\Models\UserDTO;
 use Exception;
+use Override;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 
-class HttpTransform implements HttpTransformInterface
+final class HttpTransform implements HttpTransformInterface
 {
-    public static function allToJson(array $users): string
+    #[Override]
+    public static function allToJson(array $users): false|string
     {
         $usersArr = array_map(fn($user) => ['user' => $user->toArray()], $users);
         return json_encode($usersArr);
     }
 
-    public static function oneToJson(UserDTO $user): string
+    #[Override]
+    public static function oneToJson(UserDTO $user): false|string
     {
         return json_encode(['user' => $user->toArray()]);
     }
 
-    public static function errorToJson(Exception $e): string
+    #[Override]
+    public static function errorToJson(Exception $e): false|string
     {
         return json_encode(['error' => $e->getMessage()]);
     }
 
+    #[Override]
     public static function getLastSegment(string $path): string
     {
         $segments = explode('/', $path);
         return end($segments);
     }
 
+    #[Override]
     public static function getArgs(string $jsonData): array
     {
         $arrData = json_decode($jsonData, true);
@@ -52,6 +58,7 @@ class HttpTransform implements HttpTransformInterface
      * @throws SyntaxError
      * @throws LoaderError
      */
+    #[Override]
     public static function allToHTML(Environment $twig, array $users, string $name): string
     {
         return $twig->render($name .'.twig', [$name => $users]);
@@ -62,6 +69,7 @@ class HttpTransform implements HttpTransformInterface
      * @throws RuntimeError
      * @throws LoaderError
      */
+    #[Override]
     public static function oneToHTML(Environment $twig, UserDTO $user, string $name): string
     {
         return $twig->render($name . ".twig", [$name => $user]);

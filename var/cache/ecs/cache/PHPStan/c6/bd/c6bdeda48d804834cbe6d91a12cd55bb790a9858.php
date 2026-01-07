@@ -612,5 +612,325 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
+    '/var/www/vendor/composer/../amphp/amp/src/functions.php' => 
+    array (
+      0 => 'b8cbe988443066b348ccc84846e67b821c2e53b8',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\async',
+        1 => 'amp\\now',
+        2 => 'amp\\delay',
+        3 => 'amp\\trapsignal',
+        4 => 'amp\\weakclosure',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/amp/src/Future/functions.php' => 
+    array (
+      0 => 'd152e61a362e994f22b517afd24c5484010626d2',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\future\\awaitfirst',
+        1 => 'amp\\future\\awaitany',
+        2 => 'amp\\future\\awaitanyn',
+        3 => 'amp\\future\\awaitall',
+        4 => 'amp\\future\\await',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/amp/src/Internal/functions.php' => 
+    array (
+      0 => '5ea28f18915d61bb7384154b0822321440a64647',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\internal\\formatstacktrace',
+        1 => 'amp\\internal\\isdebugenabled',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/byte-stream/src/functions.php' => 
+    array (
+      0 => '4e39af020e37926b4203bfdeb318e2305f76dbb4',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\bytestream\\pipe',
+        1 => 'amp\\bytestream\\buffer',
+        2 => 'amp\\bytestream\\getinputbufferstream',
+        3 => 'amp\\bytestream\\getoutputbufferstream',
+        4 => 'amp\\bytestream\\getstdin',
+        5 => 'amp\\bytestream\\getstdout',
+        6 => 'amp\\bytestream\\getstderr',
+        7 => 'amp\\bytestream\\split',
+        8 => 'amp\\bytestream\\splitlines',
+        9 => 'amp\\bytestream\\parselinedelimitedjson',
+      ),
+      3 => 
+      array (
+        0 => 'STDOUT',
+        1 => 'STDERR',
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/byte-stream/src/Internal/functions.php' => 
+    array (
+      0 => 'b44d7ff0fbbea5bf92260d41d2e08a8bc0710c8f',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\bytestream\\internal\\trytocreatereadablestreamfromresource',
+        1 => 'amp\\bytestream\\internal\\trytocreatewritablestreamfromresource',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/dns/src/functions.php' => 
+    array (
+      0 => 'db16da3fa8f757e25fec90cc74b1ddadc8a138b6',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\dns\\dnsresolver',
+        1 => 'amp\\dns\\createdefaultresolver',
+        2 => 'amp\\dns\\resolve',
+        3 => 'amp\\dns\\query',
+        4 => 'amp\\dns\\isvalidname',
+        5 => 'amp\\dns\\normalizename',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/parallel/src/Context/functions.php' => 
+    array (
+      0 => '5d6066e569acd764b1b4cf1cb55f665cba1ad26b',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\parallel\\context\\startcontext',
+        1 => 'amp\\parallel\\context\\contextfactory',
+        2 => 'amp\\parallel\\context\\flattenthrowablebacktrace',
+        3 => 'amp\\parallel\\context\\formatflattenedbacktrace',
+        4 => 'amp\\parallel\\context\\flattenargument',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/parallel/src/Context/Internal/functions.php' => 
+    array (
+      0 => 'f92326e1eb9865da129c9ab0ec4dbe21ac8bd919',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\parallel\\context\\internal\\runcontext',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/parallel/src/Ipc/functions.php' => 
+    array (
+      0 => '7318ea8c0a08e73efeb46be3902b9caa6c206b02',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\parallel\\ipc\\readkey',
+        1 => 'amp\\parallel\\ipc\\connect',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/parallel/src/Worker/functions.php' => 
+    array (
+      0 => '019daf72fe9663be62c913c183377ade927b1c4f',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\parallel\\worker\\workerpool',
+        1 => 'amp\\parallel\\worker\\submit',
+        2 => 'amp\\parallel\\worker\\getworker',
+        3 => 'amp\\parallel\\worker\\createworker',
+        4 => 'amp\\parallel\\worker\\workerfactory',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/process/src/functions.php' => 
+    array (
+      0 => '50cae8dd445da999732cbe5e6376883b500e8158',
+      1 => 
+      array (
+        0 => 'amp\\process\\',
+        1 => 'amp\\process\\',
+      ),
+      2 => 
+      array (
+        0 => 'amp\\process\\escapeargument',
+        1 => 'amp\\process\\escapeargument',
+      ),
+      3 => 
+      array (
+        0 => 'amp\\process\\BIN_DIR',
+        1 => 'amp\\process\\IS_WINDOWS',
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/serialization/src/functions.php' => 
+    array (
+      0 => '1f409bf42c9bf85092dbda2fcdf8fc54944d66ee',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\serialization\\encodeunprintablechars',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/socket/src/functions.php' => 
+    array (
+      0 => '6708aa441887f3163003aaa95ba4688a4878de47',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\socket\\listen',
+        1 => 'amp\\socket\\bindudpsocket',
+        2 => 'amp\\socket\\socketconnector',
+        3 => 'amp\\socket\\connect',
+        4 => 'amp\\socket\\connecttls',
+        5 => 'amp\\socket\\createsocketpair',
+        6 => 'amp\\socket\\hastlsalpnsupport',
+        7 => 'amp\\socket\\hastlssecuritylevelsupport',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/socket/src/Internal/functions.php' => 
+    array (
+      0 => '3c6ff669975a0e0b1a5ca11f50d3ce06645be211',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\socket\\internal\\parseuri',
+        1 => 'amp\\socket\\internal\\setuptls',
+        2 => 'amp\\socket\\internal\\shutdowntls',
+        3 => 'amp\\socket\\internal\\normalizebindtooption',
+        4 => 'amp\\socket\\internal\\getstreamsocketname',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/socket/src/SocketAddress/functions.php' => 
+    array (
+      0 => '417472d78883550c7ac19790b0ca35805c17e220',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\socket\\socketaddress\\fromresourcepeer',
+        1 => 'amp\\socket\\socketaddress\\fromresourcelocal',
+        2 => 'amp\\socket\\socketaddress\\fromstring',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../amphp/sync/src/functions.php' => 
+    array (
+      0 => 'fd94eeaf75ec82d4028a73b86fafaa743423893f',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'amp\\sync\\synchronized',
+        1 => 'amp\\sync\\createchannelpair',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../daverandom/libdns/src/functions.php' => 
+    array (
+      0 => '39f4a673b7a35786e3633cc1b86948b07add4fd2',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'libdns\\normalize_name',
+        1 => 'libdns\\normalize_name',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/vendor/composer/../symfony/polyfill-php84/bootstrap.php' => 
+    array (
+      0 => '215d30eb1250252dff32babb4d962d699edd1821',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+        0 => 'array_find',
+        1 => 'array_find_key',
+        2 => 'array_any',
+        3 => 'array_all',
+        4 => 'fpow',
+        5 => 'mb_ucfirst',
+        6 => 'mb_lcfirst',
+        7 => 'mb_trim',
+        8 => 'mb_ltrim',
+        9 => 'mb_rtrim',
+        10 => 'bcdivmod',
+        11 => 'grapheme_str_split',
+      ),
+      3 => 
+      array (
+        0 => 'CURL_HTTP_VERSION_3',
+        1 => 'CURL_HTTP_VERSION_3ONLY',
+      ),
+    ),
   ),
 ));

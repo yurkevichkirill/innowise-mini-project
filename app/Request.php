@@ -6,12 +6,13 @@ namespace App;
 
 use GuzzleHttp\Psr7\Stream;
 use http\Exception\RuntimeException;
+use Override;
 use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
 
-class Request implements RequestInterface
+final class Request implements RequestInterface
 {
     private UriInterface $uri;
     private string $method;
@@ -37,11 +38,13 @@ class Request implements RequestInterface
         $this->headers = $this->normalizeHeaders($headers);
     }
 
+    #[Override]
     public function getProtocolVersion(): string
     {
         return $this->protocolVersion;
     }
 
+    #[Override]
     public function withProtocolVersion(string $version): MessageInterface
     {
         $clone = clone $this;
@@ -49,27 +52,32 @@ class Request implements RequestInterface
         return $clone;
     }
 
+    #[Override]
     public function getHeaders(): array
     {
         return $this->headers;
     }
 
+    #[Override]
     public function hasHeader(string $name): bool
     {
         return isset($this->headers[strtolower($name)]);
     }
 
+    #[Override]
     public function getHeader(string $name): array
     {
         $key = strtolower($name);
         return $this->hasHeader($name) ? $this->headers[$key] : [];
     }
 
+    #[Override]
     public function getHeaderLine(string $name): string
     {
         return implode(', ', $this->getHeader($name));
     }
 
+    #[Override]
     public function withHeader(string $name, $value): MessageInterface
     {
         $clone = clone $this;
@@ -92,6 +100,7 @@ class Request implements RequestInterface
         return array_filter(array_map('strval', $value));
     }
 
+    #[Override]
     public function withAddedHeader(string $name, $value): MessageInterface
     {
         $clone = clone $this;
@@ -99,6 +108,7 @@ class Request implements RequestInterface
         return $clone;
     }
 
+    #[Override]
     public function withoutHeader(string $name): MessageInterface
     {
         $clone = clone $this;
@@ -106,11 +116,13 @@ class Request implements RequestInterface
         return $clone;
     }
 
+    #[Override]
     public function getBody(): StreamInterface
     {
         return $this->body;
     }
 
+    #[Override]
     public function withBody(StreamInterface $body): MessageInterface
     {
         $clone = clone $this;
@@ -130,11 +142,13 @@ class Request implements RequestInterface
         return new Stream($stream);
     }
 
+    #[Override]
     public function getRequestTarget(): string
     {
         return $this->requestTarget;
     }
 
+    #[Override]
     public function withRequestTarget(string $requestTarget): RequestInterface
     {
         $clone = clone $this;
@@ -142,11 +156,13 @@ class Request implements RequestInterface
         return $clone;
     }
 
+    #[Override]
     public function getMethod(): string
     {
         return $this->method;
     }
 
+    #[Override]
     public function withMethod(string $method): RequestInterface
     {
         $clone = clone $this;
@@ -154,11 +170,13 @@ class Request implements RequestInterface
         return $clone;
     }
 
+    #[Override]
     public function getUri(): UriInterface
     {
         return $this->uri;
     }
 
+    #[Override]
     public function withUri(UriInterface $uri, bool $preserveHost = false): RequestInterface
     {
         $clone = clone $this;

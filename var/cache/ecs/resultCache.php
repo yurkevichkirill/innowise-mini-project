@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 return [
-	'lastFullAnalysisTime' => 1767783243,
+	'lastFullAnalysisTime' => 1767785424,
 	'meta' => array (
   'cacheVersion' => 'v12-linesToIgnore',
   'phpstanVersion' => '2.1.33',
@@ -22,7 +22,7 @@ return [
   ),
   'composerLocks' => 
   array (
-    '/var/www/composer.lock' => 'ddb7506e1f42a755c62ebabdb0b2a75fec22cae7',
+    '/var/www/composer.lock' => '79d795aaa9449910e0284bf7e431581a82d2fcf3',
   ),
   'composerInstalled' => 
   array (
@@ -30,6 +30,138 @@ return [
     array (
       'versions' => 
       array (
+        'amphp/amp' => 
+        array (
+          'pretty_version' => 'v3.1.1',
+          'version' => '3.1.1.0',
+          'reference' => 'fa0ab33a6f47a82929c38d03ca47ebb71086a93f',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/amp',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/byte-stream' => 
+        array (
+          'pretty_version' => 'v2.1.2',
+          'version' => '2.1.2.0',
+          'reference' => '55a6bd071aec26fa2a3e002618c20c35e3df1b46',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/byte-stream',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/cache' => 
+        array (
+          'pretty_version' => 'v2.0.1',
+          'version' => '2.0.1.0',
+          'reference' => '46912e387e6aa94933b61ea1ead9cf7540b7797c',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/cache',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/dns' => 
+        array (
+          'pretty_version' => 'v2.4.0',
+          'version' => '2.4.0.0',
+          'reference' => '78eb3db5fc69bf2fc0cb503c4fcba667bc223c71',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/dns',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/parallel' => 
+        array (
+          'pretty_version' => 'v2.3.3',
+          'version' => '2.3.3.0',
+          'reference' => '296b521137a54d3a02425b464e5aee4c93db2c60',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/parallel',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/parser' => 
+        array (
+          'pretty_version' => 'v1.1.1',
+          'version' => '1.1.1.0',
+          'reference' => '3cf1f8b32a0171d4b1bed93d25617637a77cded7',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/parser',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/pipeline' => 
+        array (
+          'pretty_version' => 'v1.2.3',
+          'version' => '1.2.3.0',
+          'reference' => '7b52598c2e9105ebcddf247fc523161581930367',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/pipeline',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/process' => 
+        array (
+          'pretty_version' => 'v2.0.3',
+          'version' => '2.0.3.0',
+          'reference' => '52e08c09dec7511d5fbc1fb00d3e4e79fc77d58d',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/process',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/serialization' => 
+        array (
+          'pretty_version' => 'v1.0.0',
+          'version' => '1.0.0.0',
+          'reference' => '693e77b2fb0b266c3c7d622317f881de44ae94a1',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/serialization',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/socket' => 
+        array (
+          'pretty_version' => 'v2.3.1',
+          'version' => '2.3.1.0',
+          'reference' => '58e0422221825b79681b72c50c47a930be7bf1e1',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/socket',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'amphp/sync' => 
+        array (
+          'pretty_version' => 'v2.3.0',
+          'version' => '2.3.0.0',
+          'reference' => '217097b785130d77cfcc58ff583cf26cd1770bf1',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../amphp/sync',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
         'behat/behat' => 
         array (
           'pretty_version' => 'v3.29.0',
@@ -66,6 +198,18 @@ return [
           ),
           'dev_requirement' => true,
         ),
+        'composer/semver' => 
+        array (
+          'pretty_version' => '3.4.4',
+          'version' => '3.4.4.0',
+          'reference' => '198166618906cb2de69b95d7d47e5fa8aa1b2b95',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/./semver',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
         'composer/xdebug-handler' => 
         array (
           'pretty_version' => '3.0.5',
@@ -73,6 +217,86 @@ return [
           'reference' => '6c1925561632e83d60a44492e0b344cf48ab85ef',
           'type' => 'library',
           'install_path' => '/var/www/vendor/composer/./xdebug-handler',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'danog/advanced-json-rpc' => 
+        array (
+          'pretty_version' => 'v3.2.2',
+          'version' => '3.2.2.0',
+          'reference' => 'aadb1c4068a88c3d0530cfe324b067920661efcb',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../danog/advanced-json-rpc',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'daverandom/libdns' => 
+        array (
+          'pretty_version' => 'v2.1.0',
+          'version' => '2.1.0.0',
+          'reference' => 'b84c94e8fe6b7ee4aecfe121bfe3b6177d303c8a',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../daverandom/libdns',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'dnoegel/php-xdg-base-dir' => 
+        array (
+          'pretty_version' => 'v0.1.1',
+          'version' => '0.1.1.0',
+          'reference' => '8f8a6e48c5ecb0f991c2fdcf5f154a47d85f9ffd',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../dnoegel/php-xdg-base-dir',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'doctrine/deprecations' => 
+        array (
+          'pretty_version' => '1.1.5',
+          'version' => '1.1.5.0',
+          'reference' => '459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../doctrine/deprecations',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'felixfbecker/language-server-protocol' => 
+        array (
+          'pretty_version' => 'v1.5.3',
+          'version' => '1.5.3.0',
+          'reference' => 'a9e113dbc7d849e35b8776da39edaf4313b7b6c9',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../felixfbecker/language-server-protocol',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'felixfbecker/php-advanced-json-rpc' => 
+        array (
+          'dev_requirement' => true,
+          'replaced' => 
+          array (
+            0 => '^3',
+          ),
+        ),
+        'fidry/cpu-core-counter' => 
+        array (
+          'pretty_version' => '1.3.0',
+          'version' => '1.3.0.0',
+          'reference' => 'db9508f7b1474469d9d3c53b86f817e344732678',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../fidry/cpu-core-counter',
           'aliases' => 
           array (
           ),
@@ -126,6 +350,42 @@ return [
           ),
           'dev_requirement' => false,
         ),
+        'kelunik/certificate' => 
+        array (
+          'pretty_version' => 'v1.1.3',
+          'version' => '1.1.3.0',
+          'reference' => '7e00d498c264d5eb4f78c69f41c8bd6719c0199e',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../kelunik/certificate',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'league/uri' => 
+        array (
+          'pretty_version' => '7.7.0',
+          'version' => '7.7.0.0',
+          'reference' => '8d587cddee53490f9b82bf203d3a9aa7ea4f9807',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../league/uri',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'league/uri-interfaces' => 
+        array (
+          'pretty_version' => '7.7.0',
+          'version' => '7.7.0.0',
+          'reference' => '62ccc1a0435e1c54e10ee6022df28d6c04c2946c',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../league/uri-interfaces',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
         'myclabs/deep-copy' => 
         array (
           'pretty_version' => '1.13.4',
@@ -133,6 +393,18 @@ return [
           'reference' => '07d290f0c47959fd5eed98c95ee5602db07e0b6a',
           'type' => 'library',
           'install_path' => '/var/www/vendor/composer/../myclabs/deep-copy',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'netresearch/jsonmapper' => 
+        array (
+          'pretty_version' => 'v5.0.0',
+          'version' => '5.0.0.0',
+          'reference' => '8c64d8d444a5d764c641ebe97e0e3bc72b25bf6c',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../netresearch/jsonmapper',
           'aliases' => 
           array (
           ),
@@ -174,6 +446,42 @@ return [
           ),
           'dev_requirement' => true,
         ),
+        'phpdocumentor/reflection-common' => 
+        array (
+          'pretty_version' => '2.2.0',
+          'version' => '2.2.0.0',
+          'reference' => '1d01c49d4ed62f25aa84a747ad35d5a16924662b',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../phpdocumentor/reflection-common',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'phpdocumentor/reflection-docblock' => 
+        array (
+          'pretty_version' => '5.6.6',
+          'version' => '5.6.6.0',
+          'reference' => '5cee1d3dfc2d2aa6599834520911d246f656bcb8',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../phpdocumentor/reflection-docblock',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'phpdocumentor/type-resolver' => 
+        array (
+          'pretty_version' => '1.12.0',
+          'version' => '1.12.0.0',
+          'reference' => '92a98ada2b93d9b201a613cb5a33584dde25f195',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../phpdocumentor/type-resolver',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
         'phpoption/phpoption' => 
         array (
           'pretty_version' => '1.9.4',
@@ -185,6 +493,18 @@ return [
           array (
           ),
           'dev_requirement' => false,
+        ),
+        'phpstan/phpdoc-parser' => 
+        array (
+          'pretty_version' => '2.3.0',
+          'version' => '2.3.0.0',
+          'reference' => '1e0cd5370df5dd2e556a36b9c62f62e555870495',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../phpstan/phpdoc-parser',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
         ),
         'phpstan/phpstan' => 
         array (
@@ -269,6 +589,14 @@ return [
           array (
           ),
           'dev_requirement' => true,
+        ),
+        'psalm/psalm' => 
+        array (
+          'dev_requirement' => true,
+          'provided' => 
+          array (
+            0 => '6.14.3',
+          ),
         ),
         'psr/container' => 
         array (
@@ -401,6 +729,18 @@ return [
           array (
           ),
           'dev_requirement' => false,
+        ),
+        'revolt/event-loop' => 
+        array (
+          'pretty_version' => 'v1.0.8',
+          'version' => '1.0.8.0',
+          'reference' => 'b6fc06dce8e9b523c9946138fa5e62181934f91c',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../revolt/event-loop',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
         ),
         'sebastian/cli-parser' => 
         array (
@@ -553,6 +893,18 @@ return [
           'reference' => '3e6ccf7657d4f0a59200564b08cead899313b53c',
           'type' => 'library',
           'install_path' => '/var/www/vendor/composer/../sebastian/version',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
+        'spatie/array-to-xml' => 
+        array (
+          'pretty_version' => '3.4.4',
+          'version' => '3.4.4.0',
+          'reference' => '88b2f3852a922dd73177a68938f8eb2ec70c7224',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../spatie/array-to-xml',
           'aliases' => 
           array (
           ),
@@ -722,6 +1074,18 @@ return [
           ),
           'dev_requirement' => false,
         ),
+        'symfony/polyfill-php84' => 
+        array (
+          'pretty_version' => 'v1.33.0',
+          'version' => '1.33.0.0',
+          'reference' => 'd8ced4d875142b6a7426000426b8abc631d6b191',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../symfony/polyfill-php84',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
         'symfony/service-contracts' => 
         array (
           'pretty_version' => 'v3.6.1',
@@ -846,6 +1210,18 @@ return [
           ),
           'dev_requirement' => false,
         ),
+        'vimeo/psalm' => 
+        array (
+          'pretty_version' => '6.14.3',
+          'version' => '6.14.3.0',
+          'reference' => 'd0b040a91f280f071c1abcb1b77ce3822058725a',
+          'type' => 'project',
+          'install_path' => '/var/www/vendor/composer/../vimeo/psalm',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
+        ),
         'vlucas/phpdotenv' => 
         array (
           'pretty_version' => 'v5.6.2',
@@ -857,6 +1233,18 @@ return [
           array (
           ),
           'dev_requirement' => false,
+        ),
+        'webmozart/assert' => 
+        array (
+          'pretty_version' => '2.0.0',
+          'version' => '2.0.0.0',
+          'reference' => '1b34b004e35a164bc5bb6ebd33c844b2d8069a54',
+          'type' => 'library',
+          'install_path' => '/var/www/vendor/composer/../webmozart/assert',
+          'aliases' => 
+          array (
+          ),
+          'dev_requirement' => true,
         ),
       ),
     ),
@@ -1198,21 +1586,21 @@ return [
 	'dependencies' => array (
   '/var/www/app/App.php' => 
   array (
-    'fileHash' => '09c28b9d3474cbcd6312fe7496179bae4258c9ab',
+    'fileHash' => '9cc030e419a8acdb7f9218f0a87813240281cde4',
     'dependentFiles' => 
     array (
     ),
   ),
   '/var/www/app/Attributes/Delete.php' => 
   array (
-    'fileHash' => '8b5bc70b7b3e6de0e3ba0ef1ca7e438c5617aa4d',
+    'fileHash' => '8f124208383c383c2c1f0e42e1a878d49cb5de4f',
     'dependentFiles' => 
     array (
     ),
   ),
   '/var/www/app/Attributes/FromEnv.php' => 
   array (
-    'fileHash' => '8f8975283dc74448a96db5949db4f5a9783c4049',
+    'fileHash' => '7c8e3e3f0c78f071e8ccff6c8372d10422520135',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Container.php',
@@ -1220,21 +1608,21 @@ return [
   ),
   '/var/www/app/Attributes/Get.php' => 
   array (
-    'fileHash' => '64ba253e1dc81cc05fa3a0c98bc0cf9068b62b86',
+    'fileHash' => 'aff16c4bdfe654e2101a570e252ce205e6de36b4',
     'dependentFiles' => 
     array (
     ),
   ),
   '/var/www/app/Attributes/Patch.php' => 
   array (
-    'fileHash' => '2f09b168819800fc2802355493b3510912b94192',
+    'fileHash' => '54d8df39e13186b9b266ef7b41baaa521067a198',
     'dependentFiles' => 
     array (
     ),
   ),
   '/var/www/app/Attributes/Post.php' => 
   array (
-    'fileHash' => '63dda884af535e0824a476db2459d3bfa4f07d15',
+    'fileHash' => 'e465a4f7b7d1fd80511e8df63625c0fa4c48532f',
     'dependentFiles' => 
     array (
     ),
@@ -1253,7 +1641,7 @@ return [
   ),
   '/var/www/app/Container.php' => 
   array (
-    'fileHash' => '1875e170ed6cc4c294b67829c43a32a743837923',
+    'fileHash' => '73ae07548ce2d5a540d5d2086d7e390700ee66ba',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/App.php',
@@ -1262,7 +1650,7 @@ return [
   ),
   '/var/www/app/Controllers/APIController.php' => 
   array (
-    'fileHash' => 'f637f9b658830bd4539fb9d356c618fe836635e6',
+    'fileHash' => '26324a9f0e6a792f8e4758599599222e05255918',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Router.php',
@@ -1270,14 +1658,14 @@ return [
   ),
   '/var/www/app/Controllers/WebController.php' => 
   array (
-    'fileHash' => 'be8068275ccb7d6fec3188bfe236648dec9a323e',
+    'fileHash' => 'ad4e193a390384cdd5bdfe33f486e9a2b19e0887',
     'dependentFiles' => 
     array (
     ),
   ),
   '/var/www/app/DB.php' => 
   array (
-    'fileHash' => '696a3ad13ecee1577d96e63a7e50e210c0df5dfc',
+    'fileHash' => '3835d1a5ee799be1ec7785e7846ffccc893e66b6',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Container.php',
@@ -1285,7 +1673,7 @@ return [
   ),
   '/var/www/app/Exceptions/ContainerException.php' => 
   array (
-    'fileHash' => 'ae8cd6a2de46fcb3616ff4c71d820103ba12fcaa',
+    'fileHash' => '87fcccf1202286546f13614e80d5f3b14ff0f6ab',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Container.php',
@@ -1293,7 +1681,7 @@ return [
   ),
   '/var/www/app/Exceptions/UserNotFoundException.php' => 
   array (
-    'fileHash' => '5a4478c6ade098393777934eacf8e81abd3a0eae',
+    'fileHash' => '68475ede130e9dc4a1025a07479fb38163ae5352',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Services/UserRepository.php',
@@ -1302,14 +1690,14 @@ return [
   ),
   '/var/www/app/Logger.php' => 
   array (
-    'fileHash' => 'd7d394418da0e183e32e0555db925800329257a6',
+    'fileHash' => '8e7fe252e5b9ee677e66f74d01f8b756424f7212',
     'dependentFiles' => 
     array (
     ),
   ),
   '/var/www/app/Models/UserDTO.php' => 
   array (
-    'fileHash' => 'd257a823db9bf139ddf1c241f0ab99811d606ea2',
+    'fileHash' => '24c4fcd8bb4776ff1fb4be612146c84fa2fd6c55',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Controllers/APIController.php',
@@ -1324,7 +1712,7 @@ return [
   ),
   '/var/www/app/Request.php' => 
   array (
-    'fileHash' => 'ae8115c634fe4b8120813ccb74ac257a0ef46d12',
+    'fileHash' => 'ef4c903d76e3ab5bfd2564ba9e9b4394376a9193',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/App.php',
@@ -1333,7 +1721,7 @@ return [
   ),
   '/var/www/app/Response.php' => 
   array (
-    'fileHash' => '116221595e2cdf59448b497580b370a8f8f36559',
+    'fileHash' => '9e11b0b7f0fa1fbf0cddae896727700912459385',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Controllers/APIController.php',
@@ -1342,7 +1730,7 @@ return [
   ),
   '/var/www/app/Router.php' => 
   array (
-    'fileHash' => '6f2f527d3048c200c6427720a7c0e43bf0fbe330',
+    'fileHash' => 'c29eaceba866669e6783b2ee9ac41c7f2fea54b6',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/App.php',
@@ -1360,7 +1748,7 @@ return [
   ),
   '/var/www/app/Services/HttpTransform.php' => 
   array (
-    'fileHash' => '102a3f437bbd317269b59331378301c831a675fb',
+    'fileHash' => '4048163528e993fed38bdc6057027a92cf7d26d2',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Controllers/APIController.php',
@@ -1369,7 +1757,7 @@ return [
   ),
   '/var/www/app/Services/HttpTransformInterface.php' => 
   array (
-    'fileHash' => 'fc6b4f8d5faad9c335387a98e2c41ca6e3e5163f',
+    'fileHash' => 'a43e306c9b8fd8b82847514d69659cf50ffc8518',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Controllers/APIController.php',
@@ -1379,7 +1767,7 @@ return [
   ),
   '/var/www/app/Services/UserRepository.php' => 
   array (
-    'fileHash' => 'f456d0b0b91274f338ed104cfe97cb9ef4a580f5',
+    'fileHash' => '3b4bf9ab4d7438493076470efdb14eb82175aec0',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Container.php',
@@ -1387,7 +1775,7 @@ return [
   ),
   '/var/www/app/Services/UserRepositoryInterface.php' => 
   array (
-    'fileHash' => '65f1902b33a1093fe27d12807e90307bb1875a47',
+    'fileHash' => '0ebd0435ffce2af06b07056f0d5abc83c7880271',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Container.php',
@@ -1399,7 +1787,7 @@ return [
   ),
   '/var/www/app/Services/UserService.php' => 
   array (
-    'fileHash' => 'dc9103c38245c141219cda94f20d98cc87dc26ef',
+    'fileHash' => '5881ec0109fde6468b35bb914d6a8933677fed52',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Container.php',
@@ -1407,7 +1795,7 @@ return [
   ),
   '/var/www/app/Services/UserServiceInterface.php' => 
   array (
-    'fileHash' => '6219df37d47c5dcc4a4a96fc343a323354ad7b99',
+    'fileHash' => 'c1e9274c5ab43d2376790f287ceae6c95a7f2da7',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Container.php',
@@ -1424,7 +1812,7 @@ return [
        'name' => 'App\\App',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -1551,7 +1939,7 @@ return [
        'name' => 'App\\Attributes\\Delete',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => 'App\\Attributes\\Route',
        'implements' => 
       array (
@@ -1624,7 +2012,7 @@ return [
        'name' => 'App\\Attributes\\FromEnv',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -1698,7 +2086,7 @@ return [
        'name' => 'App\\Attributes\\Get',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => 'App\\Attributes\\Route',
        'implements' => 
       array (
@@ -1771,7 +2159,7 @@ return [
        'name' => 'App\\Attributes\\Patch',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => 'App\\Attributes\\Route',
        'implements' => 
       array (
@@ -1844,7 +2232,7 @@ return [
        'name' => 'App\\Attributes\\Post',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => 'App\\Attributes\\Route',
        'implements' => 
       array (
@@ -1991,7 +2379,7 @@ return [
        'name' => 'App\\Container',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -2050,6 +2438,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         2 => 
@@ -2071,6 +2466,7 @@ return [
               'userrepositoryinterface' => 'App\\Services\\UserRepositoryInterface',
               'userservice' => 'App\\Services\\UserService',
               'userserviceinterface' => 'App\\Services\\UserServiceInterface',
+              'override' => 'Override',
               'containerexceptioninterface' => 'Psr\\Container\\ContainerExceptionInterface',
               'containerinterface' => 'Psr\\Container\\ContainerInterface',
               'notfoundexceptioninterface' => 'Psr\\Container\\NotFoundExceptionInterface',
@@ -2103,6 +2499,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         3 => 
@@ -2126,6 +2529,7 @@ return [
               'userrepositoryinterface' => 'App\\Services\\UserRepositoryInterface',
               'userservice' => 'App\\Services\\UserService',
               'userserviceinterface' => 'App\\Services\\UserServiceInterface',
+              'override' => 'Override',
               'containerexceptioninterface' => 'Psr\\Container\\ContainerExceptionInterface',
               'containerinterface' => 'Psr\\Container\\ContainerInterface',
               'notfoundexceptioninterface' => 'Psr\\Container\\NotFoundExceptionInterface',
@@ -2253,7 +2657,7 @@ return [
        'name' => 'App\\Controllers\\APIController',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -2533,7 +2937,7 @@ return [
        'name' => 'App\\Controllers\\WebController',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -2749,7 +3153,7 @@ return [
        'name' => 'App\\DB',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -2854,6 +3258,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
       ),
@@ -2876,7 +3287,7 @@ return [
        'name' => 'App\\Exceptions\\ContainerException',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => 'Exception',
        'implements' => 
       array (
@@ -2953,7 +3364,7 @@ return [
        'name' => 'App\\Exceptions\\UserNotFoundException',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => 'Exception',
        'implements' => 
       array (
@@ -3030,7 +3441,7 @@ return [
        'name' => 'App\\Logger',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -3095,6 +3506,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3137,6 +3549,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         2 => 
@@ -3150,6 +3569,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3192,6 +3612,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         3 => 
@@ -3205,6 +3632,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3247,6 +3675,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         4 => 
@@ -3260,6 +3695,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3302,6 +3738,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         5 => 
@@ -3315,6 +3758,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3357,6 +3801,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         6 => 
@@ -3370,6 +3821,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3412,6 +3864,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         7 => 
@@ -3425,6 +3884,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3467,6 +3927,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         8 => 
@@ -3480,6 +3947,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3522,6 +3990,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         9 => 
@@ -3535,6 +4010,7 @@ return [
              'namespace' => 'App',
              'uses' => 
             array (
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
               'loglevel' => 'Psr\\Log\\LogLevel',
               'stringable' => 'Stringable',
@@ -3588,6 +4064,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         10 => 
@@ -3672,7 +4155,7 @@ return [
        'name' => 'App\\Models\\UserDTO',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -3879,7 +4362,7 @@ return [
        'name' => 'App\\Request',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -3971,6 +4454,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         2 => 
@@ -4000,6 +4490,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         3 => 
@@ -4018,6 +4515,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         4 => 
@@ -4047,6 +4551,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         5 => 
@@ -4076,6 +4587,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         6 => 
@@ -4105,6 +4623,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         7 => 
@@ -4145,6 +4670,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         8 => 
@@ -4185,6 +4717,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         9 => 
@@ -4214,6 +4753,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         10 => 
@@ -4232,6 +4778,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         11 => 
@@ -4261,6 +4814,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         12 => 
@@ -4279,6 +4839,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         13 => 
@@ -4308,6 +4875,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         14 => 
@@ -4326,6 +4900,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         15 => 
@@ -4355,6 +4936,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         16 => 
@@ -4373,6 +4961,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         17 => 
@@ -4413,6 +5008,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
       ),
@@ -4428,7 +5030,7 @@ return [
        'name' => 'App\\Response',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -4520,6 +5122,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         2 => 
@@ -4549,6 +5158,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         3 => 
@@ -4567,6 +5183,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         4 => 
@@ -4596,6 +5219,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         5 => 
@@ -4625,6 +5255,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         6 => 
@@ -4654,6 +5291,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         7 => 
@@ -4694,6 +5338,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         8 => 
@@ -4734,6 +5385,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         9 => 
@@ -4763,6 +5421,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         10 => 
@@ -4781,6 +5446,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         11 => 
@@ -4810,6 +5482,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         12 => 
@@ -4828,6 +5507,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         13 => 
@@ -4868,6 +5554,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         14 => 
@@ -4886,6 +5579,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
       ),
@@ -4901,7 +5601,7 @@ return [
        'name' => 'App\\Router',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -5271,7 +5971,7 @@ return [
        'name' => 'App\\Services\\HttpTransform',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -5295,7 +5995,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => true,
-           'returnType' => 'string',
+           'returnType' => 'false|string',
            'parameters' => 
           array (
             0 => 
@@ -5312,6 +6012,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         1 => 
@@ -5324,7 +6031,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => true,
-           'returnType' => 'string',
+           'returnType' => 'false|string',
            'parameters' => 
           array (
             0 => 
@@ -5341,6 +6048,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         2 => 
@@ -5353,7 +6067,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => true,
-           'returnType' => 'string',
+           'returnType' => 'false|string',
            'parameters' => 
           array (
             0 => 
@@ -5370,6 +6084,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         3 => 
@@ -5399,6 +6120,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         4 => 
@@ -5428,6 +6156,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         5 => 
@@ -5445,6 +6180,7 @@ return [
             array (
               'userdto' => 'App\\Models\\UserDTO',
               'exception' => 'Exception',
+              'override' => 'Override',
               'environment' => 'Twig\\Environment',
               'loadererror' => 'Twig\\Error\\LoaderError',
               'runtimeerror' => 'Twig\\Error\\RuntimeError',
@@ -5499,6 +6235,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         6 => 
@@ -5516,6 +6259,7 @@ return [
             array (
               'userdto' => 'App\\Models\\UserDTO',
               'exception' => 'Exception',
+              'override' => 'Override',
               'environment' => 'Twig\\Environment',
               'loadererror' => 'Twig\\Error\\LoaderError',
               'runtimeerror' => 'Twig\\Error\\RuntimeError',
@@ -5570,6 +6314,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
       ),
@@ -5599,7 +6350,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => true,
-           'returnType' => 'string',
+           'returnType' => 'false|string',
            'parameters' => 
           array (
             0 => 
@@ -5628,7 +6379,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => true,
-           'returnType' => 'string',
+           'returnType' => 'false|string',
            'parameters' => 
           array (
             0 => 
@@ -5657,7 +6408,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => true,
-           'returnType' => 'string',
+           'returnType' => 'false|string',
            'parameters' => 
           array (
             0 => 
@@ -5846,7 +6597,7 @@ return [
        'name' => 'App\\Services\\UserRepository',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -5916,6 +6667,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         2 => 
@@ -5932,6 +6690,7 @@ return [
               'usernotfoundexception' => 'App\\Exceptions\\UserNotFoundException',
               'userdto' => 'App\\Models\\UserDTO',
               'exception' => 'Exception',
+              'override' => 'Override',
               'pdo' => 'PDO',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
             ),
@@ -5945,7 +6704,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => '?App\\Models\\UserDTO',
+           'returnType' => 'App\\Models\\UserDTO',
            'parameters' => 
           array (
             0 => 
@@ -5962,6 +6721,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         3 => 
@@ -5991,6 +6757,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         4 => 
@@ -6007,6 +6780,7 @@ return [
               'usernotfoundexception' => 'App\\Exceptions\\UserNotFoundException',
               'userdto' => 'App\\Models\\UserDTO',
               'exception' => 'Exception',
+              'override' => 'Override',
               'pdo' => 'PDO',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
             ),
@@ -6037,6 +6811,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         5 => 
@@ -6066,6 +6847,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         6 => 
@@ -6084,6 +6872,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
       ),
@@ -6131,7 +6926,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => '?App\\Models\\UserDTO',
+           'returnType' => 'App\\Models\\UserDTO',
            'parameters' => 
           array (
             0 => 
@@ -6265,7 +7060,7 @@ return [
        'name' => 'App\\Services\\UserService',
        'phpDoc' => NULL,
        'abstract' => false,
-       'final' => false,
+       'final' => true,
        'extends' => NULL,
        'implements' => 
       array (
@@ -6329,7 +7124,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => '?App\\Models\\UserDTO',
+           'returnType' => 'App\\Models\\UserDTO',
            'parameters' => 
           array (
             0 => 
@@ -6379,6 +7174,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
         2 => 
@@ -6395,6 +7197,7 @@ return [
               'usernotfoundexception' => 'App\\Exceptions\\UserNotFoundException',
               'userdto' => 'App\\Models\\UserDTO',
               'exception' => 'Exception',
+              'override' => 'Override',
               'loggerinterface' => 'Psr\\Log\\LoggerInterface',
             ),
              'constUses' => 
@@ -6407,7 +7210,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => '?App\\Models\\UserDTO',
+           'returnType' => 'App\\Models\\UserDTO',
            'parameters' => 
           array (
             0 => 
@@ -6468,6 +7271,13 @@ return [
           ),
            'attributes' => 
           array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedAttributeNode::__set_state(array(
+               'name' => 'Override',
+               'args' => 
+              array (
+              ),
+            )),
           ),
         )),
       ),
@@ -6497,7 +7307,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => '?App\\Models\\UserDTO',
+           'returnType' => 'App\\Models\\UserDTO',
            'parameters' => 
           array (
             0 => 
@@ -6559,7 +7369,7 @@ return [
            'abstract' => false,
            'final' => false,
            'static' => false,
-           'returnType' => '?App\\Models\\UserDTO',
+           'returnType' => 'App\\Models\\UserDTO',
            'parameters' => 
           array (
             0 => 

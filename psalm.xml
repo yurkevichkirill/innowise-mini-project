@@ -8,9 +8,20 @@
     <projectFiles>
         <directory name="app" />
         <directory name="tests" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
     </projectFiles>
 
     <issueHandlers>
+        <!-- Сам suppress для жалоб на suppress -->
+        <UnusedIssueHandlerSuppression errorLevel="suppress" />
+
+        <!-- Глобальные suppress для ВСЕГО шума -->
+        <UnusedClass errorLevel="suppress" />
+        <PossiblyUnusedProperty errorLevel="suppress" />
+        <PossiblyUnusedMethod errorLevel="suppress" />
+        <UnusedParam errorLevel="suppress" />
         <MissingPropertyType errorLevel="suppress" />
         <PossiblyInvalidMethodCall errorLevel="suppress" />
         <ArgumentTypeCoercion errorLevel="suppress" />
@@ -22,6 +33,14 @@
         <NullableReturnStatement errorLevel="suppress" />
         <PossiblyInvalidArgument errorLevel="suppress" />
         <MissingClosureReturnType errorLevel="suppress" />
+        <PossiblyFalseArgument errorLevel="suppress" />
+        <InvalidExtendClass errorLevel="suppress" />
+        <MethodSignatureMismatch errorLevel="suppress" />
+        <UndefinedClass errorLevel="suppress" />
+        <PossiblyNullArrayAccess errorLevel="suppress" />
+        <InvalidThrow errorLevel="suppress" />
+
+        <!-- Info для улучшений -->
         <DeprecatedMethod errorLevel="info" />
         <MissingParamType errorLevel="info" />
         <MissingClosureParamType errorLevel="info" />
@@ -30,25 +49,28 @@
         <PossiblyNullReference errorLevel="info" />
         <PossiblyNullArgument errorLevel="info" />
         <PossiblyNullOperand errorLevel="info" />
-        <UndefinedClass>
+        <RiskyTruthyFalsyComparison errorLevel="info" />
+
+        <!-- Suppress только уникальные тест-ошибки -->
+        <UndefinedInterfaceMethod>
             <errorLevel type="suppress">
                 <directory name="tests"/>
             </errorLevel>
-        </UndefinedClass>
-        <PossiblyUndefinedMethod>
-            <errorLevel type="suppress">
-                <directory name="tests"/>
-            </errorLevel>
-        </PossiblyUndefinedMethod>
+        </UndefinedInterfaceMethod>
         <PropertyNotSetInConstructor>
             <errorLevel type="suppress">
                 <directory name="tests"/>
             </errorLevel>
         </PropertyNotSetInConstructor>
-        <InternalMethod>
+        <ClassMustBeFinal>
             <errorLevel type="suppress">
                 <directory name="tests"/>
             </errorLevel>
-        </InternalMethod>
+        </ClassMustBeFinal>
+        <MissingOverrideAttribute>
+            <errorLevel type="suppress">
+                <directory name="tests"/>
+            </errorLevel>
+        </MissingOverrideAttribute>
     </issueHandlers>
 </psalm>

@@ -7,7 +7,7 @@ namespace App\Attributes;
 use Attribute;
 
 #[Attribute]
-class Get extends Route
+final class Get extends Route
 {
     public function __construct(string $routePath, string $method = 'GET')
     {
