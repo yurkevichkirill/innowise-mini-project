@@ -10,13 +10,14 @@ Feature:
   Scenario: Try to get non-existent User
     Given db is empty
     When get user with id 1
-    Then should get last user null
+    Then get exception
 
   Scenario: Delete concrete user in db
     Given db is empty
     When initialize default values
     And delete user 2
-    Then user 2 should not exist
+    And get user with id 2
+    Then get exception
 
   Scenario: Delete non-existing user in db
     Given db is empty

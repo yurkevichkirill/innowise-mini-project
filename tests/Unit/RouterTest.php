@@ -6,7 +6,9 @@ namespace Unit;
 
 use App\Container;
 use App\Controllers\APIController;
+use App\Request;
 use App\Router;
+use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerExceptionInterface;
@@ -60,8 +62,19 @@ class RouterTest extends TestCase
         $router->register('GET', '/api/users', [APIController::class, 'showAll']);
         $router->register('POST', '/api/users', [APIController::class, 'store']);
 
-        $router->handler('/api/users', 'GET');
-        $router->handler('/api/users', 'POST');
+        $getRequest = new Request(
+            uri: new Uri('/api/users'),
+            method: 'GET',
+            headers: ['Accept' => ['application/json']]
+        );
+        $router->handler($getRequest);
+
+        $postRequest = new Request(
+            uri: new Uri('/api/users'),
+            method: 'POST',
+            headers: ['Accept' => ['application/json']]
+        );
+        $router->handler($postRequest);
     }
 
     /**
@@ -72,18 +85,35 @@ class RouterTest extends TestCase
     public function testHandleDynamicRoutes(): void
     {
         $testId = 1;
+        $getRequest = new Request(
+            uri: new Uri("/api/users/$testId"),
+            method: 'GET',
+            headers: ['Accept' => ['application/json']]
+        );
+
+        $patchRequest = new Request(
+            uri: new Uri("/api/users/$testId"),
+            method: 'PATCH',
+            headers: ['Accept' => ['application/json']]
+        );
+
+        $deleteRequest = new Request(
+            uri: new Uri("/api/users/$testId"),
+            method: 'DELETE',
+            headers: ['Accept' => ['application/json']]
+        );
         $controller = $this->createMock(APIController::class);
         $controller->expects($this->once())
             ->method('show')
-            ->with($testId);
+            ->with($getRequest);
 
         $controller->expects($this->once())
             ->method('update')
-            ->with($testId);
+            ->with($patchRequest);
 
         $controller->expects($this->once())
             ->method('remove')
-            ->with($testId);
+            ->with($deleteRequest);
 
         $container = $this->createMock(Container::class);
         $container->method('get')
@@ -95,9 +125,9 @@ class RouterTest extends TestCase
         $router->register('PATCH', '/api/users/{id}', [APIController::class, 'update']);
         $router->register('DELETE', '/api/users/{id}', [APIController::class, 'remove']);
 
-        $router->handler("/api/users/$testId", 'GET');
-        $router->handler("/api/users/$testId", 'PATCH');
-        $router->handler("/api/users/$testId", 'DELETE');
+        $router->handler($getRequest);
+        $router->handler($patchRequest);
+        $router->handler($deleteRequest);
     }
 
     /**
@@ -107,16 +137,24 @@ class RouterTest extends TestCase
      */
     public function testHandleUnknownRoute(): void
     {
-        $container = $this->createStub(Container::class);
+        $request = new Request(
+            uri: new Uri("/unknown"),
+            method: 'GET',
+            headers: ['Accept' => ['application/json']]
+        );
+
+        $controller = $this->createMock(APIController::class);
+        $controller->expects($this->once())
+            ->method('notFound')
+            ->with($request);
+
+        $container = $this->createMock(Container::class);
+        $container->method('get')
+            ->with(APIController::class)
+            ->willReturn($controller);
+
         $router = new Router($container);
 
-        ob_start();
-        $router->handler('/unknown', 'GET');
-        $output = ob_get_clean();
-
-        $this->assertJsonStringEqualsJsonString(
-            '{"error":"Not Found"}',
-            $output
-        );
+        $router->handler($request);
     }
 }

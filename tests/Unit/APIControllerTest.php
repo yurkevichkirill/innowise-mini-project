@@ -6,9 +6,11 @@ namespace Unit;
 
 use App\Controllers\APIController;
 use App\Models\UserDTO;
+use App\Request;
 use App\Services\StreamServiceInterface;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserServiceInterface;
+use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\TestCase;
 use Twig\Error\LoaderError;
@@ -20,19 +22,12 @@ class APIControllerTest extends TestCase
 {
     private ?UserServiceInterface $service = null;
     private ?UserRepositoryInterface $repository = null;
-    private ?StreamServiceInterface $streamService = null;
     protected function setUp(): void
     {
         $this->service = $this->createMock(UserServiceInterface::class);
         $this->repository = $this->createMock(UserRepositoryInterface::class);
-        $this->streamService = $this->createMock(StreamServiceInterface::class);
     }
 
-    /**
-     * @throws RuntimeError
-     * @throws SyntaxError
-     * @throws LoaderError
-     */
     public function testGetAll(): void
     {
         $values = [
@@ -43,9 +38,14 @@ class APIControllerTest extends TestCase
         $this->repository->method('getAll')
             ->willReturn($values);
 
-        $controller = new APIController($this->service, $this->repository, $this->streamService);
+        $controller = new APIController($this->service, $this->repository);
 
-        $result = $controller->showAll()->getBody()->getContents();
+        $getRequest = new Request(
+            uri: new Uri('/api/users'),
+            method: 'GET',
+            headers: ['Accept' => ['application/json']]
+        );
+        $result = $controller->showAll($getRequest)->getBody()->getContents();
         $this->assertJson(json_encode($values), $result);
     }
 
@@ -58,9 +58,14 @@ class APIControllerTest extends TestCase
             ->with($testId)
             ->willReturn($testUser);
 
-        $controller = new APIController($this->service, $this->repository, $this->streamService);
+        $controller = new APIController($this->service, $this->repository);
 
-        $result = $controller->show($testId)->getBody()->getContents();
+        $getRequest = new Request(
+            uri: new Uri("/api/users/$testId"),
+            method: 'GET',
+            headers: ['Accept' => ['application/json']]
+        );
+        $result = $controller->show($getRequest)->getBody()->getContents();
         $this->assertJson(json_encode(['user' => $testUser->toArray()]), $result);
     }
 
@@ -73,12 +78,16 @@ class APIControllerTest extends TestCase
             ->with(...$testArgs)
             ->willReturn($testUser);
 
-        $this->streamService->method("getFromStream")
-            ->with("php://input")
-            ->willReturn(json_encode($testUser->toArray()));
-
-        $controller = new APIController($this->service, $this->repository, $this->streamService);
-        $result = $controller->store()->getBody()->getContents();
+        $postRequest = new Request(
+            uri: new Uri('/api/users'),
+            method: 'POST',
+            body: json_encode(
+                $testUser->toArray()
+            ),
+            headers: ['Accept' => ['application/json']]
+        );
+        $controller = new APIController($this->service, $this->repository);
+        $result = $controller->store($postRequest)->getBody()->getContents();
 
         $this->assertJson(json_encode(['user' => $testUser->toArray()]), $result);
     }
@@ -92,12 +101,18 @@ class APIControllerTest extends TestCase
             ->with(...$testArgs)
             ->willReturn($testUser);
 
-        $this->streamService->method("getFromStream")
-            ->with("php://input")
-            ->willReturn(json_encode($testUser->toArray()));
+        $controller = new APIController($this->service, $this->repository);
 
-        $controller = new APIController($this->service, $this->repository, $this->streamService);
-        $result = $controller->update($testArgs[0])->getBody()->getContents();
+        $patchRequest = new Request(
+            uri: new Uri("/api/users/1"),
+            method: 'PATCH',
+            body: json_encode(
+                $testUser->toArray()
+            ),
+            headers: ['Accept' => ['application/json']]
+        );
+
+        $result = $controller->update($patchRequest)->getBody()->getContents();
 
         $this->assertJson(json_encode(['user' => $testUser->toArray()]), $result);
     }
@@ -108,10 +123,15 @@ class APIControllerTest extends TestCase
         $this->repository->method('delete')
             ->with($testId);
 
-        $controller = new APIController($this->service, $this->repository, $this->streamService);
+        $controller = new APIController($this->service, $this->repository);
 
-        $result = $controller->remove($testId)->getBody()->getContents();
+        $deleteRequest = new Request(
+            uri: new Uri("/api/users/$testId"),
+            method: 'DELETE',
+            headers: ['Accept' => ['application/json']]
+        );
+        $result = $controller->remove($deleteRequest)->getBody()->getContents();
 
-        $this->assertEquals(json_encode([]), $result);
+        $this->assertEquals('', $result);
     }
 }

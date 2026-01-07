@@ -6,6 +6,8 @@ namespace App;
 
 use App\Attributes\FromEnv;
 use App\Services\ConnectionServiceInterface;
+use App\Services\HttpTransform;
+use App\Services\HttpTransformInterface;
 use App\Services\StreamService;
 use App\Services\StreamServiceInterface;
 use App\Services\UserRepository;

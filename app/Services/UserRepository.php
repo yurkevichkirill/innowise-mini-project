@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\Exceptions\UserNotFoundException;
 use App\Models\UserDTO;
 use Exception;
 use PDO;
@@ -27,13 +28,16 @@ readonly class UserRepository implements UserRepositoryInterface
         return $users;
     }
 
+    /**
+     * @throws UserNotFoundException
+     */
     public function get($id): ?UserDTO
     {
         $stmt = $this->context->getConnection()->prepare("SELECT * FROM users WHERE id = ?");
         $stmt->execute([$id]);
         if(!$this->existUser($id)) {
             $this->logger->warning("User {id} not found in db", ['id' => $id]);
-            return null;
+            throw new UserNotFoundException();
         }
         $row = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
 
@@ -82,7 +86,7 @@ readonly class UserRepository implements UserRepositoryInterface
     {
         if(!$this->existUser($id)){
             $this->logger->warning("User {id} not found in db", ['id' => $id]);
-            throw new Exception("User Not Found");
+            throw new UserNotFoundException();
         }
         $stmt = $this->context->getConnection()->prepare("DELETE FROM users WHERE id = ?");
         $stmt->execute([$id]);

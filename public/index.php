@@ -5,7 +5,9 @@ declare(strict_types=1);
 use App\App;
 use App\Container;
 use App\Logger;
+use App\Request;
 use App\Router;
+use GuzzleHttp\Psr7\Uri;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Log\LoggerInterface;
@@ -30,11 +32,18 @@ $container->singleton(Environment::class, $twig);
 $logger = new Logger();
 $container->singleton(LoggerInterface::class, $logger);
 
+$request = new Request(
+    new Uri($_SERVER['REQUEST_URI']),
+    $_SERVER['REQUEST_METHOD'],
+    file_get_contents("php://input"),
+    ['Accept' => ['application/json']]
+);
+
 try {
     new App(
         $container,
         $router,
-        ['uri' => $_SERVER['REQUEST_URI'], 'method' => $_SERVER['REQUEST_METHOD']]
+        $request
     )->run();
 } catch (NotFoundExceptionInterface|ContainerExceptionInterface $e) {
     echo "Error $e";

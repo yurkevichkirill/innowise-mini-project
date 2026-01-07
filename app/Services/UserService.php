@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\Exceptions\UserNotFoundException;
 use App\Models\UserDTO;
 use Exception;
 use Psr\Log\LoggerInterface;
@@ -28,7 +29,7 @@ readonly class UserService implements UserServiceInterface
     {
         if(!$this->repository->existUser($id)) {
             $this->logger->warning("User {id} not found", ['id' => $id]);
-            throw new Exception("User Not Found");
+            throw new UserNotFoundException();
         }
         $user = new UserDTO($id, $name, $age, $money, $has_visa);
         return $this->repository->save($user);

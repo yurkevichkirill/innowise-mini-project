@@ -26,11 +26,16 @@ PATCH http://localhost/api/users/79
 Content-Type: application/json
 
 {
-  "has_visa": true
+  "age": 19
 }
 
 ###
 
 ### DELETE reauest to user 46
 DELETE http://localhost/api/users/80
+Content-Type: application/json
+
+###
+
+DELETE http://localhost/lkrnger/wefjewrg
 Content-Type: application/json

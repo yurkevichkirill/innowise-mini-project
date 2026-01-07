@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace App;
 
 use App\Attributes\Route;
+use App\Controllers\APIController;
+use GuzzleHttp\Psr7\Uri;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
+use Psr\Http\Message\RequestInterface;
 use ReflectionAttribute;
 use ReflectionClass;
 use ReflectionException;
@@ -35,7 +38,7 @@ class Router
     /**
      * @throws ReflectionException
      */
-    public function registerFromController($controller): void
+    public function registerFromController(string $controller): void
     {
         $reflectionController = new ReflectionClass($controller);
         foreach($reflectionController->getMethods() as $method) {
@@ -48,7 +51,7 @@ class Router
         }
     }
 
-    public function getControllerFiles($directory, $controllers = []): array
+    public function getControllerFiles(string $directory, array $controllers = []): array
     {
         $controllerPaths = array_diff(scandir(__DIR__ . $directory), array('.', '..'));
         $phpFiles = array_filter($controllerPaths, fn($path) => str_contains($path, ".php"));
@@ -62,7 +65,7 @@ class Router
         return $controllers;
     }
 
-    public function controllerFileToClass($controllerFile): string
+    public function controllerFileToClass(string $controllerFile): string
     {
         return "App" . str_replace("/", "\\", str_replace(".php", "", $controllerFile));
     }
@@ -77,37 +80,36 @@ class Router
      * @throws ContainerExceptionInterface
      * @throws ReflectionException
      */
-    public function handler($uri, $method): void
+    public function handler(RequestInterface $request): void
     {
-        $uri = parse_url($uri, PHP_URL_PATH);
+        $uri = parse_url($request->getUri()->getPath(), PHP_URL_PATH);
         $uri = $this->normalizePath($uri);
+        $method = $request->getMethod();
 
         if (isset($this->routes[$method][$uri])) {
             $handler = $this->routes[$method][$uri];
-            $this->callHandler($handler, []);
+            $this->callHandler($handler, $request);
             return;
         }
 
-        [$dynamicKey, $param] = $this->createDynamicData($uri);
+        $dynamicKey = $this->createDynamicData($uri);
 
         $dynamicUris = preg_grep($dynamicKey, array_keys($this->routes[$method] ?? []));
         if(count($dynamicUris) === 1) {
             $dynamicUri = array_values($dynamicUris)[0];
             $call = $this->routes[$method][$dynamicUri];
-            $this->callHandler($call, [$param]);
+            $this->callHandler($call, $request);
             return;
         }
 
-        $this->notFound();
+        $this->callHandler([APIController::class, 'notFound'], $request);
     }
 
-    private function createDynamicData(string $uri): array
+    private function createDynamicData(string $uri): string
     {
         $segments = explode('/', $uri);
-        $param = $this->extractParam($segments);
         $segments[count($segments) - 1] = '\{\w+\}';
-        $dynamicKey = "#^" . implode('/', $segments) . "$#";
-        return array($dynamicKey, $param);
+        return "#^" . implode('/', $segments) . "$#";
     }
 
     private function extractParam(array $segments): string
@@ -115,7 +117,7 @@ class Router
         return end($segments);
     }
 
-    private function normalizePath($path): string
+    private function normalizePath(string $path): string
     {
         $path = preg_replace('#/+#', '/', $path);
         if ($path !== '/' && str_ends_with($path, '/')) {
@@ -130,11 +132,12 @@ class Router
      * @throws ReflectionException
      * @throws NotFoundExceptionInterface
      */
-    private function callHandler($handler, $params): void
+    private function callHandler(array $handler, RequestInterface $request): void
     {
         [$class_name, $method_name] = $handler;
         $controller = $this->container->get($class_name);
-        $response = call_user_func_array([$controller, $method_name], $params);
+
+        $response = call_user_func_array([$controller, $method_name], [$request]);
 
         http_response_code($response->getStatusCode());
         foreach ($response->getHeaders() as $name => $values) {
@@ -146,10 +149,10 @@ class Router
         echo $response->getBody()->getContents();
     }
 
-    private function notFound(): void
-    {
-        http_response_code(404);
-        header('Content-Type: application/json');
-        echo json_encode(['error' => 'Not Found']);
-    }
+//    private function notFound(): void
+//    {
+//        http_response_code(404);
+//        header('Content-Type: application/json');
+//        echo json_encode(['error' => 'Not Found']);
+//    }
 }

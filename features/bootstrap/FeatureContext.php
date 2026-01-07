@@ -1,6 +1,7 @@
 <?php
 
 use App\DB;
+use App\Exceptions\UserNotFoundException;
 use App\Logger;
 use App\Models\UserDTO;
 use App\Services\UserRepository;
@@ -121,7 +122,11 @@ class FeatureContext implements Context
      */
     public function getUserWithId($id): void
     {
-        $this->lastUser = $this->repo->get($id);
+        try{
+            $this->lastUser = $this->repo->get($id);
+        } catch (Throwable $e) {
+            $this->lastException = $e;
+        }
     }
 
     /**

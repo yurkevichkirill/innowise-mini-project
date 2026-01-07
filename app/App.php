@@ -16,7 +16,7 @@ class App
     public function __construct(
         protected Container $container,
         protected Router $router,
-        protected array $request
+        protected Request $request
     ) {
         $this->router->initializeControllers();
     }
@@ -24,8 +24,9 @@ class App
     /**
      * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
+     * @throws ReflectionException
      */
     public function run ():void {
-        $this->router->handler($this->request['uri'], $this->request['method']);
+        $this->router->handler($this->request);
     }
 }
