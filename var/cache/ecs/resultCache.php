@@ -1641,7 +1641,7 @@ return [
   ),
   '/var/www/app/Container.php' => 
   array (
-    'fileHash' => '73ae07548ce2d5a540d5d2086d7e390700ee66ba',
+    'fileHash' => '04e2e947f1201394f77b324ccf67f7707d509f4f',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/App.php',
@@ -1650,7 +1650,7 @@ return [
   ),
   '/var/www/app/Controllers/APIController.php' => 
   array (
-    'fileHash' => '26324a9f0e6a792f8e4758599599222e05255918',
+    'fileHash' => '96db2ed46399930f0d149d6baaeb4561446e4ec3',
     'dependentFiles' => 
     array (
       0 => '/var/www/app/Router.php',
@@ -2377,9 +2377,33 @@ return [
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
        'name' => 'App\\Container',
-       'phpDoc' => NULL,
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @psalm-suppress ClassMustBeFinal
+ */',
+         'namespace' => 'App',
+         'uses' => 
+        array (
+          'fromenv' => 'App\\Attributes\\FromEnv',
+          'containerexception' => 'App\\Exceptions\\ContainerException',
+          'connectionserviceinterface' => 'App\\Services\\ConnectionServiceInterface',
+          'userrepository' => 'App\\Services\\UserRepository',
+          'userrepositoryinterface' => 'App\\Services\\UserRepositoryInterface',
+          'userservice' => 'App\\Services\\UserService',
+          'userserviceinterface' => 'App\\Services\\UserServiceInterface',
+          'override' => 'Override',
+          'containerexceptioninterface' => 'Psr\\Container\\ContainerExceptionInterface',
+          'containerinterface' => 'Psr\\Container\\ContainerInterface',
+          'notfoundexceptioninterface' => 'Psr\\Container\\NotFoundExceptionInterface',
+          'reflectionexception' => 'ReflectionException',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
        'abstract' => false,
-       'final' => true,
+       'final' => false,
        'extends' => NULL,
        'implements' => 
       array (
@@ -2655,9 +2679,33 @@ return [
     0 => 
     \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
        'name' => 'App\\Controllers\\APIController',
-       'phpDoc' => NULL,
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @psalm-suppress ClassMustBeFinal
+ */',
+         'namespace' => 'App\\Controllers',
+         'uses' => 
+        array (
+          'delete' => 'App\\Attributes\\Delete',
+          'get' => 'App\\Attributes\\Get',
+          'patch' => 'App\\Attributes\\Patch',
+          'post' => 'App\\Attributes\\Post',
+          'response' => 'App\\Response',
+          'httptransform' => 'App\\Services\\HttpTransform',
+          'userrepositoryinterface' => 'App\\Services\\UserRepositoryInterface',
+          'userserviceinterface' => 'App\\Services\\UserServiceInterface',
+          'exception' => 'Exception',
+          'requestinterface' => 'Psr\\Http\\Message\\RequestInterface',
+          'responseinterface' => 'Psr\\Http\\Message\\ResponseInterface',
+          'notfoundresourceexception' => 'Symfony\\Component\\Translation\\Exception\\NotFoundResourceException',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
        'abstract' => false,
-       'final' => true,
+       'final' => false,
        'extends' => NULL,
        'implements' => 
       array (

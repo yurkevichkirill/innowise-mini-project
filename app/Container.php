@@ -17,7 +17,10 @@ use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use ReflectionException;
 
-final class Container implements ContainerInterface
+/**
+ * @psalm-suppress ClassMustBeFinal
+ */
+class Container implements ContainerInterface
 {
     private array $objects = [];
     private array $singletons = [];

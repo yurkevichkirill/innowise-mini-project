@@ -127,7 +127,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Container.php' => 
     array (
-      0 => '73ae07548ce2d5a540d5d2086d7e390700ee66ba',
+      0 => '04e2e947f1201394f77b324ccf67f7707d509f4f',
       1 => 
       array (
         0 => 'app\\container',
@@ -362,7 +362,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Controllers/APIController.php' => 
     array (
-      0 => '26324a9f0e6a792f8e4758599599222e05255918',
+      0 => '96db2ed46399930f0d149d6baaeb4561446e4ec3',
       1 => 
       array (
         0 => 'app\\controllers\\apicontroller',

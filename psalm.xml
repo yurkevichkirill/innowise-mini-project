@@ -14,10 +14,8 @@
     </projectFiles>
 
     <issueHandlers>
-        <!-- Сам suppress для жалоб на suppress -->
         <UnusedIssueHandlerSuppression errorLevel="suppress" />
 
-        <!-- Глобальные suppress для ВСЕГО шума -->
         <UnusedClass errorLevel="suppress" />
         <PossiblyUnusedProperty errorLevel="suppress" />
         <PossiblyUnusedMethod errorLevel="suppress" />
@@ -40,7 +38,6 @@
         <PossiblyNullArrayAccess errorLevel="suppress" />
         <InvalidThrow errorLevel="suppress" />
 
-        <!-- Info для улучшений -->
         <DeprecatedMethod errorLevel="info" />
         <MissingParamType errorLevel="info" />
         <MissingClosureParamType errorLevel="info" />
@@ -51,7 +48,6 @@
         <PossiblyNullOperand errorLevel="info" />
         <RiskyTruthyFalsyComparison errorLevel="info" />
 
-        <!-- Suppress только уникальные тест-ошибки -->
         <UndefinedInterfaceMethod>
             <errorLevel type="suppress">
                 <directory name="tests"/>
