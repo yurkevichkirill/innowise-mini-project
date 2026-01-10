@@ -11,12 +11,13 @@ use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 
-
 #[AllowMockObjectsWithoutExpectations]
-class UserServiceTest extends TestCase
+final class UserServiceTest extends TestCase
 {
     private ?UserRepositoryInterface $repo = null;
+
     private ?LoggerInterface $logger = null;
+
     protected function setUp(): void
     {
         $this->repo = $this->createMock(UserRepositoryInterface::class);
@@ -25,7 +26,7 @@ class UserServiceTest extends TestCase
 
     public function testCreateUser(): void
     {
-        $testArgs = ['Kolya', 33, 1488, true];
+        $testArgs = ['Kolya', 33, 1_488, true];
         $testValue = new UserDTO(0, ...$testArgs);
 
         $this->repo->method('save')
@@ -35,7 +36,7 @@ class UserServiceTest extends TestCase
         $service = new UserService($this->repo, $this->logger);
         $result = $service->create(...$testArgs);
 
-        $this->assertEquals($testValue, $result);
+        self::assertEquals($testValue, $result);
     }
 
     /**
@@ -43,7 +44,7 @@ class UserServiceTest extends TestCase
      */
     public function testUpdateUser(): void
     {
-        $testArgs = [1, 'Kolya', 33, 1488, true];
+        $testArgs = [1, 'Kolya', 33, 1_488, true];
         $testValue = new UserDTO(...$testArgs);
 
         $this->repo->method('save')
@@ -57,6 +58,6 @@ class UserServiceTest extends TestCase
         $service = new UserService($this->repo, $this->logger);
         $result = $service->update(...$testArgs);
 
-        $this->assertEquals($testValue, $result);
+        self::assertEquals($testValue, $result);
     }
 }

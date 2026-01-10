@@ -6,25 +6,23 @@ namespace App\Services;
 
 use App\Exceptions\UserNotFoundException;
 use App\Models\UserDTO;
-use Exception;
-use Override;
-use PDO;
 use Psr\Log\LoggerInterface;
 
 final readonly class UserRepository implements UserRepositoryInterface
 {
     public function __construct(
         private ConnectionServiceInterface $context,
-        private LoggerInterface $logger
-    ) {}
+        private LoggerInterface $logger,
+    ) {
+    }
 
-    #[Override]
+    #[\Override]
     public function getAll(): array
     {
         $users = [];
-        $rawUsers = $this->context->getConnection()->query("SELECT * FROM users ORDER BY id");
+        $rawUsers = $this->context->getConnection()->query('SELECT * FROM users ORDER BY id');
         foreach ($rawUsers as $row) {
-            $users[] = new UserDTO($row['id'], $row['name'], $row['age'], $row['money'], (bool)$row['has_visa']);
+            $users[] = new UserDTO($row['id'], $row['name'], $row['age'], $row['money'], (bool) $row['has_visa']);
         }
 
         return $users;
@@ -33,85 +31,88 @@ final readonly class UserRepository implements UserRepositoryInterface
     /**
      * @throws UserNotFoundException
      */
-    #[Override]
+    #[\Override]
     public function get($id): UserDTO
     {
-        $stmt = $this->context->getConnection()->prepare("SELECT * FROM users WHERE id = ?");
+        $stmt = $this->context->getConnection()->prepare('SELECT * FROM users WHERE id = ?');
         $stmt->execute([$id]);
-        if(!$this->existUser($id)) {
-            $this->logger->warning("User {id} not found in db", ['id' => $id]);
+        if (!$this->existUser($id)) {
+            $this->logger->warning('User {id} not found in db', ['id' => $id]);
+
             throw new UserNotFoundException();
         }
-        $row = $stmt->fetchAll(PDO::FETCH_ASSOC)[0];
+        $row = $stmt->fetchAll(\PDO::FETCH_ASSOC)[0];
 
-        return new UserDTO($row['id'], $row['name'], $row['age'], $row['money'], (bool)$row['has_visa']);
+        return new UserDTO($row['id'], $row['name'], $row['age'], $row['money'], (bool) $row['has_visa']);
     }
 
-    #[Override]
+    #[\Override]
     public function save(UserDTO $dto): UserDTO
     {
         $data = $dto->toArray();
 
         $updates = [];
         $params = [':id' => $data['id']];
-        if(isset($data['name'])) {
+        if (isset($data['name'])) {
             $updates[] = 'name = :name';
             $params[':name'] = $data['name'];
         }
-        if(isset($data['age'])) {
+        if (isset($data['age'])) {
             $updates[] = 'age = :age';
             $params[':age'] = $data['age'];
         }
-        if(isset($data['money'])) {
+        if (isset($data['money'])) {
             $updates[] = 'money = :money';
-            $params[':money'] = (float)$data['money'];
+            $params[':money'] = (float) $data['money'];
         }
-        if(isset($data['has_visa'])) {
+        if (isset($data['has_visa'])) {
             $updates[] = 'has_visa = :has_visa';
             $params[':has_visa'] = $data['has_visa'] ? 1 : 0;
         }
 
-        if($this->existUser($dto->getId())) {
-            $sql = "UPDATE users SET " . implode(',', $updates) . " WHERE id = :id";
+        if ($this->existUser($dto->getId())) {
+            $sql = 'UPDATE users SET ' . implode(',', $updates) . ' WHERE id = :id';
             $stmt = $this->context->getConnection()->prepare($sql);
             $stmt->execute($params);
+
             return $this->get($params[':id']);
-        } else {
-            $stmt = $this->context->getConnection()->prepare("INSERT INTO users (name, age, money, has_visa) VALUES (?, ?, ?, ?)");
-            $stmt->execute([
-                $params[':name'] ?? null,
-                $params[':age'] ?? null,
-                $params[':money'] ?? null,
-                $params[':has_visa'] ?? null
-            ]);
-            return $this->get($this->getLastId());
         }
+        $stmt = $this->context->getConnection()->prepare('INSERT INTO users (name, age, money, has_visa) VALUES (?, ?, ?, ?)');
+        $stmt->execute([
+            $params[':name'] ?? null,
+            $params[':age'] ?? null,
+            $params[':money'] ?? null,
+            $params[':has_visa'] ?? null,
+        ]);
+
+        return $this->get($this->getLastId());
     }
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
-    #[Override]
+    #[\Override]
     public function delete($id): void
     {
-        if(!$this->existUser($id)){
-            $this->logger->warning("User {id} not found in db", ['id' => $id]);
+        if (!$this->existUser($id)) {
+            $this->logger->warning('User {id} not found in db', ['id' => $id]);
+
             throw new UserNotFoundException();
         }
-        $stmt = $this->context->getConnection()->prepare("DELETE FROM users WHERE id = ?");
+        $stmt = $this->context->getConnection()->prepare('DELETE FROM users WHERE id = ?');
         $stmt->execute([$id]);
     }
 
-    #[Override]
+    #[\Override]
     public function existUser($id): bool
     {
-        $stmt = $this->context->getConnection()->prepare("SELECT 1 FROM users WHERE id = ?");
+        $stmt = $this->context->getConnection()->prepare('SELECT 1 FROM users WHERE id = ?');
         $stmt->execute([$id]);
 
         return $stmt->fetch() !== false;
     }
 
-    #[Override]
+    #[\Override]
     public function getLastId(): string
     {
         return $this->context->getConnection()->lastInsertId();

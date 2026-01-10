@@ -1,7 +1,8 @@
 <?php
 
+declare(strict_types=1);
+
 use App\DB;
-use App\Exceptions\UserNotFoundException;
 use App\Logger;
 use App\Models\UserDTO;
 use App\Services\UserRepository;
@@ -16,42 +17,48 @@ use function PHPUnit\Framework\assertTrue;
  * Defines application features from the specific context.
  */
 #[AllowDynamicProperties]
-class FeatureContext implements Context
+final class FeatureContext implements Context
 {
     private ?DB $db = null;
+
     private ?UserRepository $repo = null;
+
     private ?UserDTO $lastUser = null;
+
     private ?Throwable $lastException = null;
 
     private array $defaultValues = [
-        ['Valik', 92, 45000, true],
-        ['Seriy', 54, 3400, false]
+        ['Valik', 92, 45_000, true],
+        ['Seriy', 54, 3_400, false],
     ];
-    protected function setUp(): void
+
+    private function setUp(): void
     {
         $this->db = new DB(getenv('TEST_DB_DSN'));
         $pdo = $this->db->getConnection();
 
         $pdo->exec('DROP TABLE IF EXISTS users');
-        $pdo->exec('CREATE TABLE users (
+        $pdo->exec(
+            'CREATE TABLE users (
             id INTEGER PRIMARY KEY,
             name VARCHAR(100) NOT NULL,
             age INT NOT NULL,
             money FLOAT NOT NULL,
             has_visa INTEGER NOT NULL
-            )'
+            )',
         );
 
         $this->logger = new Logger();
 
         $this->repo = new UserRepository($this->db, $this->logger);
     }
+
     /**
      * @Given /^db is empty$/
      */
     public function dbIsEmpty(): void
     {
-        if(is_null($this->db)){
+        if ($this->db === null) {
             $this->setUp();
         }
         assertEmpty($this->repo->getAll());
@@ -86,6 +93,7 @@ class FeatureContext implements Context
     public function deleteUser($id): void
     {
         $this->lastException = null;
+
         try {
             $this->repo->delete($id);
         } catch (Throwable $e) {
@@ -122,7 +130,7 @@ class FeatureContext implements Context
      */
     public function getUserWithId($id): void
     {
-        try{
+        try {
             $this->lastUser = $this->repo->get($id);
         } catch (Throwable $e) {
             $this->lastException = $e;

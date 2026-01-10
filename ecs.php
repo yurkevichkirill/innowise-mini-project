@@ -16,15 +16,14 @@ return ECSConfig::configure()
     // add a single rule
     ->withRules([
         NoUnusedImportsFixer::class,
-    ])
+    ]);
 
-    // add sets - group of rules, from easiest to more complex ones
-    // uncomment one, apply one, commit, PR, merge and repeat
-    //->withPreparedSets(
-    //      spaces: true,
-    //      namespaces: true,
-    //      docblocks: true,
-    //      arrays: true,
-    //      comments: true,
-    //)
-    ;
+// add sets - group of rules, from easiest to more complex ones
+// uncomment one, apply one, commit, PR, merge and repeat
+// ->withPreparedSets(
+//      spaces: true,
+//      namespaces: true,
+//      docblocks: true,
+//      arrays: true,
+//      comments: true,
+// )

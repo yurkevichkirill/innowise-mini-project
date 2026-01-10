@@ -3,16 +3,16 @@
 declare(strict_types=1);
 
 use App\Container;
+use App\DB;
 use App\Exceptions\ContainerException;
 use App\Logger;
 use App\Router;
-use App\DB;
 use Behat\Behat\Context\Context;
 use Behat\Hook\AfterScenario;
 use Behat\Hook\BeforeScenario;
 use Behat\Step\Given;
-use Behat\Step\When;
 use Behat\Step\Then;
+use Behat\Step\When;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Container\ContainerExceptionInterface;
@@ -24,25 +24,30 @@ use Twig\Loader\FilesystemLoader;
 use function PHPUnit\Framework\assertEmpty;
 use function PHPUnit\Framework\assertEquals;
 
-class FeatureContextE2E implements Context
+final class FeatureContextE2E implements Context
 {
     private ?Container $container = null;
+
     private ?Router $router = null;
+
     private ?DB $db = null;
+
     private array $defaultValues = [
-        ['Valik', 92, 45000, true],
-        ['Seriy', 54, 3400, false]
+        ['Valik', 92, 45_000, true],
+        ['Seriy', 54, 3_400, false],
     ];
+
     private ?ResponseInterface $lastResponse = null;
+
     private ?array $lastResponseData = null;
 
     #[BeforeScenario]
     public static function putEnvs(): void
     {
-        putenv("TEST_MODE=yes");
+        putenv('TEST_MODE=yes');
 
-        $file = __DIR__ . "/../../.env.test";
-        file_put_contents($file, "TEST_MODE=yes");
+        $file = __DIR__ . '/../../.env.test';
+        file_put_contents($file, 'TEST_MODE=yes');
     }
 
     /**
@@ -50,13 +55,13 @@ class FeatureContextE2E implements Context
      * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
      */
-    protected function setUp(): void
+    private function setUp(): void
     {
         $this->container = new Container();
 
         $loader = new FilesystemLoader(__DIR__ . '/../../views');
         $twig = new Environment($loader, [
-            'cache' => false
+            'cache' => false,
         ]);
         $this->container->singleton(Environment::class, $twig);
 
@@ -78,25 +83,27 @@ class FeatureContextE2E implements Context
         $this->db = $this->container->get(DB::class);
 
         $this->db->getConnection()->exec('DROP TABLE IF EXISTS users');
-        $this->db->getConnection()->exec('CREATE TABLE users (
+        $this->db->getConnection()->exec(
+            'CREATE TABLE users (
             id INTEGER PRIMARY KEY,
             name VARCHAR(100) NOT NULL,
             age INT NOT NULL,
             money FLOAT NOT NULL,
             has_visa INTEGER NOT NULL
-            )'
+            )',
         );
     }
 
     #[Given('initialize db with default values')]
     public function initializeDbWithDefaultValues(): void
     {
-        if(!isset($this->router)) {
+        if (!isset($this->router)) {
             $this->setUp();
         }
 
-        $stmt = $this->db->getConnection()->prepare("INSERT INTO users (name, age, money, has_visa) VALUES 
-                                                   (?, ?, ?, ?)"
+        $stmt = $this->db->getConnection()->prepare(
+            'INSERT INTO users (name, age, money, has_visa) VALUES 
+                                                   (?, ?, ?, ?)',
         );
 
         foreach ($this->defaultValues as $row) {
@@ -131,7 +138,7 @@ class FeatureContextE2E implements Context
     #[Given('empty db')]
     public function emptyDb(): void
     {
-        if(!isset($this->router)) {
+        if (!isset($this->router)) {
             $this->setUp();
         }
     }
@@ -147,7 +154,7 @@ class FeatureContextE2E implements Context
         $client = new Client([
             'base_uri' => 'http://nginx',
             'timeout' => 2.0,
-            'http_errors' => false
+            'http_errors' => false,
         ]);
 
         $this->lastResponse = $client->request($method, $uri, [
@@ -155,15 +162,15 @@ class FeatureContextE2E implements Context
                 'name' => $name,
                 'age' => $age,
                 'money' => $money,
-                'has_visa' => $has_visa
-            ]
+                'has_visa' => $has_visa,
+            ],
         ]);
     }
 
     #[Then('db should have :arg1 user')]
     public function dbShouldHaveUser($count): void
     {
-        $stmt = $this->db->getConnection()->query("SELECT COUNT(id) FROM users");
+        $stmt = $this->db->getConnection()->query('SELECT COUNT(id) FROM users');
         $result = $stmt->fetchColumn();
         assertEquals($count, $result);
     }
@@ -203,14 +210,14 @@ class FeatureContextE2E implements Context
             'name' => $name,
             'age' => $age,
             'money' => $money,
-            'has_visa' => $has_visa
+            'has_visa' => $has_visa,
         ]];
 
-        if(!isset($this->lastResponseData)) {
+        if (!isset($this->lastResponseData)) {
             $this->lastResponseData = json_decode($this->lastResponse->getBody()->getContents(), true);
         }
 
-        if(count($this->lastResponseData) > 1) {
+        if (count($this->lastResponseData) > 1) {
             $resultObj = $this->lastResponseData[$id - 1];
         } else {
             $resultObj = $this->lastResponseData;
@@ -238,9 +245,9 @@ class FeatureContextE2E implements Context
     #[AfterScenario]
     public static function resetEnvs(): void
     {
-        putenv("TEST_MODE=no");
+        putenv('TEST_MODE=no');
 
-        $file = __DIR__ . "/../../.env.test";
-        file_put_contents($file, "TEST_MODE=no");
+        $file = __DIR__ . '/../../.env.test';
+        file_put_contents($file, 'TEST_MODE=no');
     }
 }

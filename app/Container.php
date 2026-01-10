@@ -13,11 +13,9 @@ use App\Services\UserService;
 use App\Services\UserServiceInterface;
 use App\Services\UserTransformer;
 use App\Services\UserTransformerInterface;
-use Override;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
-use ReflectionException;
 
 /**
  * @psalm-suppress ClassMustBeFinal
@@ -25,16 +23,18 @@ use ReflectionException;
 class Container implements ContainerInterface
 {
     private array $objects = [];
+
     private array $singletons = [];
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->objects[UserServiceInterface::class] = UserService::class;
         $this->objects[UserRepositoryInterface::class] = UserRepository::class;
         $this->objects[ConnectionServiceInterface::class] = DB::class;
         $this->objects[UserTransformerInterface::class] = UserTransformer::class;
     }
 
-    #[Override]
+    #[\Override]
     public function has(string $id): bool
     {
         return isset($this->objects[$id]) || isset($this->singletons[$id]) || class_exists($id);
@@ -42,12 +42,12 @@ class Container implements ContainerInterface
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws ReflectionException|ContainerException
+     * @throws \ReflectionException|ContainerException
      */
-    #[Override]
+    #[\Override]
     public function get(string $id): mixed
     {
-        if(isset($this->singletons[$id])) {
+        if (isset($this->singletons[$id])) {
             return $this->singletons[$id];
         }
 
@@ -56,7 +56,7 @@ class Container implements ContainerInterface
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws ReflectionException
+     * @throws \ReflectionException
      * @throws NotFoundExceptionInterface
      * @throws ContainerException
      */
@@ -74,18 +74,18 @@ class Container implements ContainerInterface
 
         $constructorReflector = $classReflector->getConstructor();
         if (empty($constructorReflector)) {
-            return new $class;
+            return new $class();
         }
 
         $constructorArguments = $constructorReflector->getParameters();
         if (empty($constructorArguments)) {
-            return new $class;
+            return new $class();
         }
 
         $args = [];
         foreach ($constructorArguments as $argument) {
             $fromEnvs = $argument->getAttributes(FromEnv::class);
-            if(!empty($fromEnvs)) {
+            if (!empty($fromEnvs)) {
                 $attribute = $fromEnvs[0];
                 $envName = $attribute->getArguments()[0];
                 $args[$argument->getName()] = getenv($envName);

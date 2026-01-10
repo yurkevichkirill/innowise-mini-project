@@ -9,40 +9,38 @@ use App\Controllers\APIController;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Message\RequestInterface;
-use ReflectionAttribute;
-use ReflectionClass;
-use ReflectionException;
 
 final class Router
 {
     public array $routes = [];
 
     public function __construct(
-        private readonly Container $container
-    ) {}
+        private readonly Container $container,
+    ) {
+    }
 
     /**
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public function initializeControllers(): void
     {
-        $controllerFiles = $this->getControllerFiles("/Controllers");
+        $controllerFiles = $this->getControllerFiles('/Controllers');
         $controllerClasses = array_map(fn($controllerFile) => $this->controllerFileToClass($controllerFile), $controllerFiles);
 
-        foreach($controllerClasses as $controller) {
+        foreach ($controllerClasses as $controller) {
             $this->registerFromController($controller);
         }
     }
 
     /**
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public function registerFromController(string $controller): void
     {
-        $reflectionController = new ReflectionClass($controller);
-        foreach($reflectionController->getMethods() as $method) {
-            $attributes = $method->getAttributes(Route::class, ReflectionAttribute::IS_INSTANCEOF);
-            foreach($attributes as $attribute) {
+        $reflectionController = new \ReflectionClass($controller);
+        foreach ($reflectionController->getMethods() as $method) {
+            $attributes = $method->getAttributes(Route::class, \ReflectionAttribute::IS_INSTANCEOF);
+            foreach ($attributes as $attribute) {
                 $route = $attribute->newInstance();
 
                 $this->register($route->method, $route->routePath, [$controller, $method->getName()]);
@@ -52,21 +50,22 @@ final class Router
 
     public function getControllerFiles(string $directory, array $controllers = []): array
     {
-        $controllerPaths = array_diff(scandir(__DIR__ . $directory), array('.', '..'));
-        $phpFiles = array_filter($controllerPaths, fn($path) => str_contains($path, ".php"));
-        $phpFullFiles = array_map(fn($file) => $directory . "/" . $file, $phpFiles);
+        $controllerPaths = array_diff(scandir(__DIR__ . $directory), ['.', '..']);
+        $phpFiles = array_filter($controllerPaths, static fn($path) => str_contains($path, '.php'));
+        $phpFullFiles = array_map(static fn($file) => $directory . '/' . $file, $phpFiles);
         $controllers = array_merge($controllers, $phpFullFiles);
-        $folders = array_filter($controllerPaths, fn($path) => !str_contains($path, "."));
-        foreach($folders as $folder) {
-            $directory .= "/" . $folder;
+        $folders = array_filter($controllerPaths, static fn($path) => !str_contains($path, '.'));
+        foreach ($folders as $folder) {
+            $directory .= '/' . $folder;
             $controllers = $this->getControllerFiles($directory, $controllers);
         }
+
         return $controllers;
     }
 
     public function controllerFileToClass(string $controllerFile): string
     {
-        return "App" . str_replace("/", "\\", str_replace(".php", "", $controllerFile));
+        return 'App' . str_replace('/', '\\', str_replace('.php', '', $controllerFile));
     }
 
     public function register($method, $uri, $handler): void
@@ -77,7 +76,7 @@ final class Router
     /**
      * @throws NotFoundExceptionInterface
      * @throws ContainerExceptionInterface
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public function handler(RequestInterface $request): void
     {
@@ -88,16 +87,18 @@ final class Router
         if (isset($this->routes[$method][$uri])) {
             $handler = $this->routes[$method][$uri];
             $this->callHandler($handler, $request);
+
             return;
         }
 
         $dynamicKey = $this->createDynamicData($uri);
 
         $dynamicUris = preg_grep($dynamicKey, array_keys($this->routes[$method] ?? []));
-        if(count($dynamicUris) === 1) {
+        if (\count($dynamicUris) === 1) {
             $dynamicUri = array_values($dynamicUris)[0];
             $call = $this->routes[$method][$dynamicUri];
             $this->callHandler($call, $request);
+
             return;
         }
 
@@ -107,8 +108,9 @@ final class Router
     private function createDynamicData(string $uri): string
     {
         $segments = explode('/', $uri);
-        $segments[count($segments) - 1] = '\{\w+\}';
-        return "#^" . implode('/', $segments) . "$#";
+        $segments[\count($segments) - 1] = '\{\w+\}';
+
+        return '#^' . implode('/', $segments) . '$#';
     }
 
     private function normalizePath(string $path): string
@@ -123,7 +125,7 @@ final class Router
 
     /**
      * @throws ContainerExceptionInterface
-     * @throws ReflectionException
+     * @throws \ReflectionException
      * @throws NotFoundExceptionInterface
      */
     private function callHandler(array $handler, RequestInterface $request): void
@@ -131,12 +133,12 @@ final class Router
         [$class_name, $method_name] = $handler;
         $controller = $this->container->get($class_name);
 
-        $response = call_user_func_array([$controller, $method_name], [$request]);
+        $response = \call_user_func_array([$controller, $method_name], [$request]);
 
         http_response_code($response->getStatusCode());
         foreach ($response->getHeaders() as $name => $values) {
             foreach ($values as $value) {
-                header("$name: $value");
+                header("{$name}: {$value}");
             }
         }
 

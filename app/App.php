@@ -6,17 +6,16 @@ namespace App;
 
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
-use ReflectionException;
 
 final class App
 {
     /**
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public function __construct(
-        protected Container $container,
-        protected Router $router,
-        protected Request $request
+        private Container $container,
+        private Router $router,
+        private Request $request,
     ) {
         $this->router->initializeControllers();
     }
@@ -24,9 +23,10 @@ final class App
     /**
      * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
-    public function run ():void {
+    public function run(): void
+    {
         $this->router->handler($this->request);
     }
 }

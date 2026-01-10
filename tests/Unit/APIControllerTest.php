@@ -13,16 +13,16 @@ use App\Services\UserTransformerInterface;
 use GuzzleHttp\Psr7\Uri;
 use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
 use PHPUnit\Framework\TestCase;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
 
 #[AllowMockObjectsWithoutExpectations]
-class APIControllerTest extends TestCase
+final class APIControllerTest extends TestCase
 {
     private ?UserServiceInterface $service = null;
+
     private ?UserRepositoryInterface $repository = null;
+
     private ?UserTransformerInterface $transformer = null;
+
     protected function setUp(): void
     {
         $this->service = $this->createMock(UserServiceInterface::class);
@@ -34,7 +34,7 @@ class APIControllerTest extends TestCase
     {
         $values = [
             new UserDTO(1, 'Oleg', 23, 56.1, true),
-            new UserDTO(2, 'Slavik', 44, 66.6, false)
+            new UserDTO(2, 'Slavik', 44, 66.6, false),
         ];
 
         $this->repository->method('getAll')
@@ -45,10 +45,10 @@ class APIControllerTest extends TestCase
         $getRequest = new Request(
             uri: new Uri('/api/users'),
             method: 'GET',
-            headers: ['Accept' => ['application/json']]
+            headers: ['Accept' => ['application/json']],
         );
         $result = $controller->showAll($getRequest)->getBody()->getContents();
-        $this->assertJson(json_encode($values), $result);
+        self::assertJson(json_encode($values), $result);
     }
 
     public function testGet(): void
@@ -63,12 +63,12 @@ class APIControllerTest extends TestCase
         $controller = new APIController($this->service, $this->repository, $this->transformer);
 
         $getRequest = new Request(
-            uri: new Uri("/api/users/$testId"),
+            uri: new Uri("/api/users/{$testId}"),
             method: 'GET',
-            headers: ['Accept' => ['application/json']]
+            headers: ['Accept' => ['application/json']],
         );
         $result = $controller->show($getRequest)->getBody()->getContents();
-        $this->assertJson(json_encode(['user' => $testUser->toArray()]), $result);
+        self::assertJson(json_encode(['user' => $testUser->toArray()]), $result);
     }
 
     public function testStore(): void
@@ -84,14 +84,14 @@ class APIControllerTest extends TestCase
             uri: new Uri('/api/users'),
             method: 'POST',
             body: json_encode(
-                $testUser->toArray()
+                $testUser->toArray(),
             ),
-            headers: ['Accept' => ['application/json']]
+            headers: ['Accept' => ['application/json']],
         );
         $controller = new APIController($this->service, $this->repository, $this->transformer);
         $result = $controller->store($postRequest)->getBody()->getContents();
 
-        $this->assertJson(json_encode(['user' => $testUser->toArray()]), $result);
+        self::assertJson(json_encode(['user' => $testUser->toArray()]), $result);
     }
 
     public function testUpdate(): void
@@ -106,17 +106,17 @@ class APIControllerTest extends TestCase
         $controller = new APIController($this->service, $this->repository, $this->transformer);
 
         $patchRequest = new Request(
-            uri: new Uri("/api/users/1"),
+            uri: new Uri('/api/users/1'),
             method: 'PATCH',
             body: json_encode(
-                $testUser->toArray()
+                $testUser->toArray(),
             ),
-            headers: ['Accept' => ['application/json']]
+            headers: ['Accept' => ['application/json']],
         );
 
         $result = $controller->update($patchRequest)->getBody()->getContents();
 
-        $this->assertJson(json_encode(['user' => $testUser->toArray()]), $result);
+        self::assertJson(json_encode(['user' => $testUser->toArray()]), $result);
     }
 
     public function testRemove(): void
@@ -128,12 +128,12 @@ class APIControllerTest extends TestCase
         $controller = new APIController($this->service, $this->repository, $this->transformer);
 
         $deleteRequest = new Request(
-            uri: new Uri("/api/users/$testId"),
+            uri: new Uri("/api/users/{$testId}"),
             method: 'DELETE',
-            headers: ['Accept' => ['application/json']]
+            headers: ['Accept' => ['application/json']],
         );
         $result = $controller->remove($deleteRequest)->getBody()->getContents();
 
-        $this->assertEquals('', $result);
+        self::assertEquals('', $result);
     }
 }

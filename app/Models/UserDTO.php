@@ -11,8 +11,9 @@ final readonly class UserDTO
         private ?string $name,
         private ?int $age,
         private ?float $money,
-        private ?bool $has_visa
-    ) {}
+        private ?bool $has_visa,
+    ) {
+    }
 
     public function getId(): int
     {
@@ -46,8 +47,7 @@ final readonly class UserDTO
             'name' => $this->name,
             'age' => $this->age,
             'money' => $this->money,
-            'has_visa' => $this->has_visa
+            'has_visa' => $this->has_visa,
         ];
     }
-
 }
