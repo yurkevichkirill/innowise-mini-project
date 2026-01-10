@@ -189,4 +189,16 @@ final class Request implements RequestInterface
         }
         return $clone;
     }
+
+    public function getArgs(): array
+    {
+        $arrData = json_decode($this->getBody()->getContents(), true);
+        $args = [];
+        $args[] = $arrData['name'] ?? null;
+        $args[] = $arrData['age'] ?? null;
+        $args[] = $arrData['money'] ?? null;
+        $args[] = $arrData['has_visa'] ?? null;
+
+        return $args;
+    }
 }

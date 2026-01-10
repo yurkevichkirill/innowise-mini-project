@@ -11,6 +11,8 @@ use App\Services\UserRepository;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserService;
 use App\Services\UserServiceInterface;
+use App\Services\UserTransformer;
+use App\Services\UserTransformerInterface;
 use Override;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
@@ -29,6 +31,7 @@ class Container implements ContainerInterface
         $this->objects[UserServiceInterface::class] = UserService::class;
         $this->objects[UserRepositoryInterface::class] = UserRepository::class;
         $this->objects[ConnectionServiceInterface::class] = DB::class;
+        $this->objects[UserTransformerInterface::class] = UserTransformer::class;
     }
 
     #[Override]

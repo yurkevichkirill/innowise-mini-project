@@ -8,10 +8,12 @@ use App\Attributes\Delete;
 use App\Attributes\Get;
 use App\Attributes\Patch;
 use App\Attributes\Post;
+use App\Request;
 use App\Response;
-use App\Services\HttpTransform;
+use App\Services\UserTransformer;
 use App\Services\UserRepositoryInterface;
 use App\Services\UserServiceInterface;
+use App\Services\UserTransformerInterface;
 use Exception;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -24,37 +26,50 @@ readonly class APIController
 {
     public function __construct(
         private UserServiceInterface $userService,
-        private UserRepositoryInterface $userRepository
+        private UserRepositoryInterface $userRepository,
+        private UserTransformerInterface $userTransformer
     ) {}
 
     #[Get("/api/users")]
-    public function showAll(RequestInterface $request): ResponseInterface
-    {
-        $usersObj = $this->userRepository->getAll();
-        $json = HttpTransform::allToJson($usersObj);
-        $headers = ['Content-Type' => [$request->getHeaderLine('Accept')]];
-        return new Response(
-            $json,
-            $headers,
-            200
-        );
-    }
-
-    #[Get("/api/users/{id}")]
-    public function show(RequestInterface $request): ResponseInterface
+    public function showAll(Request $request): Response
     {
         $headers = ['Content-Type' => [$request->getHeaderLine('Accept')]];
-        $id = (int)HttpTransform::getLastSegment($request->getUri()->getPath());
         try {
-            $user = $this->userRepository->get($id);
+            $usersObj = $this->userRepository->getAll();
+            $json = $this->userTransformer->transformJSON($usersObj);
+
             return new Response(
-                HttpTransform::oneToJson($user),
+                $json,
                 $headers,
                 200
             );
         } catch(Exception $e) {
             return new Response(
-                HttpTransform::errorToJson($e),
+                json_encode(['error' => $e->getMessage()]),
+                $headers,
+                404
+            );
+        }
+    }
+
+    #[Get("/api/users/{id}")]
+    public function show(Request $request): Response
+    {
+        $headers = ['Content-Type' => [$request->getHeaderLine('Accept')]];
+        $segments = (explode('/', ($request->getUri()->getPath())));
+        $id = (int) end($segments);
+        try {
+            $user = $this->userRepository->get($id);
+
+            return new Response(
+                $this->userTransformer->transformJSON([$user]),
+                $headers,
+                200
+            );
+        } catch (Exception $e) {
+
+            return new Response(
+                json_encode(['error' => $e->getMessage()]),
                 $headers,
                 404
             );
@@ -62,20 +77,22 @@ readonly class APIController
     }
 
     #[Post("/api/users")]
-    public function store(RequestInterface $request): ResponseInterface
+    public function store(Request $request): Response
     {
         $headers = ['Content-Type' => [$request->getHeaderLine('Accept')]];
-        $args = HttpTransform::getArgs($request->getBody()->getContents());
+        $args = $request->getArgs();
         try {
             $user = $this->userService->create(...$args);
+
             return new Response(
-                HttpTransform::oneToJson($user),
+                $this->userTransformer->transformJSON([$user]),
                 $headers,
                 201
             );
         } catch(Exception $e) {
+
             return new Response(
-                HttpTransform::errorToJson($e),
+                json_encode(['error' => $e->getMessage()]),
                 $headers,
                 404
             );
@@ -83,21 +100,24 @@ readonly class APIController
     }
 
     #[Patch("/api/users/{id}")]
-    public function update(RequestInterface $request): ResponseInterface
+    public function update(Request $request): Response
     {
         $headers = ['Content-Type' => [$request->getHeaderLine('Accept')]];
-        $args = HttpTransform::getArgs($request->getBody()->getContents());
-        $id = (int) HttpTransform::getLastSegment($request->getUri()->getPath());
+        $args = $request->getArgs();
+        $segments = (explode('/', ($request->getUri()->getPath())));
+        $id = (int) end($segments);
         try {
             $user = $this->userService->update($id, ...$args);
+
             return new Response(
-                HttpTransform::oneToJson($user),
+                $this->userTransformer->transformJSON([$user]),
                 $headers,
                 200
             );
         } catch (Exception $e) {
+
             return new Response(
-                HttpTransform::errorToJson($e),
+                json_encode(['error' => $e->getMessage()]),
                 $headers,
                 404
             );
@@ -105,31 +125,37 @@ readonly class APIController
     }
 
     #[Delete("/api/users/{id}")]
-    public function remove(RequestInterface $request): ResponseInterface
+    public function remove(Request $request): Response
     {
         $headers = ['Content-Type' => [$request->getHeaderLine('Accept')]];
-        $id = (int) HttpTransform::getLastSegment($request->getUri()->getPath());
+        $segments = (explode('/', ($request->getUri()->getPath())));
+        $id = (int) end($segments);
         try {
             $this->userRepository->delete($id);
+
             return new Response(
                 headers: $headers,
                 status: 204
             );
         } catch (Exception $e) {
+
             return new Response(
-                HttpTransform::errorToJson($e),
+                json_encode(['error' => $e->getMessage()]),
                 $headers,
                 404
             );
         }
     }
 
-    public function notFound(RequestInterface $request): ResponseInterface {
+    public function notFound(Request $request): Response {
         $headers = ['Content-Type' => [$request->getHeaderLine('Accept')]];
+
         return new Response(
-            HttpTransform::errorToJson(new NotFoundResourceException("Resource Not Found")),
+            json_encode(['error' => new NotFoundResourceException("Resource Not Found")->getMessage()]),
             $headers,
             404
         );
     }
 }
+//php-csfixer
+//phpcbf

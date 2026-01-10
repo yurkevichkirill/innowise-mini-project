@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Container;
+use App\Exceptions\ContainerException;
 use App\Logger;
 use App\Router;
 use App\DB;
@@ -44,6 +45,11 @@ class FeatureContextE2E implements Context
         file_put_contents($file, "TEST_MODE=yes");
     }
 
+    /**
+     * @throws ReflectionException
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
     protected function setUp(): void
     {
         $this->container = new Container();
@@ -65,8 +71,7 @@ class FeatureContextE2E implements Context
 
     /**
      * @throws ReflectionException
-     * @throws ContainerExceptionInterface
-     * @throws NotFoundExceptionInterface
+     * @throws ContainerExceptionInterface|ContainerException
      */
     private function setUpDb(): void
     {

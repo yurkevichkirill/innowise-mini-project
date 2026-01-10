@@ -7,8 +7,9 @@ namespace App\Controllers;
 use App\Attributes\Get;
 use App\Request;
 use App\Response;
-use App\Services\HttpTransform;
+use App\Services\UserTransformer;
 use App\Services\UserRepositoryInterface;
+use App\Services\UserTransformerInterface;
 use Exception;
 use Psr\Http\Message\ResponseInterface;
 use Twig\Environment;
@@ -32,44 +33,50 @@ final readonly class WebController
     public function index(): ResponseInterface
     {
         return new Response(
-            HttpTransform::allToHTML($this->twig, [], 'index'),
+            $this->twig->render('index.twig'),
             ['Content-Type' => ['text/html']],
             200
         );
     }
 
-    /**
-     * @throws RuntimeError
-     * @throws SyntaxError
-     * @throws LoaderError
-     */
     #[Get("/users")]
-    public function showAllUsers(Request $request): ResponseInterface
+    public function showAll(Request $request): ResponseInterface
     {
         $headers = ['Content-Type' => ['text/html']];
-        $users = $this->userRepository->getAll();
-        return new Response(
-            HttpTransform::allToHTML($this->twig, $users, 'users'),
-            $headers,
-            200
-        );
-    }
-
-    #[Get("/users/{id}")]
-    public function showUser(Request $request): ResponseInterface
-    {
-        $headers = ['Content-Type' => ['text/html']];
-        $id = (int)HttpTransform::getLastSegment($request->getUri()->getPath());
         try {
-            $user = $this->userRepository->get($id);
+            $users = $this->userRepository->getAll();
+
             return new Response(
-                HttpTransform::oneToHTML($this->twig, $user, 'user'),
+                $this->twig->render('users.twig', ['users' => $users]),
                 $headers,
                 200
             );
         } catch(Exception $e) {
             return new Response(
-                HttpTransform::errorToJson($e),
+                json_encode(['error' => $e->getMessage()]),
+                $headers,
+                404
+            );
+        }
+    }
+
+    #[Get("/users/{id}")]
+    public function show(Request $request): ResponseInterface
+    {
+        $headers = ['Content-Type' => ['text/html']];
+        $segments = (explode('/', ($request->getUri()->getPath())));
+        $id = (int) end($segments);
+        try {
+            $user = $this->userRepository->get($id);
+
+            return new Response(
+                $this->twig->render('user.twig', ['user' => $user]),
+                $headers,
+                200
+            );
+        } catch(Exception $e) {
+            return new Response(
+                json_encode(['error' => $e->getMessage()]),
                 $headers,
                 404
             );

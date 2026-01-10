@@ -10,7 +10,7 @@ use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 
-final class Response implements ResponseInterface
+class Response implements ResponseInterface
 {
     private string $protocolVersion = '1.1';
     private array $headers = [];
